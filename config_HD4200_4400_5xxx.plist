@@ -163,6 +163,16 @@
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
+				<key>Name</key>
+				<string>disabled_IOAHCIBlockStorage</string>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+			</dict>
+			<dict>
 				<key>Comment</key>
 				<string>Second Stage Patch 1</string>
 				<key>Find</key>
