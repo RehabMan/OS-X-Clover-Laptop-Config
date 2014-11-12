@@ -108,12 +108,10 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>Disabled</key>
-					<true/>
 					<key>FullTitle</key>
-					<string>UEFI Internal</string>
+					<string>UEFI internal</string>
 					<key>Hidden</key>
-					<false/>
+					<string>Always</string>
 					<key>Type</key>
 					<string>Other</string>
 				</dict>
