@@ -185,13 +185,13 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>KernelLapic</key>
-		<true/>
-		<key>KernelPm</key>
+		<key>AsusAICPUPM</key>
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
-		<key>AsusAICPUPM</key>
+		<key>KernelLapic</key>
+		<true/>
+		<key>KernelPm</key>
 		<true/>
 		<key>ForceKextsToLoad</key>
 		<array>
