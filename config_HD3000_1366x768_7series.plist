@@ -132,7 +132,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>0</integer>
+			<false/>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -205,6 +205,10 @@
 		<true/>
 		<key>AsusAICPUPM</key>
 		<true/>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+		</array>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
