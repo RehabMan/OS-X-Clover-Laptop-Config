@@ -142,7 +142,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<false/>
+			<integer>0</integer>
 		</dict>
 		<key>USB</key>
 		<dict>
