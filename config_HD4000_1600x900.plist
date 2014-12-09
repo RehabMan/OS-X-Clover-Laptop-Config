@@ -147,6 +147,8 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>InjectEDID</key>
+		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -165,32 +167,52 @@
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio/video HD4000 0x01660004 #1 of 1</string>
+				<key>Name</key>
+				<string>disabled_AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>BABmAQEDAQEAAAAC</data>
+				<key>Replace</key>
+				<data>BABmAQECBAIAAAAE</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio/video HD4000 0x01660004 #2 of 2</string>
+				<key>Name</key>
+				<string>disabled_AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
+				<key>Replace</key>
+				<data>MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAACAAABgAAAAAAAAAAAgAR</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
 				<string>disabled_IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Second Stage Patch 1</string>
-				<key>Find</key>
-				<data>hcB0XUg=</data>
 				<key>Name</key>
 				<string>disabled_IOGraphicsFamily</string>
+				<key>Find</key>
+				<data>hcB0XUg=</data>
 				<key>Replace</key>
 				<data>McB0W0g=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Second Stage Patch 2</string>
-				<key>Find</key>
-				<data>QYjE6wM=</data>
 				<key>Name</key>
 				<string>disabled_IOGraphicsFamily</string>
+				<key>Find</key>
+				<data>QYjE6wM=</data>
 				<key>Replace</key>
 				<data>QYjE6yM=</data>
 			</dict>
