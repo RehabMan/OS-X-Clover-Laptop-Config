@@ -180,9 +180,29 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio HD4000 0x01660003</string>
+				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
 				<key>Name</key>
-				<string>disabled_AppleIntelFramebufferCapri</string>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHBAAA</data>
+				<key>Replace</key>
+				<data>AgUAAAAIAAAGAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660003, port 0304</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>AwQAAAAEAACBAAAA</data>
+				<key>Replace</key>
+				<data>AwQAAAAIAAAGAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660003, port 0406</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BAYAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -192,7 +212,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
-				<string>disabled_IOAHCIBlockStorage</string>
+				<string>disabled:IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -202,7 +222,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 1</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>hcB0XUg=</data>
 				<key>Replace</key>
@@ -212,7 +232,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 2</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6wM=</data>
 				<key>Replace</key>

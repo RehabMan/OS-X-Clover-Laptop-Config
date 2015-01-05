@@ -170,7 +170,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio/video HD4000 0x01660004 #1 of 1</string>
 				<key>Name</key>
-				<string>disabled_AppleIntelFramebufferCapri</string>
+				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BABmAQEDAQEAAAAC</data>
 				<key>Replace</key>
@@ -180,7 +180,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio/video HD4000 0x01660004 #2 of 2</string>
 				<key>Name</key>
-				<string>disabled_AppleIntelFramebufferCapri</string>
+				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
@@ -190,7 +190,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
-				<string>disabled_IOAHCIBlockStorage</string>
+				<string>disabled:IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -200,7 +200,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 1</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>hcB0XUg=</data>
 				<key>Replace</key>
@@ -210,7 +210,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 2</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6wM=</data>
 				<key>Replace</key>

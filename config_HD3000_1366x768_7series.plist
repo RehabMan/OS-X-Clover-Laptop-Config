@@ -107,7 +107,7 @@
 				<key>Device</key>
 				<string>IntelGFX</string>
 				<key>Key</key>
-				<string>AAPL,os-info</string>
+				<string>disabled:AAPL,os-info</string>
 				<key>Value</key>
 				<data>MEkBERERCAAAAfAfAQAAABAHAAA=</data>
 				<key>Comment</key>
@@ -117,7 +117,7 @@
 				<key>Device</key>
 				<string>IntelGFX</string>
 				<key>Key</key>
-				<string>hda-gfx</string>
+				<string>disabled:hda-gfx</string>
 				<key>Value</key>
 				<string>onboard-1</string>
 				<key>Comment</key>
@@ -217,7 +217,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
-				<string>disabled_IOAHCIBlockStorage</string>
+				<string>disabled:IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -227,7 +227,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 1</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>hcB0XUg=</data>
 				<key>Replace</key>
@@ -237,7 +237,7 @@
 				<key>Comment</key>
 				<string>Second Stage Patch 2</string>
 				<key>Name</key>
-				<string>disabled_IOGraphicsFamily</string>
+				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6wM=</data>
 				<key>Replace</key>
