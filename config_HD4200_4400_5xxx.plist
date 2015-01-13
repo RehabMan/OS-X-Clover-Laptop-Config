@@ -206,6 +206,26 @@
 				<key>Replace</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x0a260005 0x0a260006</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQJAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AgQJAAAIAACHAAAA</data>
+			</dict>
 		</array>
 	</dict>
 	<key>SMBIOS</key>
