@@ -243,6 +243,46 @@
 				<key>Replace</key>
 				<data>QYjE6yM=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD3000, 0x00010000, port 0205</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelSNBGraphicsFB</string>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHAAAA</data>
+				<key>Replace</key>
+				<data>AgUAAAAIAAAHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD3000, 0x00010000, port 0304</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelSNBGraphicsFB</string>
+				<key>Find</key>
+				<data>AwQAAAAEAAAJAAAA</data>
+				<key>Replace</key>
+				<data>AwQAAAAIAAAJAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD3000, 0x00010000, port 0406</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelSNBGraphicsFB</string>
+				<key>Find</key>
+				<data>BAYAAAAEAAAJAAAA</data>
+				<key>Replace</key>
+				<data>BAYAAAAIAAAJAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio/VGA(0602) HD3000, 0x00010000, port 0406</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelSNBGraphicsFB</string>
+				<key>Find</key>
+				<data>AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAHAAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA</data>
+				<key>Replace</key>
+				<data>AQIDABAHAAAQBwAABgIAAAABAAAJAAAABQMAAAIAAAAwAAAABAYAAAAIAAAJAAAAAAAAAAAAAAAAAAAA</data>
+			</dict>
 		</array>
 	</dict>
 	<key>SMBIOS</key>
