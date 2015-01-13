@@ -203,16 +203,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>QECI HD4600 (GT2 Mobile to Desktop)</string>
-				<key>Name</key>
-				<string>obsolete:AppleIntelHD5000Graphics</string>
-				<key>Find</key>
-				<data>PYaAEgR0EOtd</data>
-				<key>Replace</key>
-				<data>PYaAFgR0EOtd</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>0x0a260006 9MB cursor bytes patch</string>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferAzul</string>
