@@ -180,7 +180,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio/video HD4000 0x01660004 #1 of 2</string>
+				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Find</key>
@@ -190,13 +190,43 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio/video HD4000 0x01660004 #2 of 2</string>
+				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
-				<data>MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAACAAABgAAAAAAAAAAAgAR</data>
+				<data>MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAABAAAgQAAAAAAAAAAAgAR</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660004, port 0205</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHBAAA</data>
+				<key>Replace</key>
+				<data>AgUAAAAIAAAGAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660004, port 0304</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>AwQAAAAEAACBAAAA</data>
+				<key>Replace</key>
+				<data>AwQAAAAIAAAGAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660004, port 0406</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>BAYAAAAEAACBAAAA</data>
+				<key>Replace</key>
+				<data>BAYAAAAIAAAGAAAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
