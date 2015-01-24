@@ -4,12 +4,15 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>Fixes</key>
+		<key>DSDT</key>
 		<dict>
-			<key>FixRegions_10000000</key>
-			<true/>
-			<key>NewWay_80000000</key>
-			<true/>
+			<key>Fixes</key>
+			<dict>
+				<key>FixRegions_10000000</key>
+				<true/>
+				<key>NewWay_80000000</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>DropTables</key>
 		<array>
