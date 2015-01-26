@@ -171,6 +171,26 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>HDMI-audio, unsupported HDAU 0c0c, 1 of 2 (range check)</string>
+				<key>Name</key>
+				<string>disabled:AppleHDAController</string>
+				<key>Find</key>
+				<data>PQsMAAA=</data>
+				<key>Replace</key>
+				<data>PQwMAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, unsuppored HDAU 0c0c, 2 of 2 (0c0a to 0c0c)</string>
+				<key>Name</key>
+				<string>disabled:AppleHDAController</string>
+				<key>Find</key>
+				<data>PQwKAAA=</data>
+				<key>Replace</key>
+				<data>PQwMAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
 				<string>disabled:IOAHCIBlockStorage</string>
@@ -228,6 +248,26 @@
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
 				<data>AgQJAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQUJAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAAAHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQJAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AgQJAAAIAAAHAQAA</data>
 			</dict>
 		</array>
 	</dict>
