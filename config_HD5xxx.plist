@@ -305,6 +305,16 @@
 				<key>Replace</key>
 				<data>AgQJAAAIAAAHAQAA</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFrameBufferAzul</string>
+				<key>Find</key>
+				<data>AQAAAEAAAADWAAAABQUAAA==</data>
+				<key>Replace</key>
+				<data>AQAAAEAAAAAeAAAABQUAAA==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>SMBIOS</key>
