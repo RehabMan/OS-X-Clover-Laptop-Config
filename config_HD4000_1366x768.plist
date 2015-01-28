@@ -237,7 +237,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Second Stage Patch 1</string>
+				<string>Boot graphics glitch, 10.10.0/10.10.1 (1 of 2)</string>
 				<key>Name</key>
 				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
@@ -247,13 +247,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Second Stage Patch 2</string>
+				<string>Boot graphics glitch, 10.10.0/10.10.1 (2 of 2)</string>
 				<key>Name</key>
 				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6wM=</data>
 				<key>Replace</key>
 				<data>QYjE6yM=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Boot graphics glitch, 10.10.2</string>
+				<key>Name</key>
+				<string>disabled:IOGraphicsFamily</string>
+				<key>Find</key>
+				<data>QYjE6xE=</data>
+				<key>Replace</key>
+				<data>QYjE6zE=</data>
 			</dict>
 		</array>
 	</dict>
