@@ -160,6 +160,8 @@
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>#ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>Bluemac</string>
 	</dict>
@@ -314,6 +316,46 @@
 				<data>AQAAAEAAAADWAAAABQUAAA==</data>
 				<key>Replace</key>
 				<data>AQAAAEAAAAAeAAAABQUAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105(12), 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AQUSAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204(12), 0x0a260005 0x0a260006</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQJAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AgQSAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQUJAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AQUSAAAIAAAHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQJAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AgQSAAAIAAAHAQAA</data>
 			</dict>
 		</array>
 	</dict>
