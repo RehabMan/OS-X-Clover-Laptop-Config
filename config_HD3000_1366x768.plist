@@ -264,7 +264,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.2</string>
+				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
 				<key>Name</key>
 				<string>disabled:IOGraphicsFamily</string>
 				<key>Find</key>
