@@ -46,6 +46,13 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+		</array>
+		<key>#DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>SSDT</string>
@@ -84,9 +91,9 @@
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
-				<true/>
+				<false/>
 				<key>PStates</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>PluginType</key>
 			<integer>1</integer>
