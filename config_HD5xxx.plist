@@ -268,7 +268,7 @@
 				<key>Comment</key>
 				<string>0x0a260006 9MB cursor bytes patch</string>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Replace</key>
