@@ -211,26 +211,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, unsupported HDAU 0c0c, 1 of 2 (range check)</string>
-				<key>Name</key>
-				<string>disabled:AppleHDAController</string>
-				<key>Find</key>
-				<data>PQsMAAA=</data>
-				<key>Replace</key>
-				<data>PQwMAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, unsuppored HDAU 0c0c, 2 of 2 (0c0a to 0c0c)</string>
-				<key>Name</key>
-				<string>disabled:AppleHDAController</string>
-				<key>Find</key>
-				<data>PQwKAAA=</data>
-				<key>Replace</key>
-				<data>PQwMAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
 				<string>disabled:IOAHCIBlockStorage</string>
@@ -238,26 +218,6 @@
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.0/10.10.1 (1 of 2)</string>
-				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>hcB0XUg=</data>
-				<key>Replace</key>
-				<data>McB0W0g=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.0/10.10.1 (2 of 2)</string>
-				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>QYjE6wM=</data>
-				<key>Replace</key>
-				<data>QYjE6yM=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
