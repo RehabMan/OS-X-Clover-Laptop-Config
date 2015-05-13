@@ -215,6 +215,86 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.9.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>9oDUAAAAgHU6</data>
+				<key>Replace</key>
+				<data>9oDUAAAAgOs6</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>9oDUAAAAgHU0</data>
+				<key>Replace</key>
+				<data>9oDUAAAAgOs0</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable XHCI 1.0 check, 10.9.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>Zj0AAQ==</data>
+				<key>Replace</key>
+				<data>Zj0AAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable XHCI 1.0 check, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>QbzHAgDgPQABAAA=</data>
+				<key>Replace</key>
+				<data>QbzHAgDgPQAAAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Patch MSI or pin interrupts #1, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>QcdHCAAAQAA=</data>
+				<key>Replace</key>
+				<data>QcdHCAAAAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Patch MSI or pin interrupts #2, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>gUkIAABAAA==</data>
+				<key>Replace</key>
+				<data>gUkIAAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable the sleep code leaving the controller in non-working state after wake, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>xoDIAAAAAQ==</data>
+				<key>Replace</key>
+				<data>xoDIAAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable PCI power management if there is no such code in DSDT, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Name</key>
+				<string>disabled:AppleUSBXHCI</string>
+				<key>Find</key>
+				<data>dU1Ii7voAQAA</data>
+				<key>Replace</key>
+				<data>601Ii7voAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferCapri</string>
