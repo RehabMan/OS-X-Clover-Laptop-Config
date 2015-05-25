@@ -175,7 +175,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x0a260006</string>
+		<string>0x16160002</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -214,124 +214,16 @@
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
-				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>QYjE6xE=</data>
-				<key>Replace</key>
-				<data>QYjE6zE=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x0a260006 9MB cursor bytes patch</string>
-				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
-				<key>Replace</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x0a260005 0x0a260006</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFrameBufferAzul</string>
-				<key>Find</key>
-				<data>AQAAAEAAAADWAAAABQUAAA==</data>
-				<key>Replace</key>
-				<data>AQAAAEAAAAAeAAAABQUAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105(12), 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AQUSAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204(12), 0x0a260005 0x0a260006</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQSAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AQUSAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AgQSAAAIAAAHAQAA</data>
-			</dict>
 		</array>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacBookPro11,1</string>
-		<key>ProductName-MacBookAir</key>
-		<string>MacBookAir6,2</string>
+		<string>MacBookAir7,1</string>
+		<key>ProductName-MacBook</key>
+		<string>MacBook8,1</string>
+		<key>ProductName-MacBookPro</key>
+		<string>MacBookPro12,1</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
