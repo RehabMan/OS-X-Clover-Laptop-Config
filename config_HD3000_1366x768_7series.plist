@@ -106,7 +106,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1</string>
+		<string>kext-dev-mode=1 dart=0 -gux_defer_usb2 nv_disable=1</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
