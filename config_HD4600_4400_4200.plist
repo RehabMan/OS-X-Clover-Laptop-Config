@@ -231,13 +231,33 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x0a260006 9MB cursor bytes patch</string>
+				<string>Enable 9MB cursor bytes, 0x0a260006</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Replace</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable 96MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Find</key>
+				<data>CAAuCgEDAwMAAAAE</data>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>CAAuCgEDAwMAAAAG</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable 128MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Find</key>
+				<data>CAAuCgEDAwMAAAAE</data>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>CAAuCgEDAwMAAAAI</data>
 			</dict>
 			<dict>
 				<key>Comment</key>

@@ -226,7 +226,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x0a260006 9MB cursor bytes patch</string>
+				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable 9MB cursor bytes, 0x0a260006</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
@@ -236,13 +246,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<string>Enable 96MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Find</key>
+				<data>CAAuCgEDAwMAAAAE</data>
 				<key>Name</key>
 				<string>disabled:AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAAAA</data>
+				<data>CAAuCgEDAwMAAAAG</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable 128MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Find</key>
+				<data>CAAuCgEDAwMAAAAE</data>
+				<key>Name</key>
+				<string>disabled:AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>CAAuCgEDAwMAAAAI</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
