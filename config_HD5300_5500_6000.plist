@@ -206,6 +206,26 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.10.x (based on Austere.J patch)</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>Oc92PA==</data>
+				<key>Replace</key>
+				<data>Oc/rPA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.beta ( (based on Austere.J patch)</string>
+				<key>Name</key>
+				<string>disabled:AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>QTnEdj4=</data>
+				<key>Replace</key>
+				<data>QTnE6z4=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
 				<string>disabled:IOAHCIBlockStorage</string>
