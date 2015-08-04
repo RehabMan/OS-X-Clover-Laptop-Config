@@ -175,7 +175,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x16160002</string>
+		<string>0x16260006</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -236,14 +236,21 @@
 			</dict>
 		</array>
 	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
 		<string>MacBookAir7,1</string>
-		<key>ProductName-MacBook</key>
-		<string>MacBook8,1</string>
-		<key>ProductName-MacBookPro</key>
+		<key>#ProductName-MacBookPro</key>
 		<string>MacBookPro12,1</string>
+		<key>#ProductName-MacBook</key>
+		<string>MacBook8,1</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

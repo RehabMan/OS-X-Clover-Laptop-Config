@@ -345,6 +345,13 @@
 			</dict>
 		</array>
 	</dict>
+	<key>RtVariables</key>
+	<dict>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
