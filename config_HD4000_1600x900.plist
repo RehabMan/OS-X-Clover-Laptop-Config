@@ -274,6 +274,16 @@
 				<key>Replace</key>
 				<data>QYjE6zE=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Boot graphics glitch for El Capitan</string>
+				<key>Name</key>
+		    <string>disabled:IOGraphicsFamily</string>
+				<key>Find</key>
+		    <data>AQAAdRc=</data>
+		    <key>Replace</key>
+		    <data>AQAAdBc=</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
