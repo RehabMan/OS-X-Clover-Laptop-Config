@@ -212,8 +212,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.10.x (based on Austere.J patch)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelBDWGraphicsFramebuffer</string>
+				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>Oc92PA==</data>
 				<key>Replace</key>
@@ -222,8 +224,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.beta ( (based on Austere.J patch)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelBDWGraphicsFramebuffer</string>
+				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>QTnEdj4=</data>
 				<key>Replace</key>
@@ -232,8 +236,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:IOAHCIBlockStorage</string>
+				<string>IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -242,10 +248,12 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6xc=</data>
 			</dict>
@@ -270,6 +278,8 @@
 		<string>MacBookPro12,1</string>
 		<key>#ProductName-MacBook8</key>
 		<string>MacBook8,1</string>
+		<key>Trust</key>
+		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

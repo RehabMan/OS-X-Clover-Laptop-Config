@@ -212,8 +212,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:IOAHCIBlockStorage</string>
+				<string>IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -222,8 +224,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6xE=</data>
 				<key>Replace</key>
@@ -232,6 +236,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable 9MB cursor bytes, 0x0a260006</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
@@ -242,38 +248,46 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable 96MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAG</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Enable 128MB DVMT-prealloc, 0x0a2e0008</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAI</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Enable 128MB DVMT-prealloc, 48MB framebuffer, 48MB cursor bytes, 0x0a260006</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>BgAmCgEDAwMAAAAIAAAAAwAAAAM=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -282,8 +296,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0204, 0x0a260005 0x0a260006</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -292,8 +308,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -302,8 +320,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0204, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -312,8 +332,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFrameBufferAzul</string>
+				<string>AppleIntelFrameBufferAzul</string>
 				<key>Find</key>
 				<data>AQAAAEAAAADWAAAABQUAAA==</data>
 				<key>Replace</key>
@@ -322,8 +344,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0105(12), 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -332,8 +356,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0204(12), 0x0a260005 0x0a260006</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -342,8 +368,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0105(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -352,8 +380,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0204(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -362,10 +392,12 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6xc=</data>
 			</dict>
@@ -384,6 +416,8 @@
 		<string>MacBookPro11,1</string>
 		<key>#ProductName-MacBookAir</key>
 		<string>MacBookAir6,2</string>
+		<key>Trust</key>
+		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

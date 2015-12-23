@@ -216,8 +216,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.9.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU6</data>
 				<key>Replace</key>
@@ -226,8 +228,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU0</data>
 				<key>Replace</key>
@@ -236,8 +240,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.9.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>Zj0AAQ==</data>
 				<key>Replace</key>
@@ -246,8 +252,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QbzHAgDgPQABAAA=</data>
 				<key>Replace</key>
@@ -256,8 +264,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch MSI or pin interrupts #1, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QcdHCAAAQAA=</data>
 				<key>Replace</key>
@@ -266,8 +276,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch MSI or pin interrupts #2, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>gUkIAABAAA==</data>
 				<key>Replace</key>
@@ -276,8 +288,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable the sleep code leaving the controller in non-working state after wake, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>xoDIAAAAAQ==</data>
 				<key>Replace</key>
@@ -286,8 +300,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable PCI power management if there is no such code in DSDT, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleUSBXHCI</string>
+				<string>AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>dU1Ii7voAQAA</data>
 				<key>Replace</key>
@@ -296,8 +312,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BABmAQEDAQEAAAAC</data>
 				<key>Replace</key>
@@ -306,8 +324,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
@@ -316,8 +336,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0205</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHBAAA</data>
 				<key>Replace</key>
@@ -326,8 +348,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0304</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AwQAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -336,8 +360,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660004, port 0406</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:AppleIntelFramebufferCapri</string>
+				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BAYAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -346,8 +372,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:IOAHCIBlockStorage</string>
+				<string>IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -356,8 +384,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>QYjE6xE=</data>
 				<key>Replace</key>
@@ -366,10 +396,12 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Name</key>
-				<string>disabled:IOGraphicsFamily</string>
+				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6xc=</data>
 			</dict>
@@ -386,6 +418,8 @@
 	<dict>
 		<key>ProductName</key>
 		<string>MacBookPro9,2</string>
+		<key>Trust</key>
+		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
