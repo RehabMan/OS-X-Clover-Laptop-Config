@@ -330,7 +330,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFrameBufferAzul</string>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQAAAEAAAADWAAAABQUAAA==</data>
 				<key>Replace</key>
