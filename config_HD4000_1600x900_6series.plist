@@ -342,7 +342,7 @@
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
@@ -354,7 +354,7 @@
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
