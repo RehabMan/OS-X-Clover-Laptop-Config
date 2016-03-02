@@ -324,6 +324,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQKAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AgQKAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HDMI-audio, port 0204, 0x0a260005 0x0a260006</string>
 				<key>Disabled</key>
 				<true/>
@@ -381,6 +393,18 @@
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
 				<data>AQUSAAAIAACHAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204(12), 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQKAAAEAACHAAAA</data>
+				<key>Replace</key>
+				<data>AgQSAAAIAACHAAAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
