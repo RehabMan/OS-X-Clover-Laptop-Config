@@ -367,6 +367,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Enable internal display after sleep for 0x0a2e0008, credit syscl/lighting/Yating Zhou</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AQAAAEAAAAAeAAAABQUJAQ==</data>
+				<key>Replace</key>
+				<data>AQAAAEAAAAAPAAAABQUJAQ==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
 				<key>Disabled</key>
 				<true/>
