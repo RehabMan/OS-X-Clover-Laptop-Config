@@ -1,0 +1,203 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		84B9D52516FFE684002CD441 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.md; sourceTree = "<group>"; };
+		84B9D52616FFE684002CD441 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; lineEnding = 0; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
+		84B9D52716FFE684002CD441 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
+		ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD520_530_540.plist; sourceTree = "<group>"; };
+		ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768_7series.plist; sourceTree = "<group>"; };
+		ED6DB3B51C873F5C00DB1B7A /* config_HD3000_1366x768.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768.plist; sourceTree = "<group>"; };
+		ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1600x900_7series.plist; sourceTree = "<group>"; };
+		ED6DB3B71C873F5C00DB1B7A /* config_HD3000_1600x900.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1600x900.plist; sourceTree = "<group>"; };
+		ED6DB3B81C873F5C00DB1B7A /* config_HD4000_1366x768_6series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4000_1366x768_6series.plist; sourceTree = "<group>"; };
+		ED6DB3B91C873F5C00DB1B7A /* config_HD4000_1366x768.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4000_1366x768.plist; sourceTree = "<group>"; };
+		ED6DB3BA1C873F5C00DB1B7A /* config_HD4000_1600x900_6series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4000_1600x900_6series.plist; sourceTree = "<group>"; };
+		ED6DB3BB1C873F5C00DB1B7A /* config_HD4000_1600x900.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4000_1600x900.plist; sourceTree = "<group>"; };
+		ED6DB3BC1C873F5C00DB1B7A /* config_HD4600_4400_4200.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4600_4400_4200.plist; sourceTree = "<group>"; };
+		ED6DB3BD1C873F5C00DB1B7A /* config_HD5000_5100_5200.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5000_5100_5200.plist; sourceTree = "<group>"; };
+		ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_5600_6000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5300_5500_5600_6000.plist; sourceTree = "<group>"; };
+		ED97346F1C0A5F260063BCF9 /* download.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = download.sh; sourceTree = "<group>"; };
+		ED9734701C0A5F370063BCF9 /* install_downloads.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_downloads.sh; sourceTree = "<group>"; };
+		ED99560B1C94BA0C00B3B13F /* SSDT-SATA_RAID.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SATA_RAID.dsl"; path = "hotpatch/SSDT-SATA_RAID.dsl"; sourceTree = "<group>"; };
+		ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-IMEI.dsl"; path = "hotpatch/SSDT-IMEI.dsl"; sourceTree = "<group>"; };
+		ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-IGPU.dsl"; path = "hotpatch/SSDT-IGPU.dsl"; sourceTree = "<group>"; };
+		ED99560E1C94BA0C00B3B13F /* SSDT-Disable_EHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Disable_EHCI.dsl"; path = "hotpatch/SSDT-Disable_EHCI.dsl"; sourceTree = "<group>"; };
+		ED99560F1C94BA0C00B3B13F /* SSDT-PTSWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PTSWAK.dsl"; path = "hotpatch/SSDT-PTSWAK.dsl"; sourceTree = "<group>"; };
+		ED9956101C94BA0C00B3B13F /* SSDT-Config.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Config.dsl"; path = "hotpatch/SSDT-Config.dsl"; sourceTree = "<group>"; };
+		ED9956111C94BA0C00B3B13F /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = hotpatch/config.plist; sourceTree = "<group>"; };
+		ED9956121C94BA0C00B3B13F /* SSDT-PRW.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PRW.dsl"; path = "hotpatch/SSDT-PRW.dsl"; sourceTree = "<group>"; };
+		ED9956131C94BA0C00B3B13F /* SSDT-LANC_PRW.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-LANC_PRW.dsl"; path = "hotpatch/SSDT-LANC_PRW.dsl"; sourceTree = "<group>"; };
+		ED9956141C94BA0C00B3B13F /* SSDT-Disable_DGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Disable_DGPU.dsl"; path = "hotpatch/SSDT-Disable_DGPU.dsl"; sourceTree = "<group>"; };
+		ED9956151C94BA0C00B3B13F /* SSDT-LPC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-LPC.dsl"; path = "hotpatch/SSDT-LPC.dsl"; sourceTree = "<group>"; };
+		ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XOSI.dsl"; path = "hotpatch/SSDT-XOSI.dsl"; sourceTree = "<group>"; };
+		ED9956171C94BA0C00B3B13F /* SSDT-SMBUS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SMBUS.dsl"; path = "hotpatch/SSDT-SMBUS.dsl"; sourceTree = "<group>"; };
+		ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PNLF.dsl"; path = "hotpatch/SSDT-PNLF.dsl"; sourceTree = "<group>"; };
+		EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PluginType1.dsl"; path = "hotpatch/SSDT-PluginType1.dsl"; sourceTree = "<group>"; };
+		EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XSEL.dsl"; path = "hotpatch/SSDT-XSEL.dsl"; sourceTree = "<group>"; };
+		EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ESEL.dsl"; path = "hotpatch/SSDT-ESEL.dsl"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		84B9D50E16FFE58F002CD441 = {
+			isa = PBXGroup;
+			children = (
+				84B9D52716FFE684002CD441 /* README.md */,
+				84B9D52516FFE684002CD441 /* License.md */,
+				84B9D52616FFE684002CD441 /* makefile */,
+				ED97346F1C0A5F260063BCF9 /* download.sh */,
+				ED9734701C0A5F370063BCF9 /* install_downloads.sh */,
+				ED6DB3B31C873F1200DB1B7A /* config */,
+				EDB940BA1C04D44500480024 /* hotpatch */,
+			);
+			sourceTree = "<group>";
+		};
+		ED6DB3B31C873F1200DB1B7A /* config */ = {
+			isa = PBXGroup;
+			children = (
+				ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */,
+				ED6DB3B51C873F5C00DB1B7A /* config_HD3000_1366x768.plist */,
+				ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */,
+				ED6DB3B71C873F5C00DB1B7A /* config_HD3000_1600x900.plist */,
+				ED6DB3B81C873F5C00DB1B7A /* config_HD4000_1366x768_6series.plist */,
+				ED6DB3B91C873F5C00DB1B7A /* config_HD4000_1366x768.plist */,
+				ED6DB3BA1C873F5C00DB1B7A /* config_HD4000_1600x900_6series.plist */,
+				ED6DB3BB1C873F5C00DB1B7A /* config_HD4000_1600x900.plist */,
+				ED6DB3BC1C873F5C00DB1B7A /* config_HD4600_4400_4200.plist */,
+				ED6DB3BD1C873F5C00DB1B7A /* config_HD5000_5100_5200.plist */,
+				ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_5600_6000.plist */,
+				ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		EDB940BA1C04D44500480024 /* hotpatch */ = {
+			isa = PBXGroup;
+			children = (
+				ED9956111C94BA0C00B3B13F /* config.plist */,
+				ED9956101C94BA0C00B3B13F /* SSDT-Config.dsl */,
+				ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */,
+				ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */,
+				ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */,
+				ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */,
+				ED9956151C94BA0C00B3B13F /* SSDT-LPC.dsl */,
+				ED99560B1C94BA0C00B3B13F /* SSDT-SATA_RAID.dsl */,
+				ED9956141C94BA0C00B3B13F /* SSDT-Disable_DGPU.dsl */,
+				ED9956171C94BA0C00B3B13F /* SSDT-SMBUS.dsl */,
+				ED9956121C94BA0C00B3B13F /* SSDT-PRW.dsl */,
+				ED9956131C94BA0C00B3B13F /* SSDT-LANC_PRW.dsl */,
+				ED99560F1C94BA0C00B3B13F /* SSDT-PTSWAK.dsl */,
+				ED99560E1C94BA0C00B3B13F /* SSDT-Disable_EHCI.dsl */,
+				ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */,
+				EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */,
+				EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */,
+				EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */,
+			);
+			name = hotpatch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		84B9D51316FFE58F002CD441 /* Patches */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 84B9D51616FFE58F002CD441 /* Build configuration list for PBXLegacyTarget "Patches" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = Patches;
+			passBuildSettingsInEnvironment = 1;
+			productName = Patches;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		84B9D50F16FFE58F002CD441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = RehabMan;
+			};
+			buildConfigurationList = 84B9D51216FFE58F002CD441 /* Build configuration list for PBXProject "Patches" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84B9D50E16FFE58F002CD441;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84B9D51316FFE58F002CD441 /* Patches */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		84B9D51516FFE58F002CD441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84B9D51816FFE58F002CD441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84B9D51216FFE58F002CD441 /* Build configuration list for PBXProject "Patches" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B9D51516FFE58F002CD441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B9D51616FFE58F002CD441 /* Build configuration list for PBXLegacyTarget "Patches" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B9D51816FFE58F002CD441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84B9D50F16FFE58F002CD441 /* Project object */;
+}
