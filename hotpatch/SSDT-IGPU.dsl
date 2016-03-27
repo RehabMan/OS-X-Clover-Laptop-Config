@@ -2,7 +2,6 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
 {
-    External(_SB.PCI0, DeviceObj)
     External(_SB.PCI0.IGPU, DeviceObj)
 
     External(RMCF.TYPE, IntObj)
@@ -16,8 +15,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
         {
             GDID,16
         }
-//REVIEW: add ids for Skylake
-
         // Injection tables for laptops
         Name(LAPL, Package() // low resolution
         {
@@ -91,6 +88,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             0x1626, 0x162b, 0x1622, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x06, 0x00, 0x26, 0x16 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Skylake/HD520
+            //REVIEW: add more ids..., just guessing on the ID
+            0x1916, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
         })
@@ -169,6 +173,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x06, 0x00, 0x26, 0x16 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
+            // Skylake/HD520
+            //REVIEW: add more ids..., just guessing on the ID
+            0x1916, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
         })
 
         // Injection tables for desktops
@@ -241,6 +252,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             0x161e, 0x1616, 0x1612, 0x1626, 0x162b, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x2b, 0x16 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Skylake/HD520
+            //REVIEW: add more ids..., just guessing on the ID
+            0x1916, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
         })

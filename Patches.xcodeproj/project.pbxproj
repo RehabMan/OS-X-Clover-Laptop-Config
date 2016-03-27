@@ -10,6 +10,11 @@
 		84B9D52516FFE684002CD441 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.md; sourceTree = "<group>"; };
 		84B9D52616FFE684002CD441 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; lineEnding = 0; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
 		84B9D52716FFE684002CD441 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ED02043C1CA77082006E7175 /* SSDT-XHC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XHC.dsl"; path = "hotpatch/SSDT-XHC.dsl"; sourceTree = "<group>"; };
+		ED02043D1CA77082006E7175 /* SSDT-EH02.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-EH02.dsl"; path = "hotpatch/SSDT-EH02.dsl"; sourceTree = "<group>"; };
+		ED02043E1CA77082006E7175 /* SSDT-EH01.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-EH01.dsl"; path = "hotpatch/SSDT-EH01.dsl"; sourceTree = "<group>"; };
+		ED02043F1CA770A2006E7175 /* SSDT-HDEF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-HDEF.dsl"; path = "hotpatch/SSDT-HDEF.dsl"; sourceTree = "<group>"; };
+		ED0204401CA770A2006E7175 /* SSDT-HDAU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-HDAU.dsl"; path = "hotpatch/SSDT-HDAU.dsl"; sourceTree = "<group>"; };
 		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
 		ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD520_530_540.plist; sourceTree = "<group>"; };
 		ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768_7series.plist; sourceTree = "<group>"; };
@@ -98,6 +103,11 @@
 				EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */,
 				EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */,
 				EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */,
+				ED02043F1CA770A2006E7175 /* SSDT-HDEF.dsl */,
+				ED0204401CA770A2006E7175 /* SSDT-HDAU.dsl */,
+				ED02043E1CA77082006E7175 /* SSDT-EH01.dsl */,
+				ED02043D1CA77082006E7175 /* SSDT-EH02.dsl */,
+				ED02043C1CA77082006E7175 /* SSDT-XHC.dsl */,
 			);
 			name = hotpatch;
 			sourceTree = "<group>";

@@ -212,7 +212,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x16160006</string>
+		<string>0x19120000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>

@@ -1,16 +1,23 @@
 // Deals with mixed systems (HD4000 on 6-series, HD3000 on 7-series)
 // Will also add the missing IMEI device.
-//
-// Note: Changes required if your ACPI set already defines IMEI/HECI @16.
 
 DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
 {
     External(_SB.PCI0.IGPU.GDID, FieldUnitObj)
-    
-    Device(_SB.PCI0.IMEI)
-    {
-        Name(_ADR, 0x00160000)
+    External(_SB.PCI0.IMEI, DeviceObj)
 
+    // inject IMEI device if it doesn't exist
+    If (!CondRefOf(_SB.PCI0.IMEI))
+    {
+        //REVIEW: not certain this really works...
+        Device(_SB.PCI0.IMEI)
+        {
+            Name(_ADR, 0x00160000)
+        }
+    }
+    
+    Scope(_SB.PCI0.IMEI)
+    {
         // deal with mixed system, HD3000/7-series, HD4000/6-series
         OperationRegion(RMP1, PCI_Config, 2, 2)
         Field(RMP1, AnyAcc, NoLock, Preserve)

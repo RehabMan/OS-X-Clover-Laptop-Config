@@ -6,7 +6,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-DGPU", 0)
     
     Device(RMD1)
     {
-        //Name(_ADR, 0)
         Name(_HID, "RMD10000")
         Method(_INI)
         {

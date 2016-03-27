@@ -8,6 +8,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-EHCI", 0)
     External(_SB.PCI0.LPCB, DeviceObj)
     External(_SB.PCI0.XHC, DeviceObj)
 
+    External(RMCF, DeviceObj)
+    Scope(RMCF)
+    {
+        // SSDT-XHC tests this so it can change RM,pr2-force for FakePCIID_XHCIMux
+        // We don't want FakePCIID_XHCIMux to route USB2 on XHCI to a
+        // disabled EHCI controller!
+        Name(RMED, 1)
+    }
+
     Scope(_SB.PCI0)
     {
         // registers needed for disabling EHC#1
@@ -47,7 +56,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-EHCI", 0)
         }
         Device(RMD2)
         {
-            //Name(_ADR, 0)
             Name(_HID, "RMD20000")
             Method(_INI)
             {
@@ -63,15 +71,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-EHCI", 0)
                 // disable EHCI#2 PCI space
                 ^^LPCB.FDE2 = 1
             }
-        }
-        Method(LPCB.XHC._DSM, 4)
-        {
-            // configure FakePCIID_XHCIMux.kext to handle USB2 on XHC
-            If (!Arg2) { Return (Buffer() { 0x03 } ) }
-            Return (Package()
-            {
-                "RM,pr2-force", Buffer() { 0xff, 0x3f, 0, 0 },
-            })
         }
     }
 }

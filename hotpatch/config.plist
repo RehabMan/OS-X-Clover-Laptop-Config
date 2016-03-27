@@ -87,9 +87,23 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change HECI to IMEI</string>
+					<key>Find</key>
+					<data>SEVDSQ==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change _PTS to ZPTS</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Find</key>
 					<data>X1BUUwE=</data>
 					<key>Replace</key>
@@ -98,8 +112,6 @@
 				<dict>
 					<key>Comment</key>
 					<string>change _WAK to ZWAK</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Find</key>
 					<data>X1dBSwE=</data>
 					<key>Replace</key>
@@ -108,8 +120,6 @@
 				<dict>
 					<key>Comment</key>
 					<string>change Method(XWAK,0,S) to ZWAK</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Find</key>
 					<data>WFdBSwg=</data>
 					<key>Replace</key>
@@ -118,8 +128,6 @@
 				<dict>
 					<key>Comment</key>
 					<string>change Method(XWAK,0,N) to ZWAK</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Find</key>
 					<data>WFdBSwA=</data>
 					<key>Replace</key>
@@ -127,43 +135,43 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to ZSEL</string>
+					<string>change Method(XSEL,0,S) to XSEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
 					<data>WFNFTAg=</data>
 					<key>Replace</key>
-					<data>WlNFTAg=</data>
+					<data>WFNFWgg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,N) to ZSEL</string>
+					<string>change Method(XSEL,0,N) to XSEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
 					<data>WFNFTAA=</data>
 					<key>Replace</key>
-					<data>WlNFTAA=</data>
+					<data>WFNFWgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEX</string>
+					<string>change Method(ESEL,0,S) to ESEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
 					<data>RVNFTAg=</data>
 					<key>Replace</key>
-					<data>RVNFWAg=</data>
+					<data>RVNFWgg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,N) to ESEX</string>
+					<string>change Method(ESEL,0,N) to ESEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
 					<data>RVNFTAA=</data>
 					<key>Replace</key>
-					<data>RVNFWAA=</data>
+					<data>RVNFWgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -178,6 +186,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change Method(UPRW,2,..) to Method(XPRW,2,..)</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>VVBSVwpwEg==</data>
 					<key>Replace</key>
@@ -279,7 +289,7 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>Arbitrary</key>
+		<key>#Arbitrary</key>
 		<array>
 			<dict>
 				<key>Comment</key>
@@ -636,8 +646,6 @@
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
 				<string>IOAHCIBlockStorage</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -648,8 +656,6 @@
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
-				<key>Disabled</key>
-				<false/>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
@@ -660,8 +666,6 @@
 				<string>AirPortBrcm4360 whitelist patch (board-id), credit RehabMan</string>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>MdtMO2XYdRI=</data>
 				<key>Replace</key>
@@ -672,8 +676,6 @@
 				<string>10.9.5 5Ghz US FCC, svko</string>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>WFQAIBcnIAAA</data>
 				<key>Replace</key>
@@ -684,8 +686,6 @@
 				<string>10.10.2+ 5Ghz US FCC, the-darkvoid</string>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>QYP8/3QsSA==</data>
 				<key>Replace</key>
@@ -696,8 +696,6 @@
 				<string>10.10.2+ BT4LE-Handoff-Hotspot, Dokterdok</string>
 				<key>Name</key>
 				<string>IOBluetoothFamily</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>SIXAdFwPt0g=</data>
 				<key>Replace</key>
@@ -708,8 +706,6 @@
 				<string>10.11.dp1+ BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok original</string>
 				<key>Name</key>
 				<string>IOBluetoothFamily</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>SIX/dEdIiwc=</data>
 				<key>Replace</key>
@@ -720,8 +716,6 @@
 				<string>HDMI-audio HD3000, 0x00010000, port 0205</string>
 				<key>Name</key>
 				<string>AppleIntelSNBGraphicsFB</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHAAAA</data>
 				<key>Replace</key>
@@ -732,8 +726,6 @@
 				<string>HDMI-audio HD3000, 0x00010000, port 0304</string>
 				<key>Name</key>
 				<string>AppleIntelSNBGraphicsFB</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>AwQAAAAEAAAJAAAA</data>
 				<key>Replace</key>
@@ -744,8 +736,6 @@
 				<string>HDMI-audio HD3000, 0x00010000, port 0406</string>
 				<key>Name</key>
 				<string>AppleIntelSNBGraphicsFB</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>BAYAAAAEAAAJAAAA</data>
 				<key>Replace</key>
@@ -768,8 +758,6 @@
 				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHBAAA</data>
 				<key>Replace</key>
@@ -780,8 +768,6 @@
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>BABmAQEDAQEAAAAC</data>
 				<key>Replace</key>
@@ -792,8 +778,6 @@
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
@@ -804,8 +788,6 @@
 				<string>HDMI-audio HD4000 0x01660003, port 0304</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>AwQAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -814,8 +796,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660003, port 0406</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Find</key>
@@ -826,8 +806,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable 9MB cursor bytes, 0x0a260006</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Find</key>
