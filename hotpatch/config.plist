@@ -773,16 +773,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
-				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
-				<key>Find</key>
-				<data>AgUAAAAEAAAHBAAA</data>
-				<key>Replace</key>
-				<data>AgUAAAAIAAAGAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
@@ -800,6 +790,16 @@
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
 				<data>MAIAAAIFAAAABAAABwQAAAMEAAAABAAAgQAAAAQGAAAABAAAgQAAAAAAAAAAAgAR</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
+				<key>Name</key>
+				<string>AppleIntelFramebufferCapri</string>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHBAAA</data>
+				<key>Replace</key>
+				<data>AgUAAAAIAAAGAAAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
