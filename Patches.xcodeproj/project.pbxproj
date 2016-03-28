@@ -30,7 +30,7 @@
 		ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_5600_6000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5300_5500_5600_6000.plist; sourceTree = "<group>"; };
 		ED97346F1C0A5F260063BCF9 /* download.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = download.sh; sourceTree = "<group>"; };
 		ED9734701C0A5F370063BCF9 /* install_downloads.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_downloads.sh; sourceTree = "<group>"; };
-		ED99560B1C94BA0C00B3B13F /* SSDT-SATA_RAID.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SATA_RAID.dsl"; path = "hotpatch/SSDT-SATA_RAID.dsl"; sourceTree = "<group>"; };
+		ED99560B1C94BA0C00B3B13F /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SATA.dsl"; path = "hotpatch/SSDT-SATA.dsl"; sourceTree = "<group>"; };
 		ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-IMEI.dsl"; path = "hotpatch/SSDT-IMEI.dsl"; sourceTree = "<group>"; };
 		ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-IGPU.dsl"; path = "hotpatch/SSDT-IGPU.dsl"; sourceTree = "<group>"; };
 		ED99560E1C94BA0C00B3B13F /* SSDT-Disable_EHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Disable_EHCI.dsl"; path = "hotpatch/SSDT-Disable_EHCI.dsl"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 				ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */,
 				ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */,
 				ED9956151C94BA0C00B3B13F /* SSDT-LPC.dsl */,
-				ED99560B1C94BA0C00B3B13F /* SSDT-SATA_RAID.dsl */,
+				ED99560B1C94BA0C00B3B13F /* SSDT-SATA.dsl */,
 				ED9956141C94BA0C00B3B13F /* SSDT-Disable_DGPU.dsl */,
 				ED9956171C94BA0C00B3B13F /* SSDT-SMBUS.dsl */,
 				ED9956121C94BA0C00B3B13F /* SSDT-PRW.dsl */,
