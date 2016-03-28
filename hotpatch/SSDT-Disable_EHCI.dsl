@@ -7,15 +7,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-EHCI", 0)
     External(_SB.PCI0.EH02, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
 
-    External(RMCF, DeviceObj)
-    Scope(RMCF)
-    {
-        // SSDT-XHC tests this so it can change RM,pr2-force for FakePCIID_XHCIMux
-        // We don't want FakePCIID_XHCIMux to route USB2 on XHCI to a
-        // disabled EHCI controller!
-        Name(RMED, 1)
-    }
-
     // registers needed for disabling EHC#1
     Scope(_SB.PCI0.EH01)
     {
