@@ -119,6 +119,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change MEI to IMEI</string>
+					<key>Find</key>
+					<data>TUVJXw==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change SAT0 to SATA</string>
 					<key>Find</key>
 					<data>U0FUMA==</data>
