@@ -113,9 +113,9 @@
 					<key>Comment</key>
 					<string>change Method(_PTS,1,S) to ZPTS</string>
 					<key>Find</key>
-					<data>X1BUUwg=</data>
+					<data>X1BUUwk=</data>
 					<key>Replace</key>
-					<data>WlBUUwg=</data>
+					<data>WlBUUwk=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -129,9 +129,9 @@
 					<key>Comment</key>
 					<string>change Method(_WAK,1,S) to ZWAK</string>
 					<key>Find</key>
-					<data>X1dBSwg=</data>
+					<data>X1dBSwk=</data>
 					<key>Replace</key>
-					<data>WldBSwg=</data>
+					<data>WldBSwk=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
