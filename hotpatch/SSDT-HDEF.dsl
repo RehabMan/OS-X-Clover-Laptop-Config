@@ -25,7 +25,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
             "hda-gfx", Buffer() { "onboard-1" },
             "PinConfigurations", Buffer() { },
         }
-        DerefOf(Local0[1]) = \RMCF.AUDL
+        CreateDWordField(DerefOf(Local0[1]), 0, AUDL)
+        AUDL = \RMCF.AUDL
         Return(Local0)
     }
 }
