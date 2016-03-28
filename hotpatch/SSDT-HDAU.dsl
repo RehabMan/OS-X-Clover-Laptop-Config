@@ -10,6 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDAU", 0)
     // inject properties for audio
     Method(_SB.PCI0.HDAU._DSM, 4)
     {
+        If (Ones == \RMCF.AUDL) { Return(0) }
         If (!Arg2) { Return (Buffer() { 0x03 } ) }
         Local0 = Package()
         {

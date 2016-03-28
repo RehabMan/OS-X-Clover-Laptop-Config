@@ -9,10 +9,10 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         Method(HELP)
         {
             Store("TYPE indicates type of the computer. 0: desktop, 1: laptop", Debug)
-            Store("HIGH selects display type.  1: high resolution, 2: low resolution", Debug)
-            Store("DPTS for laptops only.  1: enables/disables DGPU in _WAK/_PTS", Debug)
-            Store("SHUT enables shutdown fix.  1: disables _PTS code when Arg0==5", Debug)
-            Store("AUDL indicates audio layout-id for patched AppleHDA", Debug)
+            Store("HIGH selects display type. 1: high resolution, 2: low resolution", Debug)
+            Store("DPTS for laptops only. 1: enables/disables DGPU in _WAK/_PTS", Debug)
+            Store("SHUT enables shutdown fix. 1: disables _PTS code when Arg0==5", Debug)
+            Store("AUDL indicates audio layout-id for patched AppleHDA. Ones: no injection", Debug)
         }
 
         // TYPE: Indicates the type of computer... desktop or laptop
@@ -44,7 +44,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // AUDL: Audio Layout
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
-        Name(AUDL, 3)
+        // If set to Ones, no audio injection will be done.
+        Name(AUDL, Ones)
     }
 }
 //EOF

@@ -63,6 +63,22 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change EUSB to EH01</string>
+					<key>Find</key>
+					<data>RVVTQg==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change USBE to EH02</string>
+					<key>Find</key>
+					<data>VVNCRQ==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change GFX0 to IGPU</string>
 					<key>Find</key>
 					<data>R0ZYMA==</data>
@@ -82,6 +98,14 @@
 					<string>change HDAS to HDEF</string>
 					<key>Find</key>
 					<data>SERBUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change AZAL to HDEF</string>
+					<key>Find</key>
+					<data>QVpBTA==</data>
 					<key>Replace</key>
 					<data>SERFRg==</data>
 				</dict>

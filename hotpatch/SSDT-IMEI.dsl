@@ -7,7 +7,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
     External(_SB.PCI0.IMEI, DeviceObj)
 
     // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI)
-    // remove this Device definition (leaving just the Scope inject below
+    // remove this Device definition (leaving just the Scope inject below)
     Device(_SB.PCI0.IMEI)
     {
         Name(_ADR, 0x00160000)
