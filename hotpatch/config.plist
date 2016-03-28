@@ -103,7 +103,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _PTS to ZPTS</string>
+					<string>change Method(_PTS,1,N) to ZPTS</string>
 					<key>Find</key>
 					<data>X1BUUwE=</data>
 					<key>Replace</key>
@@ -111,7 +111,15 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _WAK to ZWAK</string>
+					<string>change Method(_PTS,1,S) to ZPTS</string>
+					<key>Find</key>
+					<data>X1BUUwg=</data>
+					<key>Replace</key>
+					<data>WlBUUwg=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(_WAK,1,N) to ZWAK</string>
 					<key>Find</key>
 					<data>X1dBSwE=</data>
 					<key>Replace</key>
@@ -119,9 +127,9 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XWAK,0,S) to ZWAK</string>
+					<string>change Method(_WAK,1,S) to ZWAK</string>
 					<key>Find</key>
-					<data>WFdBSwg=</data>
+					<data>X1dBSwg=</data>
 					<key>Replace</key>
 					<data>WldBSwg=</data>
 				</dict>
@@ -135,13 +143,11 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to XSEZ</string>
-					<key>Disabled</key>
-					<true/>
+					<string>change Method(XWAK,0,S) to ZWAK</string>
 					<key>Find</key>
-					<data>WFNFTAg=</data>
+					<data>WFdBSwg=</data>
 					<key>Replace</key>
-					<data>WFNFWgg=</data>
+					<data>WldBSwg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -155,13 +161,13 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEZ</string>
+					<string>change Method(XSEL,0,S) to XSEZ</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
-					<data>RVNFTAg=</data>
+					<data>WFNFTAg=</data>
 					<key>Replace</key>
-					<data>RVNFWgg=</data>
+					<data>WFNFWgg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -172,6 +178,16 @@
 					<data>RVNFTAA=</data>
 					<key>Replace</key>
 					<data>RVNFWgA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(ESEL,0,S) to ESEZ</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>RVNFTAg=</data>
+					<key>Replace</key>
+					<data>RVNFWgg=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -195,7 +211,9 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change LANC Method(_PRW,0,Serialized) to Method(XPRW,0,..)</string>
+					<string>change LANC Method(_PRW,0,S) to Method(XPRW,0,..)</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>AAAZABQfX1BSVwg=</data>
 					<key>Replace</key>
