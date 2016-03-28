@@ -5,16 +5,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
     External(_SB.PCI0.HDEF, DeviceObj)
     External(RMCF.AUDL, IntObj)
 
-    // inject HDEF device if it doesn't exist
-    If (!CondRefOf(_SB.PCI0.HDEF))
-    {
-        //REVIEW: not certain this really works...
-        Device(HDEF)
-        {
-            Name(_ADR, 0x001B0000)
-        }
-    }
-
     // inject properties for audio
     Method(_SB.PCI0.HDEF._DSM, 4)
     {

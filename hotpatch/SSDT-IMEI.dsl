@@ -6,16 +6,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
     External(_SB.PCI0.IGPU.GDID, FieldUnitObj)
     External(_SB.PCI0.IMEI, DeviceObj)
 
-    // inject IMEI device if it doesn't exist
-    If (!CondRefOf(_SB.PCI0.IMEI))
-    {
-        //REVIEW: not certain this really works...
-        Device(_SB.PCI0.IMEI)
-        {
-            Name(_ADR, 0x00160000)
-        }
-    }
-    
     Scope(_SB.PCI0.IMEI)
     {
         // deal with mixed system, HD3000/7-series, HD4000/6-series
