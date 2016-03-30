@@ -90,11 +90,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x06, 0x00, 0x26, 0x16 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
-            // Skylake/HD520
-            //REVIEW: add more ids..., just guessing on the ID
-            0x1916, 0, Package()
+            // Skylake/HD520/HD530/HD540
+            //REVIEW: add more ids..., just guessing on the ID (1916000? 191b0000)
+            // Note: this list from AppleIntelSKLGraphicsFramebuffer.kext Info.plist
+            0x1916, 0x191e, 0x1926, 0x1912, 0x1932, 0x1902, 0x1917, 0x193b, 0x191b, 0, Package()
             {
-                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
         })
@@ -177,7 +178,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             //REVIEW: add more ids..., just guessing on the ID
             0x1916, 0, Package()
             {
-                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
         })
