@@ -7,6 +7,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
 
     External(_SB.PCI0.PEG0.PEGP._ON, MethodObj)
     External(_SB.PCI0.PEG0.PEGP._OFF, MethodObj)
+    External(_SB.PCI0.PEGP.DGFX._ON, MethodObj)
+    External(_SB.PCI0.PEGP.DGFX._OFF, MethodObj)
 
     External(RMCF.DPTS, IntObj)
     External(RMCF.SHUT, IntObj)
@@ -22,6 +24,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
         {
             // enable discrete graphics
             If (CondRefOf(\_SB.PCI0.PEG0.PEGP._ON)) { \_SB.PCI0.PEG0.PEGP._ON() }
+            If (CondRefOf(\_SB.PCI0.PEGP.DGFX._ON)) { \_SB.PCI0.PEGP.DGFX._ON() }
         }
 
         // call into original _PTS method
@@ -40,6 +43,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
         {
             // disable discrete graphics
             If (CondRefOf(\_SB.PCI0.PEG0.PEGP._OFF)) { \_SB.PCI0.PEG0.PEGP._OFF() }
+            If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
         }
 
         // return value from original _WAK
