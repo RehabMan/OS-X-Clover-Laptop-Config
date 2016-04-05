@@ -252,7 +252,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             // Broadwell/HD5300/HD5500/HD5600/HD6000 (future)
             0x161e, 0x1616, 0x1612, 0x1626, 0x162b, 0, Package()
             {
-                "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x2b, 0x16 },
+                "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x16 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
             // Skylake/HD520
