@@ -4,7 +4,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
 {
     Device(RMCF)
     {
-        Name(_ADR, 0)
+        Name(_ADR, 0)   // do not remove
 
         Method(HELP)
         {
@@ -13,6 +13,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
             Store("DPTS for laptops only. 1: enables/disables DGPU in _WAK/_PTS", Debug)
             Store("SHUT enables shutdown fix. 1: disables _PTS code when Arg0==5", Debug)
             Store("AUDL indicates audio layout-id for patched AppleHDA. Ones: no injection", Debug)
+            Store("BKLT indicates the type of backlight control. 0: IntelBacklight, 1: AppleBacklight", Debug)
+            Store("LMAX indicates max for IGPU PWM backlight. Ones: Use default, other values must match framebuffer", Debug)
         }
 
         // TYPE: Indicates the type of computer... desktop or laptop
@@ -46,6 +48,18 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
         Name(AUDL, Ones)
+
+        // BKLT: Backlight control type
+        //
+        // 0: Using IntelBacklight.kext
+        // 1: Using AppleBacklight.kext + AppleBacklightInjector.kext
+        Name(BKLT, 0)
+
+        // LMAX: Backlight PWM MAX.  Must match framebuffer in use.
+        //
+        // Ones: Default will be used (0x710 for Ivy/Sandy, 0xad9 for Haswell/Broadwell)
+        // Other values: must match framebuffer
+        Name(LMAX, Ones)
     }
 }
 //EOF

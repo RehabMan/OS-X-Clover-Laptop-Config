@@ -10,10 +10,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
     Scope(_SB.PCI0.IGPU)
     {
         // need the device-id from PCI_config to inject correct properties
-        OperationRegion(RMP1, PCI_Config, 2, 2)
+        OperationRegion(RMP1, PCI_Config, 0, 0x14)
         Field(RMP1, AnyAcc, NoLock, Preserve)
         {
-            GDID,16
+            Offset(0x02), GDID,16,
+            Offset(0x10), BAR1,32,
         }
         // Injection tables for laptops
         Name(LAPL, Package() // low resolution
