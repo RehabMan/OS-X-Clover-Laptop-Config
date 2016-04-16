@@ -46,6 +46,7 @@
 		ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PNLF.dsl"; path = "hotpatch/SSDT-PNLF.dsl"; sourceTree = "<group>"; };
 		EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PluginType1.dsl"; path = "hotpatch/SSDT-PluginType1.dsl"; sourceTree = "<group>"; };
 		EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XSEL.dsl"; path = "hotpatch/SSDT-XSEL.dsl"; sourceTree = "<group>"; };
+		EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Debug.dsl"; path = "hotpatch/SSDT-Debug.dsl"; sourceTree = "<group>"; };
 		EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ESEL.dsl"; path = "hotpatch/SSDT-ESEL.dsl"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +88,7 @@
 			children = (
 				ED9956111C94BA0C00B3B13F /* config.plist */,
 				ED9956101C94BA0C00B3B13F /* SSDT-Config.dsl */,
+				EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */,
 				ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */,
 				ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */,
 				ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */,
