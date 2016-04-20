@@ -1,4 +1,4 @@
-// For solving instant wake by hooking GPRW
+// For solving instant wake by hooking GPRW or UPRW
 
 DefinitionBlock("", "SSDT", 2, "hack", "PRW", 0)
 {
@@ -11,6 +11,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "PRW", 0)
     // by returning 0 in the second position (sleep state supported)
     // of the return package.
     Method(GPRW, 2)
+    {
+        If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
+        If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
+        Return (XPRW(Arg0, Arg1))
+    }
+    Method(UPRW, 2)
     {
         If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
         If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
