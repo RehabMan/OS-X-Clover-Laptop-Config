@@ -7,39 +7,39 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
 {
-    Device (RMDT)
+    Device(RMDT)
     {
-        Name (_HID, "RMD0000")
-        Name (RING, Package(256) { })
-        Mutex (RTMX, 0)
-        Name (HEAD, 0)
-        Name (TAIL, 0)
+        Name(_HID, "RMD0000")
+        Name(RING, Package(256) { })
+        Mutex(RTMX, 0)
+        Name(HEAD, 0)
+        Name(TAIL, 0)
         // PUSH: Use to push a trace item into RING for ACPIDebug.kext
-        Method (PUSH, 1, NotSerialized)
+        Method (PUSH, 1)
         {
             Acquire(RTMX, 0xFFFF)
             // push new item at HEAD
-            Add(HEAD, 1, Local0)
-            If (LGreaterEqual(Local0, SizeOf(RING))) { Store(0, Local0) }
-            if (LNotEqual(Local0, TAIL))
+            Local0 = HEAD + 1
+            If (Local0 >= SizeOf(RING)) { Local0 = 0 }
+            if (Local0 != TAIL)
             {
-                Store(Arg0, Index(RING, HEAD))
-                Store(Local0, HEAD)
+                RING[HEAD] = Arg0
+                HEAD = Local0
             }
             Release(RTMX)
             Notify(RMDT, 0x80)
         }
         // FTCH: Used by ACPIDebug.kext to fetch an item from RING
-        Method (FTCH, 0, NotSerialized)
+        Method (FTCH)
         {
             Acquire(RTMX, 0xFFFF)
             // pull item from TAIL and return it
-            Store(0, Local0)
-            if (LNotEqual(HEAD, TAIL))
+            Local0 = 0
+            if (HEAD != TAIL)
             {
-                Store(DerefOf(Index(RING, TAIL)), Local0)
-                Increment(TAIL)
-                If (LGreaterEqual(TAIL, SizeOf(RING))) { Store(0, TAIL) }
+                Local0 = DerefOf(RING[TAIL])
+                TAIL++
+                If (TAIL >= SizeOf(RING)) { TAIL = 0 }
             }
             Release(RTMX)
             Return(Local0)
@@ -49,69 +49,69 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
         {
             Acquire(RTMX, 0xFFFF)
             // return count of items in RING
-            Subtract(HEAD, TAIL, Local0)
-            if (LLess(Local0, 0)) { Add(Local0, SizeOf(RING), Local0) }
+            Local0 = HEAD - TAIL
+            if (Local0 < 0) { Local0 += SizeOf(RING) }
             Release(RTMX)
             Return(Local0)
         }
         // Helper functions for multiple params at one time
-        Method (P1, 1, NotSerialized) { PUSH(Arg0) }
-        Method (P2, 2, Serialized)
+        Method (P1, 1) { PUSH(Arg0) }
+        Method (P2, 2)
         {
-            Name (TEMP, Package(2) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            PUSH(TEMP)
+            Local0 = Package(2) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            PUSH(Local0)
         }
-        Method (P3, 3, Serialized)
+        Method (P3, 3)
         {
-            Name (TEMP, Package(3) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            Store(Arg2, Index(TEMP, 2))
-            PUSH(TEMP)
+            Local0 = Package(3) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            Local0[2] = Arg2
+            PUSH(Local0)
         }
-        Method (P4, 4, Serialized)
+        Method (P4, 4)
         {
-            Name (TEMP, Package(4) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            Store(Arg2, Index(TEMP, 2))
-            Store(Arg3, Index(TEMP, 3))
-            PUSH(TEMP)
+            Local0 = Package(4) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            Local0[2] = Arg2
+            Local0[3] = Arg3
+            PUSH(Local0)
         }
-        Method (P5, 5, Serialized)
+        Method (P5, 5)
         {
-            Name (TEMP, Package(5) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            Store(Arg2, Index(TEMP, 2))
-            Store(Arg3, Index(TEMP, 3))
-            Store(Arg4, Index(TEMP, 4))
-            PUSH(TEMP)
+            Local0 = Package(5) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            Local0[2] = Arg2
+            Local0[3] = Arg3
+            Local0[4] = Arg4
+            PUSH(Local0)
         }
-        Method (P6, 6, Serialized)
+        Method (P6, 6)
         {
-            Name (TEMP, Package(6) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            Store(Arg2, Index(TEMP, 2))
-            Store(Arg3, Index(TEMP, 3))
-            Store(Arg4, Index(TEMP, 4))
-            Store(Arg5, Index(TEMP, 5))
-            PUSH(TEMP)
+            Local0 = Package(6) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            Local0[2] = Arg2
+            Local0[3] = Arg3
+            Local0[4] = Arg4
+            Local0[5] = Arg5
+            PUSH(Local0)
         }
-        Method (P7, 7, Serialized)
+        Method (P7, 7)
         {
-            Name (TEMP, Package(7) { })
-            Store(Arg0, Index(TEMP, 0))
-            Store(Arg1, Index(TEMP, 1))
-            Store(Arg2, Index(TEMP, 2))
-            Store(Arg3, Index(TEMP, 3))
-            Store(Arg4, Index(TEMP, 4))
-            Store(Arg5, Index(TEMP, 5))
-            Store(Arg6, Index(TEMP, 6))
-            PUSH(TEMP)
+            Local0 = Package(7) { }
+            Local0[0] = Arg0
+            Local0[1] = Arg1
+            Local0[2] = Arg2
+            Local0[3] = Arg3
+            Local0[4] = Arg4
+            Local0[5] = Arg5
+            Local0[6] = Arg6
+            PUSH(Local0)
         }
     }
 }
