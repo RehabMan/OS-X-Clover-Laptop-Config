@@ -73,11 +73,19 @@
 		<array>
 			<dict>
 				<key>Signature</key>
+				<string>MCFG</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
 		</array>
 		<key>#DropTables</key>
 		<array>
+			<dict>
+				<key>Signature</key>
+				<string>MCFG</string>
+			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
@@ -460,7 +468,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacBookPro8,1</string>
+		<string>MacBookPro8,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
