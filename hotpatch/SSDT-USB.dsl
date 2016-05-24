@@ -59,7 +59,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "EH01", 0)
                 "AAPL,max-port-current-in-sleep", Buffer() { 0x34, 0x08, 0, 0 },
             }
             // force USB2 on XHC if EHCI is disabled
-            If (CondRefOf(_SB.PCI0.RMD2))
+            If (CondRefOf(\_SB.PCI0.RMD2))
             {
                 CreateDWordField(DerefOf(Local0[1]), 0, PR2F)
                 PR2F = 0x3fff
