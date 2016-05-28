@@ -16,7 +16,9 @@
 		ED02043F1CA770A2006E7175 /* SSDT-HDEF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-HDEF.dsl"; path = "hotpatch/SSDT-HDEF.dsl"; sourceTree = "<group>"; };
 		ED0204401CA770A2006E7175 /* SSDT-HDAU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-HDAU.dsl"; path = "hotpatch/SSDT-HDAU.dsl"; sourceTree = "<group>"; };
 		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
+		ED2500581CF681E2006A5FB7 /* config_HD5600.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5600.plist; sourceTree = "<group>"; };
 		ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD520_530_540.plist; sourceTree = "<group>"; };
+		ED57679B1CF5D81300ABAEF8 /* config_HD540_1927.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD540_1927.plist; sourceTree = "<group>"; };
 		ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768_7series.plist; sourceTree = "<group>"; };
 		ED6DB3B51C873F5C00DB1B7A /* config_HD3000_1366x768.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768.plist; sourceTree = "<group>"; };
 		ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1600x900_7series.plist; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		ED6DB3BB1C873F5C00DB1B7A /* config_HD4000_1600x900.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4000_1600x900.plist; sourceTree = "<group>"; };
 		ED6DB3BC1C873F5C00DB1B7A /* config_HD4600_4400_4200.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD4600_4400_4200.plist; sourceTree = "<group>"; };
 		ED6DB3BD1C873F5C00DB1B7A /* config_HD5000_5100_5200.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5000_5100_5200.plist; sourceTree = "<group>"; };
-		ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_5600_6000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5300_5500_5600_6000.plist; sourceTree = "<group>"; };
+		ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_6000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5300_5500_6000.plist; sourceTree = "<group>"; };
 		ED97346F1C0A5F260063BCF9 /* download.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = download.sh; sourceTree = "<group>"; };
 		ED9734701C0A5F370063BCF9 /* install_downloads.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_downloads.sh; sourceTree = "<group>"; };
 		ED99560B1C94BA0C00B3B13F /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SATA.dsl"; path = "hotpatch/SSDT-SATA.dsl"; sourceTree = "<group>"; };
@@ -44,7 +46,6 @@
 		ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XOSI.dsl"; path = "hotpatch/SSDT-XOSI.dsl"; sourceTree = "<group>"; };
 		ED9956171C94BA0C00B3B13F /* SSDT-SMBUS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SMBUS.dsl"; path = "hotpatch/SSDT-SMBUS.dsl"; sourceTree = "<group>"; };
 		ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PNLF.dsl"; path = "hotpatch/SSDT-PNLF.dsl"; sourceTree = "<group>"; };
-		ED9E1B951CD049C2008776A7 /* SSDT-USB.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-USB.dsl"; path = "hotpatch/SSDT-USB.dsl"; sourceTree = "<group>"; };
 		EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PluginType1.dsl"; path = "hotpatch/SSDT-PluginType1.dsl"; sourceTree = "<group>"; };
 		EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XSEL.dsl"; path = "hotpatch/SSDT-XSEL.dsl"; sourceTree = "<group>"; };
 		EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Debug.dsl"; path = "hotpatch/SSDT-Debug.dsl"; sourceTree = "<group>"; };
@@ -78,8 +79,10 @@
 				ED6DB3BB1C873F5C00DB1B7A /* config_HD4000_1600x900.plist */,
 				ED6DB3BC1C873F5C00DB1B7A /* config_HD4600_4400_4200.plist */,
 				ED6DB3BD1C873F5C00DB1B7A /* config_HD5000_5100_5200.plist */,
-				ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_5600_6000.plist */,
+				ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_6000.plist */,
+				ED2500581CF681E2006A5FB7 /* config_HD5600.plist */,
 				ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */,
+				ED57679B1CF5D81300ABAEF8 /* config_HD540_1927.plist */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -108,7 +111,6 @@
 				EDAC054D1CA38DDB00109CA4 /* SSDT-PluginType1.dsl */,
 				ED02043F1CA770A2006E7175 /* SSDT-HDEF.dsl */,
 				ED0204401CA770A2006E7175 /* SSDT-HDAU.dsl */,
-				ED9E1B951CD049C2008776A7 /* SSDT-USB.dsl */,
 				ED02043E1CA77082006E7175 /* SSDT-EH01.dsl */,
 				ED02043D1CA77082006E7175 /* SSDT-EH02.dsl */,
 				ED02043C1CA77082006E7175 /* SSDT-XHC.dsl */,

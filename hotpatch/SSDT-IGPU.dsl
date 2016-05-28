@@ -182,6 +182,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
+            // Skylake/HD540
+            0x1926, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
         })
 
         // Injection tables for desktops
