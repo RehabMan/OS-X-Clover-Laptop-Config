@@ -39,7 +39,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
+					<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
 					<key>Find</key>
 					<data>X09TSQ==</data>
 					<key>Replace</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
+					<string>change EHC1 to EH01, optionally pair with SSDT-EH01.aml</string>
 					<key>Find</key>
 					<data>RUhDMQ==</data>
 					<key>Replace</key>
@@ -55,7 +55,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
+					<string>change EHC2 to EH02, optionally pair with SSDT-EH02.aml</string>
 					<key>Find</key>
 					<data>RUhDMg==</data>
 					<key>Replace</key>
@@ -63,7 +63,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EUSB to EH01</string>
+					<string>change EUSB to EH01, optionally pair with SSDT-EH01.aml</string>
 					<key>Find</key>
 					<data>RVVTQg==</data>
 					<key>Replace</key>
@@ -71,7 +71,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change USBE to EH02</string>
+					<string>change USBE to EH02, optionally pair with SSDT-EH02.aml</string>
 					<key>Find</key>
 					<data>VVNCRQ==</data>
 					<key>Replace</key>
@@ -79,7 +79,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
+					<string>change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml</string>
 					<key>Find</key>
 					<data>R0ZYMA==</data>
 					<key>Replace</key>
@@ -87,7 +87,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change B0D3 to HDAU</string>
+					<string>change B0D3 to HDAU, optionally pair with SSDT-HDAU.aml</string>
 					<key>Find</key>
 					<data>QjBEMw==</data>
 					<key>Replace</key>
@@ -95,7 +95,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
+					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
 					<key>Find</key>
 					<data>SERBUw==</data>
 					<key>Replace</key>
@@ -103,7 +103,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change AZAL to HDEF</string>
+					<string>change AZAL to HDEF, optionally pair with SSDT-HDEF.aml</string>
 					<key>Find</key>
 					<data>QVpBTA==</data>
 					<key>Replace</key>
@@ -111,7 +111,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HECI to IMEI</string>
+					<string>change HECI to IMEI, optionally pair with SSDT-IMEI.aml</string>
 					<key>Find</key>
 					<data>SEVDSQ==</data>
 					<key>Replace</key>
@@ -119,7 +119,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change MEI to IMEI</string>
+					<string>change MEI to IMEI, optionally pair with SSDT-IMEI.aml</string>
 					<key>Find</key>
 					<data>TUVJXw==</data>
 					<key>Replace</key>
@@ -127,7 +127,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
+					<string>change SAT0 to SATA, optionally pair with SSDT-SATA.aml</string>
 					<key>Find</key>
 					<data>U0FUMA==</data>
 					<key>Replace</key>
@@ -135,7 +135,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS</string>
+					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>X1BUUwE=</data>
 					<key>Replace</key>
@@ -143,7 +143,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_PTS,1,S) to ZPTS</string>
+					<string>change Method(_PTS,1,S) to ZPTS, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>X1BUUwk=</data>
 					<key>Replace</key>
@@ -151,7 +151,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_WAK,1,N) to ZWAK</string>
+					<string>change Method(_WAK,1,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>X1dBSwE=</data>
 					<key>Replace</key>
@@ -159,7 +159,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_WAK,1,S) to ZWAK</string>
+					<string>change Method(_WAK,1,S) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>X1dBSwk=</data>
 					<key>Replace</key>
@@ -167,7 +167,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XWAK,0,N) to ZWAK</string>
+					<string>change Method(XWAK,0,N) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>WFdBSwA=</data>
 					<key>Replace</key>
@@ -175,7 +175,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XWAK,0,S) to ZWAK</string>
+					<string>change Method(XWAK,0,S) to ZWAK, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>WFdBSwg=</data>
 					<key>Replace</key>
@@ -183,7 +183,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,N) to XSEZ</string>
+					<string>change Method(XSEL,0,N) to XSEZ, pair with SSDT-XSEL.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -193,7 +193,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(XSEL,0,S) to XSEZ</string>
+					<string>change Method(XSEL,0,S) to XSEZ, pair with SSDT-XSEL.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -203,7 +203,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,N) to ESEZ</string>
+					<string>change Method(ESEL,0,N) to ESEZ, pair with SSDT-ESEL.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -213,7 +213,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(ESEL,0,S) to ESEZ</string>
+					<string>change Method(ESEL,0,S) to ESEZ, pair with SSDT-ESEL.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -223,7 +223,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW</string>
+					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -233,7 +233,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(UPRW,2,..) to Method(XPRW,2,..)</string>
+					<string>change Method(UPRW,2,..) to Method(XPRW,2,..), pair with SSDT-PRW.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -243,7 +243,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change LANC Method(_PRW,0,S) to Method(XPRW,0,..)</string>
+					<string>change LANC Method(_PRW,0,S) to Method(XPRW,0,..), pair with SSDT-LANC_PRW.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
