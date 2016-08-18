@@ -99,7 +99,7 @@
 		<array>
 			<dict>
 				<key>Signature</key>
-				<string>MCFG</string>
+				<string>#MCFG</string>
 			</dict>
 			<dict>
 				<key>Signature</key>

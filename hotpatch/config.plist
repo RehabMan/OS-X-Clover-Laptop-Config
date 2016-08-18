@@ -135,6 +135,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change LPC to LPCB, optionally pair with SSDT-EHCI_Disable.aml, SSDT-LPC.aml</string>
+					<key>Find</key>
+					<data>TFBDXw==</data>
+					<key>Replace</key>
+					<data>TFBDQg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
 					<key>Find</key>
 					<data>X1BUUwE=</data>
@@ -261,7 +269,7 @@
 			</dict>
 			<dict>
 				<key>Signature</key>
-				<string>MCFG</string>
+				<string>#MCFG</string>
 			</dict>
 		</array>
 		<key>#DropTables</key>

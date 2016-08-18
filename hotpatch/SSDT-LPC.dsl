@@ -13,6 +13,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
         }
         Name(LPDL, Package()
         {
+            // list of 7-series LPC device-ids not natively supported (partial list)
+            0x1e49, 0,
+            Package()
+            {
+                "device-id", Buffer() { 0x42, 0x1e, 0, 0 },
+                "compatible", Buffer() { "pci8086,1e42" },
+            },
             // list of 8-series LPC device-ids not natively supported
             // inject 0x8c4b for unsupported LPC device-id
             0x8c46, 0x8c49, 0x8c4a, 0x8c4c, 0x8c4e, 0x8c4f,
