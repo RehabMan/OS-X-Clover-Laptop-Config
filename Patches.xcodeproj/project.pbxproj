@@ -18,7 +18,7 @@
 		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
 		ED2500581CF681E2006A5FB7 /* config_HD5600.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5600.plist; sourceTree = "<group>"; };
 		ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD520_530_540.plist; sourceTree = "<group>"; };
-		ED57679B1CF5D81300ABAEF8 /* config_HD540_1927.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD540_1927.plist; sourceTree = "<group>"; };
+		ED57679B1CF5D81300ABAEF8 /* config_HD550.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD550.plist; sourceTree = "<group>"; };
 		ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768_7series.plist; sourceTree = "<group>"; };
 		ED6DB3B51C873F5C00DB1B7A /* config_HD3000_1366x768.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1366x768.plist; sourceTree = "<group>"; };
 		ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD3000_1600x900_7series.plist; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_6000.plist */,
 				ED2500581CF681E2006A5FB7 /* config_HD5600.plist */,
 				ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */,
-				ED57679B1CF5D81300ABAEF8 /* config_HD540_1927.plist */,
+				ED57679B1CF5D81300ABAEF8 /* config_HD550.plist */,
 			);
 			name = config;
 			sourceTree = "<group>";

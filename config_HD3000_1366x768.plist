@@ -470,7 +470,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacBookPro8,2</string>
+		<string>MacBookPro8,1</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
