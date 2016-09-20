@@ -606,6 +606,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.9.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -618,6 +620,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -630,6 +634,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.9.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -642,6 +648,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -654,6 +662,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch MSI or pin interrupts #1, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x,10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -666,6 +676,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch MSI or pin interrupts #2, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x,10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -678,6 +690,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable the sleep code leaving the controller in non-working state after wake, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x,10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -690,6 +704,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable PCI power management if there is no such code in DSDT, 10.9.*, 10.10.* (credit Zenith432)</string>
+				<key>MatchOS</key>
+				<string>10.9.x,10.10.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
@@ -711,18 +727,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Find</key>
-				<data>AQAAdSU=</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>AQAA6yU=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x</string>
@@ -735,15 +739,27 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AirPortBrcm4360 whitelist patch (board-id), 10.12.dp1, credit RehabMan</string>
+				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Find</key>
-				<data>MdtMO33YdRI=</data>
+				<data>AQAAdSU=</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>AQAA6yU=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AirPortBrcm4360 whitelist patch (board-id), 10.10.5, credit RehabMan</string>
+				<key>MatchOS</key>
+				<string>10.10.5</string>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
+				<key>Find</key>
+				<data>MdtJiwQkSDtF2HUS</data>
 				<key>Replace</key>
-				<data>Mdv/w5CQkJA=</data>
+				<data>Mdv/w5CQkJCQkJCQ</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -759,15 +775,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AirPortBrcm4360 whitelist patch (board-id), 10.10.5, credit RehabMan</string>
+				<string>AirPortBrcm4360 whitelist patch (board-id), 10.12.dp1, credit RehabMan</string>
 				<key>MatchOS</key>
-				<string>10.10.5</string>
+				<string>10.12.x</string>
+				<key>Find</key>
+				<data>MdtMO33YdRI=</data>
 				<key>Name</key>
 				<string>AirPortBrcm4360</string>
-				<key>Find</key>
-				<data>MdtJiwQkSDtF2HUS</data>
 				<key>Replace</key>
-				<data>Mdv/w5CQkJCQkJCQ</data>
+				<data>Mdv/w5CQkJA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
