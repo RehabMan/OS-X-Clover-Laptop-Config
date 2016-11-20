@@ -324,6 +324,18 @@
 				<key>Replace</key>
 				<data>AQAA6xc=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAAA=</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AAAIAAQAAACYAAAAAQUJAAAEAAA=</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
