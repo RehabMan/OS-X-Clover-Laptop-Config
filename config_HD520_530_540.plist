@@ -336,6 +336,30 @@
 				<key>Replace</key>
 				<data>AAAIAAAEAACYAAAAAQUJAAAEAAA=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>CgsDAAAHBgADAAAABAAAAA==</data>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>DwsDAAAHBgADAAAABAAAAA==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
