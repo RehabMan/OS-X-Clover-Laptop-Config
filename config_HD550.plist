@@ -285,7 +285,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>QTnEdio=</data>
 				<key>Replace</key>
@@ -299,7 +299,7 @@
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>iUXIOcZ2UQ==</data>
 				<key>Replace</key>

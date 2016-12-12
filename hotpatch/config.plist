@@ -611,7 +611,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU6</data>
 				<key>Replace</key>
@@ -625,7 +625,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU0</data>
 				<key>Replace</key>
@@ -639,7 +639,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>Zj0AAQ==</data>
 				<key>Replace</key>
@@ -653,7 +653,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QbzHAgDgPQABAAA=</data>
 				<key>Replace</key>
@@ -667,7 +667,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QcdHCAAAQAA=</data>
 				<key>Replace</key>
@@ -681,7 +681,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>gUkIAABAAA==</data>
 				<key>Replace</key>
@@ -695,7 +695,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>xoDIAAAAAQ==</data>
 				<key>Replace</key>
@@ -709,7 +709,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>dU1Ii7voAQAA</data>
 				<key>Replace</key>
@@ -719,7 +719,7 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
@@ -731,7 +731,7 @@
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x</string>
 				<key>Name</key>
-				<string>IOGraphicsFamily</string>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Replace</key>
@@ -745,7 +745,7 @@
 				<key>Find</key>
 				<data>AQAAdSU=</data>
 				<key>Name</key>
-				<string>IOGraphicsFamily</string>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6yU=</data>
 			</dict>
@@ -755,7 +755,7 @@
 				<key>MatchOS</key>
 				<string>10.10.5</string>
 				<key>Name</key>
-				<string>AirPortBrcm4360</string>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Find</key>
 				<data>MdtJiwQkSDtF2HUS</data>
 				<key>Replace</key>
@@ -767,7 +767,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
-				<string>AirPortBrcm4360</string>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Find</key>
 				<data>MdtMO2XYdRI=</data>
 				<key>Replace</key>
@@ -778,10 +778,10 @@
 				<string>AirPortBrcm4360 whitelist patch (board-id), 10.12.dp1, credit RehabMan</string>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Find</key>
 				<data>MdtMO33YdRI=</data>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>Mdv/w5CQkJA=</data>
 			</dict>
@@ -791,7 +791,7 @@
 				<key>MatchOS</key>
 				<string>10.9.5</string>
 				<key>Name</key>
-				<string>AirPortBrcm4360</string>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Find</key>
 				<data>WFQAIBcnIAAA</data>
 				<key>Replace</key>
@@ -803,7 +803,7 @@
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x,10.12.x</string>
 				<key>Name</key>
-				<string>AirPortBrcm4360</string>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>Find</key>
 				<data>QYP8/3QsSA==</data>
 				<key>Replace</key>
@@ -814,10 +814,10 @@
 				<string>AirPortBrcm4360 - fcvo, 10.12.x (credit the-darkvoid)</string>
 				<key>Find</key>
 				<data>gflSqgAAdSk=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AirPort.Brcm4360</string>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
-				<key>Name</key>
-				<string>AirPortBrcm4360</string>
 				<key>Replace</key>
 				<data>gflSqgAAZpA=</data>
 			</dict>
@@ -827,7 +827,7 @@
 				<key>MatchOS</key>
 				<string>10.10.x</string>
 				<key>Name</key>
-				<string>IOBluetoothFamily</string>
+				<string>com.apple.iokit.IOBluetoothFamily</string>
 				<key>Find</key>
 				<data>SIXAdFwPt0g=</data>
 				<key>Replace</key>
@@ -839,7 +839,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
 				<key>Name</key>
-				<string>IOBluetoothFamily</string>
+				<string>com.apple.iokit.IOBluetoothFamily</string>
 				<key>Find</key>
 				<data>SIX/dEdIiwc=</data>
 				<key>Replace</key>
@@ -849,7 +849,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD3000, 0x00010000, port 0205</string>
 				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHAAAA</data>
 				<key>Replace</key>
@@ -859,7 +859,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD3000, 0x00010000, port 0304</string>
 				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Find</key>
 				<data>AwQAAAAEAAAJAAAA</data>
 				<key>Replace</key>
@@ -869,7 +869,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD3000, 0x00010000, port 0406</string>
 				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Find</key>
 				<data>BAYAAAAEAAAJAAAA</data>
 				<key>Replace</key>
@@ -881,7 +881,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
 				<key>Find</key>
 				<data>AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAHAAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA</data>
 				<key>Replace</key>
@@ -891,7 +891,7 @@
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #1 of 2</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BABmAQEDAQEAAAAC</data>
 				<key>Replace</key>
@@ -901,7 +901,7 @@
 				<key>Comment</key>
 				<string>HDMI-video, 64MB BIOS, HD4000 0x01660004 #2 of 2</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>MAIAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAABAAAAQAAAAAAAAAAAAAAA</data>
 				<key>Replace</key>
@@ -911,7 +911,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660003, port 0205</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHBAAA</data>
 				<key>Replace</key>
@@ -921,7 +921,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660003, port 0304</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AwQAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -931,7 +931,7 @@
 				<key>Comment</key>
 				<string>HDMI-audio HD4000 0x01660003, port 0406</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BAYAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -941,7 +941,7 @@
 				<key>Comment</key>
 				<string>Enable 9MB cursor bytes, 0x0a260006</string>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Replace</key>
@@ -955,7 +955,7 @@
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAG</data>
 			</dict>
@@ -967,7 +967,7 @@
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAI</data>
 			</dict>
@@ -979,7 +979,7 @@
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>BgAmCgEDAwMAAAAIAAAAAwAAAAM=</data>
 			</dict>
@@ -989,7 +989,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -1001,7 +1001,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -1013,7 +1013,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -1025,7 +1025,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -1037,7 +1037,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQAAAEAAAADWAAAABQUAAA==</data>
 				<key>Replace</key>
@@ -1049,7 +1049,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -1061,7 +1061,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -1073,7 +1073,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -1085,7 +1085,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -1099,7 +1099,7 @@
 				<key>MatchOS</key>
 				<string>10.10.x</string>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>Oc92PA==</data>
 				<key>Replace</key>
@@ -1113,7 +1113,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>QTnEdj4=</data>
 				<key>Replace</key>
@@ -1127,7 +1127,7 @@
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>iUXIOcd2Tw==</data>
 				<key>Replace</key>
@@ -1141,7 +1141,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>QTnEdio=</data>
 				<key>Replace</key>
@@ -1155,7 +1155,7 @@
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>iUXIOcZ2UQ==</data>
 				<key>Replace</key>
@@ -1167,7 +1167,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQUJAAQAAAAEAAAA</data>
 				<key>Replace</key>
@@ -1179,7 +1179,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AgQJAAAIAACCAAAA</data>
 				<key>Replace</key>
@@ -1191,7 +1191,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAABEAAA</data>
 				<key>Replace</key>
@@ -1203,7 +1203,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHBQAA</data>
 				<key>Replace</key>
@@ -1215,7 +1215,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHBQAA</data>
 				<key>Replace</key>
@@ -1227,7 +1227,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQULAAAEAAAHBQAA</data>
 				<key>Replace</key>
@@ -1239,7 +1239,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AgQLAAAEAAAHBQAA</data>
 				<key>Replace</key>
@@ -1251,7 +1251,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AwYIAAAEAAARAAAA</data>
 				<key>Replace</key>

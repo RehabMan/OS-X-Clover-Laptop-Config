@@ -291,7 +291,7 @@
 				<key>MatchOS</key>
 				<string>10.11.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>QTnEdio=</data>
 				<key>Replace</key>
@@ -305,7 +305,7 @@
 				<key>MatchOS</key>
 				<string>10.12.x</string>
 				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>iUXIOcZ2UQ==</data>
 				<key>Replace</key>
@@ -316,10 +316,10 @@
 				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AAAIAAIAAACYAAAAAQUJAAAEAAA=</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>AAAIAAAEAACYAAAAAQUJAAAEAAA=</data>
 			</dict>
@@ -328,10 +328,10 @@
 				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
 			</dict>
@@ -340,10 +340,10 @@
 				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>CgsDAAAHBgADAAAABAAAAA==</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>DwsDAAAHBgADAAAABAAAAA==</data>
 			</dict>

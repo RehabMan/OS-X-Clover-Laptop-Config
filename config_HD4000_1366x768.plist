@@ -249,7 +249,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AgUAAAAEAAAHBAAA</data>
 				<key>Replace</key>
@@ -261,7 +261,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>AwQAAAAEAACBAAAA</data>
 				<key>Replace</key>
@@ -273,7 +273,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferCapri</string>
+				<string>com.apple.driver.AppleIntelFramebufferCapri</string>
 				<key>Find</key>
 				<data>BAYAAAAEAACBAAAA</data>
 				<key>Replace</key>

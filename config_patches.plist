@@ -40,7 +40,7 @@
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Name</key>
-				<string>IOGraphicsFamily</string>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6xc=</data>
 			</dict>
@@ -50,7 +50,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU6</data>
 				<key>Replace</key>
@@ -62,7 +62,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>9oDUAAAAgHU0</data>
 				<key>Replace</key>
@@ -74,7 +74,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>Zj0AAQ==</data>
 				<key>Replace</key>
@@ -86,7 +86,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QbzHAgDgPQABAAA=</data>
 				<key>Replace</key>
@@ -98,7 +98,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>QcdHCAAAQAA=</data>
 				<key>Replace</key>
@@ -110,7 +110,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>gUkIAABAAA==</data>
 				<key>Replace</key>
@@ -122,7 +122,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>xoDIAAAAAQ==</data>
 				<key>Replace</key>
@@ -134,7 +134,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleUSBXHCI</string>
+				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
 				<data>dU1Ii7voAQAA</data>
 				<key>Replace</key>

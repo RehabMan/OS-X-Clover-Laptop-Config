@@ -249,7 +249,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
 				<key>Replace</key>
@@ -260,10 +260,10 @@
 				<string>Enable 96MB DVMT-prealloc, 0x0a2e0008</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
-				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAG</data>
 			</dict>
@@ -272,10 +272,10 @@
 				<string>Enable 128MB DVMT-prealloc, 0x0a2e0008</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>CAAuCgEDAwMAAAAE</data>
-				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>CAAuCgEDAwMAAAAI</data>
 			</dict>
@@ -284,10 +284,10 @@
 				<string>Enable 128MB DVMT-prealloc, 48MB framebuffer, 48MB cursor bytes, 0x0a260006</string>
 				<key>Disabled</key>
 				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
-				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
 				<data>BgAmCgEDAwMAAAAIAAAAAwAAAAM=</data>
 			</dict>
@@ -297,7 +297,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -309,7 +309,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQKAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -321,7 +321,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -333,7 +333,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -345,7 +345,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -357,7 +357,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQAAAEAAAAAeAAAABQUJAQ==</data>
 				<key>Replace</key>
@@ -369,7 +369,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQAAAEAAAADWAAAABQUAAA==</data>
 				<key>Replace</key>
@@ -381,7 +381,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -393,7 +393,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQKAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -405,7 +405,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAACHAAAA</data>
 				<key>Replace</key>
@@ -417,7 +417,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AQUJAAAEAAAHAQAA</data>
 				<key>Replace</key>
@@ -429,7 +429,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
