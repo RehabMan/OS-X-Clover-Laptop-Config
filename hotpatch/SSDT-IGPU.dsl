@@ -99,6 +99,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
+            // Kaby Lake/HD620
+            //REVIEW: add more ids..., currently only HD620 confirmed
+            0x5919, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
+                "model", Buffer() { "Intel HD Graphics 620" },
+                "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
         })
         Name(LAPH, Package() // high resolution
         {
@@ -186,6 +195,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             0x1926, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Kaby Lake/HD620
+            //REVIEW: add more ids..., currently only HD620 confirmed
+            0x5919, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
+                "model", Buffer() { "Intel HD Graphics 620" },
+                "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
         })
