@@ -305,30 +305,6 @@
 				<key>Replace</key>
 				<data>iUXIOcbrUQ==</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>AQAAdRc=</data>
-				<key>Replace</key>
-				<data>AQAA6xc=</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
