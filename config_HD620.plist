@@ -270,11 +270,9 @@
 		<key>AppleRTC</key>
 		<true/>
 		<key>#Kaby Lake-Comment</key>
-		<string>Kaby Lake CPU supportable by using CPUID from Skylake and KernelCpu=true</string>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
 		<key>FakeCPUID</key>
 		<string>0x0506e3</string>
-		<key>KernelCpu</key>
-		<true/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
