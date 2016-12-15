@@ -69,6 +69,30 @@
 					<key>Replace</key>
 					<data>RUgwMg==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF</string>
+					<key>Find</key>
+					<data>SERBUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HECI to IMEI</string>
+					<key>Find</key>
+					<data>SEVDSQ==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change MEI to IMEI</string>
+					<key>Find</key>
+					<data>TUVJXw==</data>
+					<key>Replace</key>
+					<data>SU1FSQ==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -155,12 +179,24 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
+		<false/>
+	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
 			<integer>0</integer>
+		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>#Kaby Lake-Comment</key>
+			<string>Kaby Lake HD620 graphics supportable by using Skylake device-id</string>
+			<key>IntelGFX</key>
+			<string>0x19168086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -214,7 +250,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x0a260006</string>
+		<string>0x19160000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -233,6 +269,10 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
@@ -245,195 +285,67 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Enable 9MB cursor bytes, 0x0a260006</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
+				<key>MatchOS</key>
+				<string>10.11.x</string>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
+				<data>QTnEdio=</data>
 				<key>Replace</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAkAA=</data>
+				<data>QTnE6yo=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable 96MB DVMT-prealloc, 0x0a2e0008</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.0 ( (based on Austere.J patch)</string>
 				<key>Disabled</key>
 				<true/>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>CAAuCgEDAwMAAAAE</data>
+				<data>iUXIOcZ2UQ==</data>
 				<key>Replace</key>
-				<data>CAAuCgEDAwMAAAAG</data>
+				<data>iUXIOcbrUQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable 128MB DVMT-prealloc, 0x0a2e0008</string>
+				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>CAAuCgEDAwMAAAAE</data>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAAA=</data>
 				<key>Replace</key>
-				<data>CAAuCgEDAwMAAAAI</data>
+				<data>AAAIAAAEAACYAAAAAQUJAAAEAAA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable 128MB DVMT-prealloc, 48MB framebuffer, 48MB cursor bytes, 0x0a260006</string>
+				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>BgAmCgEDAwMAAAACAAAwAQAAYAA=</data>
+				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
 				<key>Replace</key>
-				<data>BgAmCgEDAwMAAAAIAAAAAwAAAAM=</data>
+				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
+				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAAAA</data>
+				<data>CgsDAAAHBgADAAAABAAAAA==</data>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQKAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQKAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x0a260005 0x0a260006</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable internal display after sleep for 0x0a2e0008, credit syscl/lighting/Yating Zhou</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQAAAEAAAAAeAAAABQUJAQ==</data>
-				<key>Replace</key>
-				<data>AQAAAEAAAAAPAAAABQUJAQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQAAAEAAAADWAAAABQUAAA==</data>
-				<key>Replace</key>
-				<data>AQAAAEAAAAAeAAAABQUAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105(12), 0x0a260005 0x0a260006, 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AQUSAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204(12), 0x0d220003, 0x0a2e000a, 0x0a26000a</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQKAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQSAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204(12), 0x0a260005 0x0a260006</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAACHAAAA</data>
-				<key>Replace</key>
-				<data>AgQSAAAIAACHAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AQUSAAAIAAAHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHAQAA</data>
-				<key>Replace</key>
-				<data>AgQSAAAIAAAHAQAA</data>
+				<data>DwsDAAAHBgADAAAABAAAAA==</data>
 			</dict>
 		</array>
 	</dict>
@@ -446,9 +358,9 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>ProductName-Comment</key>
+		<string>Using Haswell MacBookAir6,2 until Clover has support for Skylake identifiers</string>
 		<key>ProductName</key>
-		<string>MacBookPro11,1</string>
-		<key>#ProductName-MacBookAir</key>
 		<string>MacBookAir6,2</string>
 		<key>Trust</key>
 		<true/>
