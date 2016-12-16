@@ -194,7 +194,7 @@
 		<key>FakeID</key>
 		<dict>
 			<key>IntelGFX</key>
-			<string>0x19268086</string>
+			<string>0x19278086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -248,7 +248,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x19260000</string>
+		<string>0x19270004</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
