@@ -585,7 +585,7 @@
 		<key>#ScreenResolution</key>
 		<string>1024x768</string>
 		<key>Theme</key>
-		<string>Bluemac</string>
+		<string>BGM</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
