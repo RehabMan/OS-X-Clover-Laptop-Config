@@ -353,6 +353,20 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x16160002 (may be 10.11.6 only)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>MatchOS</key>
+				<string>10.11.6</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AgQKAAAEAAAHBQAA</data>
+				<key>Replace</key>
+				<data>AgQKAAAIAACCAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x16120003 0x16120005 0x16120006 0x16260006</string>
 				<key>Disabled</key>
 				<true/>
