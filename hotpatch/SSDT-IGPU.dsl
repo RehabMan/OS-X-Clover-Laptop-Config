@@ -199,7 +199,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             },
             // Kaby Lake/HD620
             //REVIEW: add more ids..., currently only HD620 confirmed
-            0x5919, 0, Package()
+            0x5916, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                 "model", Buffer() { "Intel HD Graphics 620" },
@@ -294,15 +294,21 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
         {
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             // determine correct injection table to use based on graphics config in SSDT-Config.aml
-            Local0 = Ones
-            If (0 == \RMCF.TYPE)
-                { Local0 = DESK }
-            ElseIf (1 == \RMCF.TYPE)
+            Local0 = LAPL
+            if (CondRefOf(\RMCF.TYPE))
             {
-                If (0 == \RMCF.HIGH)
-                    { Local0 = LAPL }
-                ElseIf (1 == \RMCF.HIGH)
-                    { Local0 = LAPH }
+                If (0 == \RMCF.TYPE)
+                    { Local0 = DESK }
+                ElseIf (1 == \RMCF.TYPE)
+                {
+                    If (CondRefOf(\RMCF.HIGH))
+                    {
+                        If (0 == \RMCF.HIGH)
+                            { Local0 = LAPL }
+                        ElseIf (1 == \RMCF.HIGH)
+                            { Local0 = LAPH }
+                    }
+                }
             }
             // search for matching device-id in device-id list
             Local1 = Match(Local0, MEQ, GDID, MTR, 0, 0)

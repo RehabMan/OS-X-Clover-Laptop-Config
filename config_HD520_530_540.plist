@@ -31,6 +31,7 @@
 			<string>SSDT-19.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-LPC.aml</string>
+			<string>SSDT-UIAC.aml</string>
 		</array>
 		<key>DSDT</key>
 		<dict>
@@ -105,6 +106,12 @@
 				<key>Signature</key>
 				<string>DMAR</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>xh_rvp10</string>
+			</dict>
 		</array>
 		<key>#DropTables</key>
 		<array>
@@ -115,6 +122,12 @@
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>xh_rvp10</string>
 			</dict>
 			<dict>
 				<key>Signature</key>
@@ -238,7 +251,7 @@
 		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>Bluemac</string>
+		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>

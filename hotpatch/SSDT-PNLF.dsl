@@ -38,6 +38,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
         Method(_INI)
         {
             // IntelBacklight.kext takes care of this at load time...
+            If (!CondRefOf(\RMCF.BKLT)) { Return }
             If (1 != \RMCF.BKLT) { Return }
 
             // Adjustment required when using AppleBacklight.kext

@@ -18,13 +18,16 @@ DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
     Method(_PTS, 1)
     {
         // Shutdown fix, if enabled
-        if (\RMCF.SHUT && 5 == Arg0) { Return }
+        If (CondRefOf(\RMCF.SHUT)) { If (\RMCF.SHUT && 5 == Arg0) { Return } }
 
-        If (\RMCF.DPTS)
+        If (CondRefOf(\RMCF.DPTS))
         {
-            // enable discrete graphics
-            If (CondRefOf(\_SB.PCI0.PEG0.PEGP._ON)) { \_SB.PCI0.PEG0.PEGP._ON() }
-            If (CondRefOf(\_SB.PCI0.PEGP.DGFX._ON)) { \_SB.PCI0.PEGP.DGFX._ON() }
+            If (\RMCF.DPTS)
+            {
+                // enable discrete graphics
+                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._ON)) { \_SB.PCI0.PEG0.PEGP._ON() }
+                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._ON)) { \_SB.PCI0.PEGP.DGFX._ON() }
+            }
         }
 
         // call into original _PTS method
@@ -39,11 +42,14 @@ DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
         // call into original _WAK method
         Local0 = ZWAK(Arg0)
 
-        If (\RMCF.DPTS)
+        If (CondRefOf(\RMCF.DPTS))
         {
-            // disable discrete graphics
-            If (CondRefOf(\_SB.PCI0.PEG0.PEGP._OFF)) { \_SB.PCI0.PEG0.PEGP._OFF() }
-            If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
+            If (\RMCF.DPTS)
+            {
+                // disable discrete graphics
+                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._OFF)) { \_SB.PCI0.PEG0.PEGP._OFF() }
+                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
+            }
         }
 
         // return value from original _WAK

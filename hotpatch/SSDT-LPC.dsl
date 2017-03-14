@@ -30,7 +30,9 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
                 "compatible", Buffer() { "pci8086,8c4b" },
             },
             // list of 100-series LPC device-ids not natively supported (partial list)
-            0x9d48, 0xa14e, 0,
+            0x9d48, 0x9d58, 0xa14e,
+            // and 200-series...
+            0xa2c5, 0,
             Package()
             {
                 "device-id", Buffer() { 0xc1, 0x9c, 0, 0 },

@@ -31,6 +31,7 @@
 			<string>SSDT-19.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-LPC.aml</string>
+			<string>SSDT-UIAC.aml</string>
 		</array>
 		<key>DSDT</key>
 		<dict>
@@ -218,7 +219,7 @@
 		<key>#ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>Bluemac</string>
+		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
