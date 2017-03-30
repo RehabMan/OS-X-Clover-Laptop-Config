@@ -54,8 +54,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
         Method(_INI)
         {
             // IntelBacklight.kext takes care of this at load time...
-            If (!CondRefOf(\RMCF.BKLT)) { Return }
-            If (1 != \RMCF.BKLT) { Return }
+            // If RMCF.BKLT does not exist, it is assumed you want to use AppleBacklight.kext...
+            If (CondRefOf(\RMCF.BKLT)) { If (1 != \RMCF.BKLT) { Return } }
 
             // Adjustment required when using AppleBacklight.kext
             Local0 = GDID
@@ -73,7 +73,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
                 }, MEQ, Local0, MTR, 0, 0))
             {
                 // Sandy/Ivy
-                if (Ones == \RMCF.LMAX) { Local2 = SANDYIVY_PWMMAX }
+                if (Ones == Local2) { Local2 = SANDYIVY_PWMMAX }
 
                 // change/scale only if different than current...
                 Local1 = LEVX >> 16
@@ -91,7 +91,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
             Else
             {
                 // otherwise... Assume Haswell/Broadwell/Skylake
-                if (Ones == \RMCF.LMAX)
+                if (Ones == Local2)
                 {
                     // check Haswell and Broadwell, as they are both 0xad9 (for most common ig-platform-id values)
                     If (Ones != Match(Package()
