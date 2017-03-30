@@ -358,6 +358,20 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>HDMI-audio, port 0204, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQKAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AgQKAAAIAAAHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable internal display after sleep for 0x0a2e0008, credit syscl/lighting/Yating Zhou</string>
 				<key>Disabled</key>
 				<true/>
@@ -437,6 +451,20 @@
 				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
 				<key>Find</key>
 				<data>AgQJAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AgQSAAAIAAAHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204(12), 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQKAAAEAAAHAQAA</data>
 				<key>Replace</key>
 				<data>AgQSAAAIAAAHAQAA</data>
 			</dict>
