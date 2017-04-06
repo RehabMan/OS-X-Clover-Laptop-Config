@@ -142,27 +142,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>change F%uT%04x to F%uTxxxx for AppleBacklightInjector.kext (credit RehabMan)</string>
+				<string>change %04x to xxxx for AppleBacklightInjector.kext (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleBacklight</string>
 				<key>Find</key>
-				<data>RiV1VCUwNHgA</data>
+				<data>JTA0eA==</data>
 				<key>Replace</key>
-				<data>RiV1VHh4eHgA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change F%uP%04x to F%uPxxxx for AppleBacklightInjector.kext (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleBacklight</string>
-				<key>Find</key>
-				<data>RiV1UCUwNHgA</data>
-				<key>Replace</key>
-				<data>RiV1UHh4eHgA</data>
+				<data>eHh4eA==</data>
 			</dict>
 		</array>
 	</dict>
