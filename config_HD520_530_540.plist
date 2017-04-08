@@ -275,6 +275,8 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>DellSMBIOSPatch</key>
+		<true/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
