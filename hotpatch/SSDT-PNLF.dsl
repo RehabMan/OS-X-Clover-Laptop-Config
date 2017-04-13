@@ -80,12 +80,23 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
                 If (!Local1) { Local1 = Local2 }
                 If (Local2 != Local1)
                 {
-                    // set new backlight PWMAX but retain current backlight level by scaling
+                    // set new backlight PWMMax but retain current backlight level by scaling
                     Local0 = (LEVL * Local2) / Local1
                     //REVIEW: wait for vblank before setting new PWM config
                     //For (Local7 = P0BL, P0BL == Local7, ) { }
-                    LEVL = Local0
-                    LEVX = Local2 << 16
+                    Local3 = Local2 << 16
+                    If (Local2 > Local1)
+                    {
+                        // PWMMax is getting larger... store new PWMMax first
+                        LEVX = Local3
+                        LEVL = Local0
+                    }
+                    Else
+                    {
+                        // otherwise, store new brightness level, followed by new PWMMax
+                        LEVL = Local0
+                        LEVX = Local3
+                    }
                 }
             }
             Else
@@ -132,9 +143,9 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
 
             // Now Local2 is the new PWMMax, set _UID accordingly
             // The _UID selects the correct entry in AppleBacklightInjector.kext
-            If (Local2 == SANDYIVY_PWMMAX) { _UID = 10 }
-            ElseIf (Local2 == HASWELL_PWMMAX) { _UID = 11 }
-            ElseIf (Local2 == SKYLAKE_PWMMAX) { _UID = 12 }
+            If (Local2 == SANDYIVY_PWMMAX) { _UID = 14 }
+            ElseIf (Local2 == HASWELL_PWMMAX) { _UID = 15 }
+            ElseIf (Local2 == SKYLAKE_PWMMAX) { _UID = 16 }
             Else { _UID = 99 }
         }
     }
