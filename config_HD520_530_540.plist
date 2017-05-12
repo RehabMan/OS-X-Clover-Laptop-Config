@@ -395,7 +395,7 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AAAgAgAAUAE=</data>
 				<key>Replace</key>
