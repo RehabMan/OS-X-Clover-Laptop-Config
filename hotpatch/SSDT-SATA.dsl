@@ -14,7 +14,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "SATA", 0)
         Name(SDDL, Package()
         {
             // 8086:282a is RAID mode, remap to supported 8086:2829
-            0x282a, 0,
+            // 8086:2822 is RAID mode on others
+            0x282a, 0x2822, 0,
             Package()
             {
                 "device-id", Buffer() { 0x29, 0x28, 0, 0 },
