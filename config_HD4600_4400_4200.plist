@@ -86,6 +86,22 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change EC0 to EC</string>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change EHC1 to EH01</string>
 					<key>Find</key>
 					<data>RUhDMQ==</data>
