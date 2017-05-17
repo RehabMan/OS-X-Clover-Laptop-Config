@@ -384,6 +384,8 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
 		<key>#Kaby Lake-Comment</key>
 		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
 		<key>FakeCPUID</key>

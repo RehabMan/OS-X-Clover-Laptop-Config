@@ -387,6 +387,11 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
+		<false/>
+	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>#AddProperties</key>
@@ -680,6 +685,12 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>#FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
