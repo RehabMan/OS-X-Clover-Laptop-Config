@@ -53,7 +53,7 @@
 		EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XSEL.dsl"; path = "hotpatch/SSDT-XSEL.dsl"; sourceTree = "<group>"; };
 		EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Debug.dsl"; path = "hotpatch/SSDT-Debug.dsl"; sourceTree = "<group>"; };
 		EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ESEL.dsl"; path = "hotpatch/SSDT-ESEL.dsl"; sourceTree = "<group>"; };
-		EDDD257B1DFE3C4A00092E18 /* config_HD620.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD620.plist; sourceTree = "<group>"; };
+		EDDD257B1DFE3C4A00092E18 /* config_HD615_620_630_640_650.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD615_620_630_640_650.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -88,7 +88,7 @@
 				ED2500581CF681E2006A5FB7 /* config_HD5600.plist */,
 				ED3636B91CA426EF004CE8B4 /* config_HD520_530_540.plist */,
 				ED57679B1CF5D81300ABAEF8 /* config_HD550_P530.plist */,
-				EDDD257B1DFE3C4A00092E18 /* config_HD620.plist */,
+				EDDD257B1DFE3C4A00092E18 /* config_HD615_620_630_640_650.plist */,
 			);
 			name = config;
 			sourceTree = "<group>";

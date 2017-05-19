@@ -398,6 +398,18 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>0x19160000/etc, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AAAgAgAAUAE=</data>
+				<key>Replace</key>
+				<data>AAAwAQAAkAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
 				<key>Disabled</key>
 				<true/>
@@ -423,18 +435,6 @@
 				<data>iUXIOcZ2UQ==</data>
 				<key>Replace</key>
 				<data>iUXIOcbrUQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x19160000/etc, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AAAgAgAAUAE=</data>
-				<key>Replace</key>
-				<data>AAAwAQAAkAA=</data>
 			</dict>
 		</array>
 		<key>KernelToPatch</key>

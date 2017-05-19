@@ -376,6 +376,18 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>0x16260006,0x16260004/etc, 32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AAAgAgAAUAE=</data>
+				<key>Replace</key>
+				<data>AAAwAQAAkAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.10.x (based on Austere.J patch)</string>
 				<key>Disabled</key>
 				<true/>
@@ -415,18 +427,6 @@
 				<data>iUXIOcd2Tw==</data>
 				<key>Replace</key>
 				<data>iUXIOcfrTw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x16260006,0x16260004/etc, 32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AAAgAgAAUAE=</data>
-				<key>Replace</key>
-				<data>AAAwAQAAkAA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
