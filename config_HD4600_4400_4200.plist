@@ -617,7 +617,7 @@
 				<key>Find</key>
 				<data>ILniAAAADzA=</data>
 				<key>MatchOS</key>
-				<string>10.12</string>
+				<string>10.12.x</string>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
 			</dict>
