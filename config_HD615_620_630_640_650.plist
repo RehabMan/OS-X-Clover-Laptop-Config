@@ -105,6 +105,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change ECDV to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>RUNEVg==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
 					<key>Find</key>
 					<data>SERBUw==</data>

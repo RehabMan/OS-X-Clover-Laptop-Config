@@ -73,6 +73,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change ECDV to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>RUNEVg==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change EHC1 to EH01, optionally pair with SSDT-EH01.aml</string>
 					<key>Find</key>
 					<data>RUhDMQ==</data>
