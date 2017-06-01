@@ -54,6 +54,7 @@
 		EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-Debug.dsl"; path = "hotpatch/SSDT-Debug.dsl"; sourceTree = "<group>"; };
 		EDD76F281C9B1E4A0023D100 /* SSDT-ESEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ESEL.dsl"; path = "hotpatch/SSDT-ESEL.dsl"; sourceTree = "<group>"; };
 		EDDD257B1DFE3C4A00092E18 /* config_HD615_620_630_640_650.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD615_620_630_640_650.plist; sourceTree = "<group>"; };
+		EDE4A34B1EDDD7EC00D52BF1 /* SSDT-ALS0.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ALS0.dsl"; path = "hotpatch/SSDT-ALS0.dsl"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -122,6 +123,7 @@
 				ED02043E1CA77082006E7175 /* SSDT-EH01.dsl */,
 				ED02043D1CA77082006E7175 /* SSDT-EH02.dsl */,
 				ED02043C1CA77082006E7175 /* SSDT-XHC.dsl */,
+				EDE4A34B1EDDD7EC00D52BF1 /* SSDT-ALS0.dsl */,
 			);
 			name = hotpatch;
 			sourceTree = "<group>";
