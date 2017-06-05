@@ -245,6 +245,16 @@
 				<key>Device</key>
 				<string>IntelGFX</string>
 				<key>Key</key>
+				<string>AAPL00,DualLink</string>
+				<key>Value</key>
+				<data>AQAAAA==</data>
+				<key>Comment</key>
+				<string>for dual link LVDS cable, DualLink needed for high resolution HD3000</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
 				<string>AAPL,snb-platform-id</string>
 				<key>Value</key>
 				<data>AAABAA==</data>
