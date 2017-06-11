@@ -573,7 +573,7 @@
 				<key>Find</key>
 				<data>ILniAAAADzA=</data>
 				<key>MatchOS</key>
-				<string>10.12.x,10.11.x</string>
+				<string>10.13.x,10.12.x,10.11.x</string>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
 			</dict>
