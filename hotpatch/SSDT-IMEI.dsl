@@ -4,7 +4,6 @@
 DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
 {
     External(_SB.PCI0.IGPU.GDID, FieldUnitObj)
-    External(_SB.PCI0.IMEI, DeviceObj)
 
     // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI)
     // remove this Device definition (leaving just the Scope inject below)
@@ -13,6 +12,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
         Name(_ADR, 0x00160000)
     }
 
+    //External(_SB.PCI0.IMEI, DeviceObj)
     Scope(_SB.PCI0.IMEI)
     {
         // deal with mixed system, HD3000/7-series, HD4000/6-series

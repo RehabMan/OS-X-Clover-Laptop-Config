@@ -39,11 +39,47 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
+					<key>Find</key>
+					<data>T1NJRA==</data>
+					<key>Replace</key>
+					<data>WFNJRA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
 					<key>Find</key>
 					<data>X09TSQ==</data>
 					<key>Replace</key>
 					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change ECDV to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>RUNEVg==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -84,6 +120,22 @@
 					<data>R0ZYMA==</data>
 					<key>Replace</key>
 					<data>SUdQVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #1 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
+					<key>Find</key>
+					<data>UENJMFZJRF8=</data>
+					<key>Replace</key>
+					<data>UENJMElHUFU=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #2 (Thinkpad), optionally pair with SSDT-IGPU.aml</string>
+					<key>Find</key>
+					<data>VklEXwhfQURSDAAAAgA=</data>
+					<key>Replace</key>
+					<data>SUdQVQhfQURSDAAAAgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -332,6 +384,8 @@
 	<dict>
 		<key>Arguments</key>
 		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1</string>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -345,8 +399,54 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
+		<false/>
+	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>#AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>layout-id</string>
+				<key>Value</key>
+				<data>AwAAAA==</data>
+				<key>Comment</key>
+				<string>layout-id=3</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>PinConfigurations</string>
+				<key>Value</key>
+				<data></data>
+			</dict>
+		</array>
 		<key>#Arbitrary</key>
 		<array>
 			<dict>
@@ -547,6 +647,8 @@
 			<key>Inject</key>
 			<false/>
 		</dict>
+		<key>UseIntelHDMI</key>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -579,6 +681,8 @@
 			<true/>
 			<key>Legacy</key>
 			<true/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
@@ -593,6 +697,12 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>#FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
@@ -1257,6 +1367,33 @@
 				<key>Replace</key>
 				<data>AwYIAAAIAACCAAAA</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleBacklight</string>
+				<key>Find</key>
+				<data>RiV1VCUwNHgA</data>
+				<key>Replace</key>
+				<data>RiV1VHh4eHgA</data>
+			</dict>
+		</array>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>ILniAAAADzA=</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Replace</key>
+				<data>ILniAAAAkJA=</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -1269,12 +1406,14 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacPro3,1</string>
+		<string>iMac14,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>BacklightLevel</key>
+		<integer>0</integer>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 	</dict>

@@ -23,7 +23,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
             // list of 8-series LPC device-ids not natively supported
             // inject 0x8c4b for unsupported LPC device-id
             0x8c46, 0x8c49, 0x8c4a, 0x8c4c, 0x8c4e, 0x8c4f,
-            0x8c50, 0x8c52, 0x8c54, 0x8c56, 0x8c5c, 0,
+            0x8c50, 0x8c52, 0x8c54, 0x8c56, 0x8c5c, 0x8cc3, 0,
             Package()
             {
                 "device-id", Buffer() { 0x4b, 0x8c, 0, 0 },

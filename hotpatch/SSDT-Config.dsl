@@ -10,6 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         {
             Store("TYPE indicates type of the computer. 0: desktop, 1: laptop", Debug)
             Store("HIGH selects display type. 1: high resolution, 2: low resolution", Debug)
+            Store("IGPI overrides ig-platform-id or snb-platform-id", Debug)
             Store("DPTS for laptops only. 1: enables/disables DGPU in _WAK/_PTS", Debug)
             Store("SHUT enables shutdown fix. 1: disables _PTS code when Arg0==5", Debug)
             Store("AUDL indicates audio layout-id for patched AppleHDA. Ones: no injection", Debug)
@@ -29,6 +30,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // For UHD/QHD+ on Haswell/Broadwell, use 1
         // Others (low resolution), use 0
         Name(HIGH, 0)
+
+        // IGPI: Override for ig-platform-id (or snb-platform-id).  Will be used if non-zero.
+        // For example, if you wanted to inject a bogus id, 0x12345678
+        //    Name(IGPI, 0x12345678)
+        Name(IGPI, 0)
 
         // DPTS: For laptops only: set to 1 if you want to enable and
         //  disable the DGPU _PTS and _WAK.
@@ -53,7 +59,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         //
         // 0: Using IntelBacklight.kext
         // 1: Using AppleBacklight.kext + AppleBacklightInjector.kext
-        Name(BKLT, 0)
+        Name(BKLT, 1)
 
         // LMAX: Backlight PWM MAX.  Must match framebuffer in use.
         //

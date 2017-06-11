@@ -4,9 +4,9 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>SortedOrder-Comment</key>
-		<string>This is the original order supported by Clover prior to build v3062.  You can trim it as necessary.</string>
-		<key>SortedOrder</key>
+		<key>#Comment-SortedOrder</key>
+		<string>SortedOrder required if you have patched SSDTs in ACPI/patched</string>
+		<key>#SortedOrder</key>
 		<array>
 			<string>SSDT.aml</string>
 			<string>SSDT-0.aml</string>
@@ -32,6 +32,7 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-LPC.aml</string>
 			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-PNLF.aml</string>
 		</array>
 		<key>DSDT</key>
 		<dict>
@@ -45,9 +46,29 @@
 				<false/>
 				<key>NewWay_80000000</key>
 				<true/>
+				<key>#Comment-IRQ Fix</key>
+				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>FIX_TMR_40000</key>
+				<false/>
+				<key>FIX_RTC_20000</key>
+				<false/>
+				<key>FixIPIC_0040</key>
+				<false/>
+				<key>FixHPET_0010</key>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
+				<dict>
+					<key>Comment</key>
+					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>T1NJRA==</data>
+					<key>Replace</key>
+					<data>WFNJRA==</data>
+				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
@@ -57,6 +78,34 @@
 					<data>X09TSQ==</data>
 					<key>Replace</key>
 					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -73,6 +122,30 @@
 					<data>RUhDMg==</data>
 					<key>Replace</key>
 					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU</string>
+					<key>Find</key>
+					<data>R0ZYMA==</data>
+					<key>Replace</key>
+					<data>SUdQVQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #1 (Thinkpad)</string>
+					<key>Find</key>
+					<data>UENJMFZJRF8=</data>
+					<key>Replace</key>
+					<data>UENJMElHUFU=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU #2 (Thinkpad)</string>
+					<key>Find</key>
+					<data>VklEXwhfQURSDAAAAgA=</data>
+					<key>Replace</key>
+					<data>SUdQVQhfQURSDAAAAgA=</data>
 				</dict>
 			</array>
 		</dict>
@@ -147,6 +220,8 @@
 	<dict>
 		<key>Arguments</key>
 		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1</string>
+		<key>DefaultVolume</key>
+		<string>LastBootedVolume</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -162,6 +237,47 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>#AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>layout-id</string>
+				<key>Value</key>
+				<data>AwAAAA==</data>
+				<key>Comment</key>
+				<string>layout-id=3</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>HDA</string>
+				<key>Key</key>
+				<string>PinConfigurations</string>
+				<key>Value</key>
+				<data></data>
+			</dict>
+		</array>
 		<key>FakeID</key>
 		<dict>
 			<key>IMEI</key>
@@ -181,6 +297,8 @@
 			<key>Inject</key>
 			<true/>
 		</dict>
+		<key>UseIntelHDMI</key>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -213,6 +331,8 @@
 			<true/>
 			<key>Legacy</key>
 			<true/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
@@ -243,6 +363,8 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
@@ -319,6 +441,8 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>BacklightLevel</key>
+		<integer>0</integer>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 	</dict>

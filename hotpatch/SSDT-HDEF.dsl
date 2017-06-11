@@ -5,7 +5,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
     External(_SB.PCI0.HDEF, DeviceObj)
     External(RMCF.AUDL, IntObj)
 
-    // Note: If your ACPI set (DSDT+SSDTs) does not define HDEF (or AZAL)
+    // Note: If your ACPI set (DSDT+SSDTs) does not define HDEF (or AZAL or HDAS)
     // add this Device definition (by uncommenting it)
     //
     //Device(_SB.PCI0.HDEF)
