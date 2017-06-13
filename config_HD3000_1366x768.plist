@@ -368,7 +368,7 @@
 			<false/>
 		</dict>
 		<key>InjectEDID</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
