@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>#Comment</key>
-	<string>This file is for 10.12.6+ with native KabyLake support</string>
+	<string>This file is for spoofing KabyLake as Skylake (requried prior to 10.12.6)</string>
 	<key>ACPI</key>
 	<dict>
 		<key>#Comment-SortedOrder</key>
@@ -321,9 +321,9 @@
 		<key>FakeID</key>
 		<dict>
 			<key>#Kaby Lake-Comment</key>
-			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
+			<string>Kaby Lake HD620 graphics supportable by using Skylake device-id</string>
 			<key>IntelGFX</key>
-			<string>0x59168086</string>
+			<string>0x19168086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -381,7 +381,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x591b0000</string>
+		<string>0x19160000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -402,6 +402,10 @@
 		<true/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
@@ -414,27 +418,79 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>0x591b0000, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
+				<string>0x19160000/etc, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>AABgAgAAUAE=</data>
+				<data>AAAgAgAAUAE=</data>
 				<key>Replace</key>
 				<data>AAAwAQAAkAA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x591b0000, 0105 instead of 0306, HDMI</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>MatchOS</key>
+				<string>10.11.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>QTnEdio=</data>
+				<key>Replace</key>
+				<data>QTnE6yo=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.0 ( (based on Austere.J patch)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>iUXIOcZ2UQ==</data>
+				<key>Replace</key>
+				<data>iUXIOcbrUQ==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>AgQKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAAA=</data>
 				<key>Replace</key>
-				<data>AQUKAAAIAACHAQAAAgQKAAAIAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<data>AAAIAAAEAACYAAAAAQUJAAAEAAA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
+				<key>Replace</key>
+				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>CgsDAAAHBgADAAAABAAAAA==</data>
+				<key>Replace</key>
+				<data>DwsDAAAHBgADAAAABAAAAA==</data>
 			</dict>
 		</array>
 		<key>KernelToPatch</key>
@@ -463,7 +519,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName-Comment</key>
-		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
+		<string>Using Haswell MacBookAir6,2 until Clover has support for Skylake identifiers</string>
 		<key>ProductName</key>
 		<string>MacBookAir6,2</string>
 		<key>Trust</key>
