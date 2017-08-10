@@ -13,6 +13,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
             Store("IGPI overrides ig-platform-id or snb-platform-id", Debug)
             Store("DPTS for laptops only. 1: enables/disables DGPU in _WAK/_PTS", Debug)
             Store("SHUT enables shutdown fix. 1: disables _PTS code when Arg0==5", Debug)
+            Store("XPEE enables XHC.PMEE fix. 1: set XHC.PMEE to zero in _PTS when Arg0==5", Debug)
             Store("AUDL indicates audio layout-id for patched AppleHDA. Ones: no injection", Debug)
             Store("BKLT indicates the type of backlight control. 0: IntelBacklight, 1: AppleBacklight", Debug)
             Store("LMAX indicates max for IGPU PWM backlight. Ones: Use default, other values must match framebuffer", Debug)
@@ -48,6 +49,14 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         //  0: does not affect _PTS behavior during shutdown
         //  1: disables _PTS code during shutdown
         Name(SHUT, 0)
+
+        // XPEE: XHC.PMEE fix, set XHC.PMEE=0 in _PTS when Arg0==5 (shutdown)
+        // This fixes "auto restart" after shutdown when USB devices are plugged into XHC on
+        // certain computers.
+        //
+        // 0: does not affect _PTS behavior during shutdown
+        // 1: sets XHC.PMEE in _PTS code during shutdown
+        Name(XPEE, 0)
 
         // AUDL: Audio Layout
         //
