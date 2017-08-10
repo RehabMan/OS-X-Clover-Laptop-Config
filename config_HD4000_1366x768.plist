@@ -358,6 +358,8 @@
 		<true/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
+		<key>KernelIvyXCPM</key>
+		<false/>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>
