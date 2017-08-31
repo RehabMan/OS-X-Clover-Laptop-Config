@@ -303,6 +303,9 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
         // inject properties for integrated graphics on IGPU
         Method(_DSM, 4)
         {
+            // IGPU can be set to Ones to disable IGPU property injection (same as removing SSDT-IGPU.aml)
+            If (CondRefOf(\RMCF.IGPI)) { If (Ones == \RMCF.IGPI) { Return(0) } }
+            // otherwise, normal IGPU injection...
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             Local1 = Ones
             // determine correct injection table to use based on graphics config in SSDT-Config.aml

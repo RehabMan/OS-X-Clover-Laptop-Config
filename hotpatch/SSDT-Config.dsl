@@ -32,9 +32,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // Others (low resolution), use 0
         Name(HIGH, 0)
 
-        // IGPI: Override for ig-platform-id (or snb-platform-id).  Will be used if non-zero.
+        // IGPI: Override for ig-platform-id (or snb-platform-id).
+        // Will be used if non-zero, and not Ones
+        // Can be set to Ones to disable IGPU injection.
         // For example, if you wanted to inject a bogus id, 0x12345678
         //    Name(IGPI, 0x12345678)
+        // Or to disable, IGPU injection from SSDT-IGPU:
+        //    Name(IGPI, Ones)
+        // Or to set a custom ig-platform-id, example:
+        //    Name(IGPI, 0x01660008)
         Name(IGPI, 0)
 
         // DPTS: For laptops only: set to 1 if you want to enable and
