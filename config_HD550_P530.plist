@@ -481,7 +481,7 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>BacklightLevel</key>
+		<key>#BacklightLevel</key>
 		<integer>0</integer>
 		<key>InjectKexts</key>
 		<string>Detect</string>
