@@ -144,6 +144,69 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
         // Injection tables for desktops
         Name(DESK, Package()
         {
+            // Sandy Bridge/HD3000 (supported)
+            0x0116, 0x0126, 0, Package()
+            {
+                "model", Buffer() { "Intel HD Graphics 3000" },
+                "hda-gfx", Buffer() { "onboard-1" },
+                "AAPL,snb-platform-id", Buffer() { 0x10, 0x00, 0x03, 0x00 },
+                //"AAPL,os-info", Buffer() { 0x30, 0x49, 0x01, 0x11, 0x11, 0x11, 0x08, 0x00, 0x00, 0x01, 0xf0, 0x1f, 0x01, 0x00, 0x00, 0x00, 0x10, 0x07, 0x00, 0x00 },
+                "AAPL00,DualLink", Buffer() { 0x01, 0, 0, 0, },
+            },
+            // Sandy Bridge/HD3000 (unsupported)
+            0x0112, 0x0122, 0, Package()
+            {
+                "device-id", Buffer() { 0x26, 0x01, 0x00, 0x00 },
+                "model", Buffer() { "Intel HD Graphics 3000" },
+                "hda-gfx", Buffer() { "onboard-1" },
+                "AAPL,snb-platform-id", Buffer() { 0x10, 0x00, 0x03, 0x00 },
+                //"AAPL,os-info", Buffer() { 0x30, 0x49, 0x01, 0x11, 0x11, 0x11, 0x08, 0x00, 0x00, 0x01, 0xf0, 0x1f, 0x01, 0x00, 0x00, 0x00, 0x10, 0x07, 0x00, 0x00 },
+                "AAPL00,DualLink", Buffer() { 0x01, 0, 0, 0, },
+            },
+            // Ivy Bridge/HD4000
+            0x0166, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x0a, 0x00, 0x66, 0x01 },
+                "model", Buffer() { "Intel HD Graphics 4000" },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Haswell/HD4200
+            0x0a1e, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
+                "model", Buffer() { "Intel HD Graphics 4200" },
+                "device-id", Buffer() { 0x12, 0x04, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Haswell/HD4400
+            0x0a16, 0x041e, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
+                "model", Buffer() { "Intel HD Graphics 4400" },
+                "device-id", Buffer() { 0x12, 0x04, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Haswell/HD4600 (mobile)
+            0x0416, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
+                "model", Buffer() { "Intel HD Graphics 4600" },
+                "device-id", Buffer() { 0x12, 0x04, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Haswell/HD4600 (desktop)
+            0x0412, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
+                "model", Buffer() { "Intel HD Graphics 4600" },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Haswell/HD5000/HD5100/HD5200
+            0x0a26, 0x0a2e, 0x0d22, 0x0d26, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
+                "hda-gfx", Buffer() { "onboard-1" },
+            },
             // Broadwell/HD5300
             0x161e, 0, Package()
             {
