@@ -56,6 +56,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change EC0 to EC</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>RUMwXw==</data>
 					<key>Replace</key>
@@ -188,6 +190,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change LPC to LPCB, optionally pair with SSDT-EHCI_Disable.aml, SSDT-LPC.aml</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>TFBDXw==</data>
 					<key>Replace</key>

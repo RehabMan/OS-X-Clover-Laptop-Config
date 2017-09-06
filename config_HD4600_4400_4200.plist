@@ -89,6 +89,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change EC0 to EC</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>RUMwXw==</data>
 					<key>Replace</key>
