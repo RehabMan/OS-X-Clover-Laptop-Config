@@ -11,8 +11,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Find</key>
@@ -25,8 +23,6 @@
 				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
 				<key>MatchOS</key>
 				<string>10.10.2,10.10.3</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
@@ -39,8 +35,6 @@
 				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
@@ -53,8 +47,6 @@
 				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
 				<key>MatchOS</key>
 				<string>10.12.x</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
@@ -67,8 +59,6 @@
 				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
 				<key>MatchOS</key>
 				<string>10.13.x</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Find</key>
@@ -79,8 +69,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.9.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -91,8 +79,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable Intel, Fresco Logic USB3.0 controllers check, 10.10.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -103,8 +89,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.9.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -115,8 +99,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable XHCI 1.0 check, 10.10.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -127,8 +109,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Patch MSI or pin interrupts #1, 10.9.*, 10.10.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -151,8 +131,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Disable the sleep code leaving the controller in non-working state after wake, 10.9.*, 10.10.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -163,8 +141,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable PCI power management if there is no such code in DSDT, 10.9.*, 10.10.* (credit Zenith432)</string>
-				<key>Disabled</key>
-				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleUSBXHCI</string>
 				<key>Find</key>
@@ -175,8 +151,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleBacklight</string>
 				<key>Find</key>

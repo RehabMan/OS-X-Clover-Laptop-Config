@@ -420,7 +420,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>0x19160000/etc, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
+				<string>0x19160000/etc, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
@@ -429,34 +429,6 @@
 				<data>AAAgAgAAUAE=</data>
 				<key>Replace</key>
 				<data>AAAwAQAAkAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>QTnEdio=</data>
-				<key>Replace</key>
-				<data>QTnE6yo=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.0 ( (based on Austere.J patch)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>iUXIOcZ2UQ==</data>
-				<key>Replace</key>
-				<data>iUXIOcbrUQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
