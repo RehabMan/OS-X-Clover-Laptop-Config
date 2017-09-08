@@ -26,7 +26,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             Local1 = ^^IGPU.GDID
             Local2 = MDID
-            If (0x1c3a == Local2 && 0x0166 == Local1)
+            If (0x1c3a == Local2 && Ones != Match(Package() { 0x0166, 0x0162 }, MEQ, Local1, MTR, 0, 0))
             {
                 // HD4000 on 6-series, inject 7-series IMEI device-id
                 Return (Package() { "device-id", Buffer() { 0x3a, 0x1e, 0, 0 } })

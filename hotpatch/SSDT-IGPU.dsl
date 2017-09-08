@@ -11,11 +11,10 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
     Scope(_SB.PCI0.IGPU)
     {
         // need the device-id from PCI_config to inject correct properties
-        OperationRegion(RMP1, PCI_Config, 0, 0x14)
+        OperationRegion(RMP1, PCI_Config, 2, 2)
         Field(RMP1, AnyAcc, NoLock, Preserve)
         {
-            Offset(0x02), GDID,16,
-            Offset(0x10), BAR1,32,
+            GDID,16,
         }
         // Note: all injection packages must have ig-platform-id as the first entry (for IGPI override)
 
@@ -31,7 +30,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,os-info", Buffer() { 0x30, 0x49, 0x01, 0x11, 0x11, 0x11, 0x08, 0x00, 0x00, 0x01, 0xf0, 0x1f, 0x01, 0x00, 0x00, 0x00, 0x10, 0x07, 0x00, 0x00 },
             },
             // Ivy Bridge/HD4000
-            0x0166, 0, Package()
+            0x0166, 0x0162, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x03, 0x00, 0x66, 0x01 },   //768p
                 "model", Buffer() { "Intel HD Graphics 4000" },
@@ -74,7 +73,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,os-info", Buffer() { 0x30, 0x49, 0x01, 0x11, 0x11, 0x11, 0x08, 0x00, 0x00, 0x01, 0xf0, 0x1f, 0x01, 0x00, 0x00, 0x00, 0x10, 0x07, 0x00, 0x00 },
             },
             // Ivy Bridge/HD4000
-            0x0166, 0, Package()
+            0x0166, 0x0162, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x04, 0x00, 0x66, 0x01 }, //900p+
                 "model", Buffer() { "Intel HD Graphics 4000" },
@@ -164,7 +163,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL00,DualLink", Buffer() { 0x01, 0, 0, 0, },
             },
             // Ivy Bridge/HD4000
-            0x0166, 0, Package()
+            0x0166, 0x0162, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x0a, 0x00, 0x66, 0x01 },
                 "model", Buffer() { "Intel HD Graphics 4000" },
@@ -233,6 +232,16 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             {
                 "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x16 },
                 "hda-gfx", Buffer() { "onboard-1" },
+            },
+            // Skylake/HD510
+            0x1902, 0x1906, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x19 },
+                "model", Buffer() { "Intel HD Graphics 510" },
+                "device-id", Buffer() { 0x02, 0x19, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+                "RM,device-id", Buffer() { 0x02, 0x19, 0x00, 0x00 },
+                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD515
             0x191e, 0, Package()
