@@ -14,6 +14,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
             Store("DPTS for laptops only. 1: enables/disables DGPU in _WAK/_PTS", Debug)
             Store("SHUT enables shutdown fix. 1: disables _PTS code when Arg0==5", Debug)
             Store("XPEE enables XHC.PMEE fix. 1: set XHC.PMEE to zero in _PTS when Arg0==5", Debug)
+            Store("SSTF enables _SST LED fix. 1: enables _SI._SST in _WAK when Arg0 == 3", Debug)
             Store("AUDL indicates audio layout-id for patched AppleHDA. Ones: no injection", Debug)
             Store("BKLT indicates the type of backlight control. 0: IntelBacklight, 1: AppleBacklight", Debug)
             Store("LMAX indicates max for IGPU PWM backlight. Ones: Use default, other values must match framebuffer", Debug)
@@ -63,6 +64,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // 0: does not affect _PTS behavior during shutdown
         // 1: sets XHC.PMEE in _PTS code during shutdown
         Name(XPEE, 0)
+
+        // SSTF: _SI._SST fix.  To fix LED on wake.  Useful for some Thinkpad laptops.
+        //
+        // 0: no effect duing _WAK
+        // 1: calls _SI._SST(1) during _WAK when Arg0 == 3 (waking from S3 sleep)
+        Name(SSTF, 0)
 
         // AUDL: Audio Layout
         //
