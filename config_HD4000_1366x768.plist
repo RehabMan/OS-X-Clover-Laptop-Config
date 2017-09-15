@@ -211,9 +211,13 @@
 				<false/>
 				<key>PStates</key>
 				<false/>
+				<key>APSN</key>
+				<false/>
+				<key>APLF</key>
+				<false/>
+				<key>PluginType</key>
+				<false/>
 			</dict>
-			<key>PluginType</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>Boot</key>
