@@ -224,10 +224,6 @@
 		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
-		<key>Legacy</key>
-		<string>LegacyBiosDefault</string>
-		<key>Log</key>
-		<false/>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -235,7 +231,7 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>XMPDetection</key>
-		<string>Yes</string>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -359,7 +355,7 @@
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
-			<true/>
+			<false/>
 			<key>Linux</key>
 			<true/>
 			<key>Tool</key>
