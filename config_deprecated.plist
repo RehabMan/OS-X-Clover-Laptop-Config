@@ -68,6 +68,42 @@
 				<key>Replace</key>
 				<data>iUXIOcbrUQ==</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>TIlduHZE</data>
+				<key>Replace</key>
+				<data>TIlduOtE</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>TIlVuHZA</data>
+				<key>Replace</key>
+				<data>TIlVuOtA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>TIldwHZG</data>
+				<key>Replace</key>
+				<data>TIldwOtG</data>
+			</dict>
 		</array>
 	</dict>
 </dict>

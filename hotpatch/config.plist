@@ -665,15 +665,23 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>FullTitle</key>
-					<string>UEFI internal</string>
 					<key>Hidden</key>
-					<string>Always</string>
+					<false/>
 					<key>Type</key>
-					<string>Other</string>
+					<string>OSXRecovery</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Title</key>
+					<string>Windows</string>
 				</dict>
 			</array>
 		</dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
