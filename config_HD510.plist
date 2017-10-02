@@ -225,7 +225,7 @@
 				<key>Key</key>
 				<string>name</string>
 				<key>Value</key>
-				<data>I2Rpc3BsYXk=</data>
+				<data>I2Rpc3BsYXkA</data>
 				<key>Comment</key>
 				<string>Inject &quot;name&quot; as (data)&quot;#display&quot; to disable graphics drivers on NVidia</string>
 			</dict>
