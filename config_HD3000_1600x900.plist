@@ -415,7 +415,7 @@
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>InjectEDID</key>
 		<false/>
