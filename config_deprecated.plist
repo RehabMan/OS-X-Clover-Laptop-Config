@@ -46,6 +46,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>TIlduHZE</data>
+				<key>Replace</key>
+				<data>TIlduOtE</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
 				<key>MatchOS</key>
 				<string>10.11.x</string>
@@ -70,30 +82,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.6 ( (credit RehabMan)</string>
-				<key>MatchOS</key>
-				<string>10.12.6</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>iU3IQTnNdlM=</data>
-				<key>Replace</key>
-				<data>iU3IQTnN61M=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
-				<key>MatchOS</key>
-				<string>10.13.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>TIlduHZE</data>
-				<key>Replace</key>
-				<data>TIlduOtE</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.x (credit PMHeart)</string>
 				<key>MatchOS</key>
 				<string>10.13.x</string>
@@ -103,6 +91,18 @@
 				<data>TIlVuHZA</data>
 				<key>Replace</key>
 				<data>TIlVuOtA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.6 ( (credit RehabMan)</string>
+				<key>MatchOS</key>
+				<string>10.12.6</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>iU3IQTnNdlM=</data>
+				<key>Replace</key>
+				<data>iU3IQTnN61M=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
