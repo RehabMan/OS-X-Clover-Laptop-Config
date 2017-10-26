@@ -6,8 +6,10 @@
 	<string>This file is for 10.12.6+ with native KabyLake support</string>
 	<key>ACPI</key>
 	<dict>
+		<key>AutoMerge</key>
+		<true/>
 		<key>#Comment-SortedOrder</key>
-		<string>SortedOrder required if you have patched SSDTs in ACPI/patched</string>
+		<string>SortedOrder may be required if you have patched SSDTs in ACPI/patched</string>
 		<key>#SortedOrder</key>
 		<array>
 			<string>SSDT.aml</string>
@@ -195,6 +197,8 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>NoOemTableId</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
