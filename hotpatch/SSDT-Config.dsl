@@ -67,7 +67,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
 
         // SSTF: _SI._SST fix.  To fix LED on wake.  Useful for some Thinkpad laptops.
         //
-        // 0: no effect duing _WAK
+        // 0: no effect during _WAK
         // 1: calls _SI._SST(1) during _WAK when Arg0 == 3 (waking from S3 sleep)
         Name(SSTF, 0)
 
