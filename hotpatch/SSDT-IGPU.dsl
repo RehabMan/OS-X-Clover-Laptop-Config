@@ -109,6 +109,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x08, 0x00, 0x2e, 0x0a }, //UHD/QHD+
                 "hda-gfx", Buffer() { "onboard-1" },
             },
+            // KabyLake/UHD620
+            0x5917, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 }, //UHD/QHD+
+                "model", Buffer() { "Intel UHD Graphics 620" },
+                "device-id", Buffer { 0x16, 0x59, 0x00, 0x00 },
+                "hda-gfx", Buffer() { "onboard-1" },
+		        "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            },
         })
         Name(LAPG, Package() // laptop generic
         {
