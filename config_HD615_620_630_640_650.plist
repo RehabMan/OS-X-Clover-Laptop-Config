@@ -8,8 +8,6 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
-		<key>#Comment-SortedOrder</key>
-		<string>SortedOrder may be required if you have patched SSDTs in ACPI/patched</string>
 		<key>#SortedOrder</key>
 		<array>
 			<string>SSDT.aml</string>
@@ -42,22 +40,18 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FixRegions_10000000</key>
-				<false/>
-				<key>NewWay_80000000</key>
+				<key>FixHeaders</key>
 				<true/>
 				<key>#Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
-				<key>FIX_TMR_40000</key>
+				<key>FixTMR</key>
 				<false/>
-				<key>FIX_RTC_20000</key>
+				<key>FixRTC</key>
 				<false/>
-				<key>FixIPIC_0040</key>
+				<key>FixIPIC</key>
 				<false/>
-				<key>FixHPET_0010</key>
+				<key>FixHPET</key>
 				<false/>
-				<key>FixHeaders_20000000</key>
-				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
