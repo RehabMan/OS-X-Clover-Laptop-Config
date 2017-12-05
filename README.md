@@ -27,7 +27,10 @@ This SSDT provides the XOSI method, which is a replacement for the system provid
 
 SSDT-IGPU.dsl
 This SSDT injects Intel GPU properties depending on the configuration data in SSDT-Config and the device-id that is discovered to be present on the system.  It assumes the IGPU is named IGPU (typical is GFX0, requring GFX0->IGPU rename).
-Configured with RMCF.TYPE, RMCF.HIGH, RMCF.IGPI.
+Configured with RMCF.TYPE, RMCF.HIGH, RMCF.IGPI, and SSDT-SkylakeSpoof.aml.
+
+SSDT-SkylakeSpoof.aml
+This SSDT is an optional SSDT that can be paired with SSDT-IGPU.dsl.  When present, SSDT-IGPU uses the data within as an override for various KabyLake graphics devices which spoofs those devices as Skylake.  Prior to 10.12.6, Skylake spoofing is the only option for KabyLake graphics.  And even with 10.12.6 (or later, including 10.13.x), it still may be useful to spoof KabyLake graphics as Skyake.  Keep in mind complete Skylake spoofing requires FakePCIID.kext + FakePCIID_Intel_HD_Graphics.kext.
 
 SSDT-IMEI.dsl
 This SSDT injects fake device-id as required for IMEI when using mixed HD3000/7-series or HD4000/6-series.

@@ -36,7 +36,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "SATA", 0)
         {
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             // search for matching device-id in device-id list, SDDL
-            Local0 = Match(SDDL, MEQ, SDID, MTR, 0, 0)
+            Local0 = Match(SDDL, MEQ, ^SDID, MTR, 0, 0)
             If (Ones != Local0)
             {
                 // start search for zero-terminator (prefix to injection package)

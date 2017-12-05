@@ -20,7 +20,7 @@ all : $(ALL)
 clean:
 	rm -f $(ALL)
 
-IASLOPTS=-vw 2095 -vw 2008 -vi -vs
+IASLOPTS=-vw 2095 -vw 2008 -vw 4089 -vi -vs
 
 build/%.aml : hotpatch/%.dsl
 	iasl $(IASLOPTS) -p $@ $<

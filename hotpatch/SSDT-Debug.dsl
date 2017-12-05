@@ -15,7 +15,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
         Name(HEAD, 0)
         Name(TAIL, 0)
         // PUSH: Use to push a trace item into RING for ACPIDebug.kext
-        Method (PUSH, 1)
+        Method(PUSH, 1)
         {
             Acquire(RTMX, 0xFFFF)
             // push new item at HEAD
@@ -30,7 +30,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Notify(RMDT, 0x80)
         }
         // FTCH: Used by ACPIDebug.kext to fetch an item from RING
-        Method (FTCH)
+        Method(FTCH)
         {
             Acquire(RTMX, 0xFFFF)
             // pull item from TAIL and return it
@@ -45,7 +45,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Return(Local0)
         }
         // COUN: Used by ACPIDebug.kext to determine number of items in RING
-        Method (COUN, 0, NotSerialized)
+        Method(COUN, 0, NotSerialized)
         {
             Acquire(RTMX, 0xFFFF)
             // return count of items in RING
@@ -55,15 +55,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Return(Local0)
         }
         // Helper functions for multiple params at one time
-        Method (P1, 1) { PUSH(Arg0) }
-        Method (P2, 2)
+        Method(P1, 1) { PUSH(Arg0) }
+        Method(P2, 2)
         {
             Local0 = Package(2) { }
             Local0[0] = Arg0
             Local0[1] = Arg1
             PUSH(Local0)
         }
-        Method (P3, 3)
+        Method(P3, 3)
         {
             Local0 = Package(3) { }
             Local0[0] = Arg0
@@ -71,7 +71,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Local0[2] = Arg2
             PUSH(Local0)
         }
-        Method (P4, 4)
+        Method(P4, 4)
         {
             Local0 = Package(4) { }
             Local0[0] = Arg0
@@ -80,7 +80,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Local0[3] = Arg3
             PUSH(Local0)
         }
-        Method (P5, 5)
+        Method(P5, 5)
         {
             Local0 = Package(5) { }
             Local0[0] = Arg0
@@ -90,7 +90,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Local0[4] = Arg4
             PUSH(Local0)
         }
-        Method (P6, 6)
+        Method(P6, 6)
         {
             Local0 = Package(6) { }
             Local0[0] = Arg0
@@ -101,7 +101,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "Debug", 0)
             Local0[5] = Arg5
             PUSH(Local0)
         }
-        Method (P7, 7)
+        Method(P7, 7)
         {
             Local0 = Package(7) { }
             Local0[0] = Arg0

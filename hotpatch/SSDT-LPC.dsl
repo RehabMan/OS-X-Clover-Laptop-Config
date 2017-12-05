@@ -6,8 +6,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
 
     Scope(_SB.PCI0.LPCB)
     {
-        OperationRegion(RMP2, PCI_Config, 2, 2)
-        Field(RMP2, AnyAcc, NoLock, Preserve)
+        OperationRegion(RMP1, PCI_Config, 2, 2)
+        Field(RMP1, AnyAcc, NoLock, Preserve)
         {
             LDID,16
         }
@@ -30,7 +30,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
                 "compatible", Buffer() { "pci8086,8c4b" },
             },
             // list of 100-series LPC device-ids not natively supported (partial list)
-            0x9d48, 0x9d58, 0xa14e,
+            0x9d48, 0x9d58, 0xa14e, 0xa150,
             // and 200-series...
             0xa2c5, 0,
             Package()
@@ -43,7 +43,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
         {
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
             // search for matching device-id in device-id list, LPDL
-            Local0 = Match(LPDL, MEQ, LDID, MTR, 0, 0)
+            Local0 = Match(LPDL, MEQ, ^LDID, MTR, 0, 0)
             If (Ones != Local0)
             {
                 // start search for zero-terminator (prefix to injection package)

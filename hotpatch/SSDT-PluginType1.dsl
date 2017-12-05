@@ -12,8 +12,8 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "Plugin1", 0)
 {
-    External(\_PR.CPU0, DeviceObj)
-    Method (\_PR.CPU0._DSM, 4)
+    External(_PR.CPU0, DeviceObj)
+    Method(_PR.CPU0._DSM, 4)
     {
         If (!Arg2) { Return (Buffer() { 0x03 } ) }
         Return (Package()

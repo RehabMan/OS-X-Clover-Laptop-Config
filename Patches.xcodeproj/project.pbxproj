@@ -59,6 +59,7 @@
 		EDDD257B1DFE3C4A00092E18 /* config_HD615_620_630_640_650_spoof.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD615_620_630_640_650_spoof.plist; sourceTree = "<group>"; };
 		EDE4A34B1EDDD7EC00D52BF1 /* SSDT-ALS0.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-ALS0.dsl"; path = "hotpatch/SSDT-ALS0.dsl"; sourceTree = "<group>"; };
 		EDF4A6891F364130000B04AB /* config_HD615_620_630_640_650.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD615_620_630_640_650.plist; sourceTree = "<group>"; };
+		EDFCA5301FD4E32600C13A5B /* SSDT-SkylakeSpoof.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SkylakeSpoof.dsl"; path = "hotpatch/SSDT-SkylakeSpoof.dsl"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -109,6 +110,7 @@
 				EDBE0CBD1CC2CA920008EF8F /* SSDT-Debug.dsl */,
 				ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */,
 				ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */,
+				EDFCA5301FD4E32600C13A5B /* SSDT-SkylakeSpoof.dsl */,
 				ED99560C1C94BA0C00B3B13F /* SSDT-IMEI.dsl */,
 				ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */,
 				ED9956151C94BA0C00B3B13F /* SSDT-LPC.dsl */,

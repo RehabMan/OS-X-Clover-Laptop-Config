@@ -15,8 +15,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
     External(_SB.PCI0.IGPU, DeviceObj)
     Scope(_SB.PCI0.IGPU)
     {
-        // need the device-id from PCI_config to inject correct properties
-        OperationRegion(IGD5, PCI_Config, 0, 0x14)
+        OperationRegion(RMP3, PCI_Config, 0, 0x14)
     }
 
     // For backlight control
@@ -33,12 +32,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
         Name(_UID, 0)
         Name(_STA, 0x0B)
 
-        Field(^IGD5, AnyAcc, NoLock, Preserve)
+        Field(^RMP3, AnyAcc, NoLock, Preserve)
         {
             Offset(0x02), GDID,16,
             Offset(0x10), BAR1,32,
         }
-
         OperationRegion(RMB1, SystemMemory, BAR1 & ~0xF, 0xe1184)
         Field(RMB1, AnyAcc, Lock, Preserve)
         {
@@ -61,7 +59,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
             If (CondRefOf(\RMCF.BKLT)) { If (1 != \RMCF.BKLT) { Return } }
 
             // Adjustment required when using AppleBacklight.kext
-            Local0 = GDID
+            Local0 = ^GDID
             Local2 = Ones
             If (CondRefOf(\RMCF.LMAX)) { Local2 = \RMCF.LMAX }
             // Determine framebuffer type (for PWM register layout)
@@ -98,26 +96,26 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
                 if (Ones == Local2) { Local2 = SANDYIVY_PWMMAX }
 
                 // change/scale only if different than current...
-                Local1 = LEVX >> 16
+                Local1 = ^LEVX >> 16
                 If (!Local1) { Local1 = Local2 }
                 If (Local2 != Local1)
                 {
                     // set new backlight PWMMax but retain current backlight level by scaling
-                    Local0 = (LEVL * Local2) / Local1
+                    Local0 = (^LEVL * Local2) / Local1
                     //REVIEW: wait for vblank before setting new PWM config
-                    //For (Local7 = P0BL, P0BL == Local7, ) { }
+                    //For (Local7 = ^P0BL, ^P0BL == Local7, ) { }
                     Local3 = Local2 << 16
                     If (Local2 > Local1)
                     {
                         // PWMMax is getting larger... store new PWMMax first
-                        LEVX = Local3
-                        LEVL = Local0
+                        ^LEVX = Local3
+                        ^LEVL = Local0
                     }
                     Else
                     {
                         // otherwise, store new brightness level, followed by new PWMMax
-                        LEVL = Local0
-                        LEVX = Local3
+                        ^LEVL = Local0
+                        ^LEVX = Local3
                     }
                 }
             }
@@ -146,20 +144,20 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
                     }
                 }
 
-                // This 0xC value comes from looking what OS X initializes this\n
-                // register to after display sleep (using ACPIDebug/ACPIPoller)\n
-                LEVW = 0xC0000000
+                // This 0xC value comes from looking what OS X initializes this
+                // register to after display sleep (using ACPIDebug/ACPIPoller)
+                ^LEVW = 0xC0000000
 
                 // change/scale only if different than current...
-                Local1 = LEVX >> 16
+                Local1 = ^LEVX >> 16
                 If (!Local1) { Local1 = Local2 }
                 If (Local2 != Local1)
                 {
                     // set new backlight PWMAX but retain current backlight level by scaling
-                    Local0 = (((LEVX & 0xFFFF) * Local2) / Local1) | (Local2 << 16)
+                    Local0 = (((^LEVX & 0xFFFF) * Local2) / Local1) | (Local2 << 16)
                     //REVIEW: wait for vblank before setting new PWM config
-                    //For (Local7 = P0BL, P0BL == Local7, ) { }
-                    LEVX = Local0
+                    //For (Local7 = ^P0BL, ^P0BL == Local7, ) { }
+                    ^LEVX = Local0
                 }
             }
 

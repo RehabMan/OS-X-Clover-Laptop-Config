@@ -3,29 +3,33 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
 {
-    External(_SB.PCI0.IGPU.GDID, FieldUnitObj)
-
     // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI)
-    // remove this Device definition (leaving just the Scope inject below)
-    Device(_SB.PCI0.IMEI)
-    {
-        Name(_ADR, 0x00160000)
-    }
+    // remove this Device definition
+    Device(_SB.PCI0.IMEI) { Name(_ADR, 0x00160000) }
+
+    // setup PCI_Config for IGPU
+    External(_SB.PCI0.IGPU, DeviceObj)
+    Scope(_SB.PCI0.IGPU) { OperationRegion(RMP2, PCI_Config, 2, 2) }
 
     //External(_SB.PCI0.IMEI, DeviceObj)
     Scope(_SB.PCI0.IMEI)
     {
         // deal with mixed system, HD3000/7-series, HD4000/6-series
         OperationRegion(RMP1, PCI_Config, 2, 2)
+        // need the device-id from PCI_config to inject correct properties
         Field(RMP1, AnyAcc, NoLock, Preserve)
         {
             MDID,16
         }
+        Field(^IGPU.RMP2, AnyAcc, NoLock, Preserve)
+        {
+            GDID,16,
+        }
         Method(_DSM, 4)
         {
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
-            Local1 = ^^IGPU.GDID
-            Local2 = MDID
+            Local1 = ^GDID
+            Local2 = ^MDID
             If (0x1c3a == Local2 && Ones != Match(Package() { 0x0166, 0x0162 }, MEQ, Local1, MTR, 0, 0))
             {
                 // HD4000 on 6-series, inject 7-series IMEI device-id
