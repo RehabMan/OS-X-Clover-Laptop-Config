@@ -7,6 +7,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
     External(RMCF.TYPE, IntObj)
     External(RMCF.HIGH, IntObj)
     External(RMCF.IGPI, IntObj)
+    External(RMGO, PkgObj)
 
     Scope(_SB.PCI0.IGPU)
     {
@@ -366,63 +367,59 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             If (CondRefOf(\RMCF.IGPI)) { If (Ones == \RMCF.IGPI) { Return(0) } }
             // otherwise, normal IGPU injection...
             If (!Arg2) { Return (Buffer() { 0x03 } ) }
-            Local1 = Ones
-            // allow overrides in RMGO, if present
-            External(\RMGO, PkgObj)
-            If (CondRefOf(\RMGO))
+            Local0 = Ones
+            For (,,)
             {
-                Local0 = RMGO
-                Local1 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
-            }
-            // determine correct injection table to use based on graphics config in SSDT-Config.aml
-            If (Ones == Local1 && CondRefOf(\RMCF.TYPE))
-            {
-                If (1 == \RMCF.TYPE) // laptop
+                // allow overrides in RMGO, if present
+                If (CondRefOf(\RMGO))
                 {
-                    Local2 = 0 // assume lowres if RMCF.HIGH not present
-                    If (CondRefOf(\RMCF.HIGH)) { Local2 = \RMCF.HIGH }
-                    If (0 == Local2) // lowres
+                    Local1 = RMGO
+                    Local0 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
+                    if (Ones != Local0) { Break }
+                }
+                If (CondRefOf(\RMCF.TYPE))
+                {
+                    If (1 == \RMCF.TYPE) // laptop
                     {
-                        Local0 = LAPL
-                        Local1 = Match(Local0, MEQ, GDID, MTR, 0, 0)
-                    }
-                    ElseIf (1 == Local2) // hires
-                    {
-                        Local0 = LAPH
-                        Local1 = Match(Local0, MEQ, GDID, MTR, 0, 0)
-                    }
-                    If (Ones == Local1) // not found in LAPL or LAPH, use generic
-                    {
-                        Local0 = LAPG
-                        Local1 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                        Local2 = 0 // assume lowres if RMCF.HIGH not present
+                        If (CondRefOf(\RMCF.HIGH)) { Local2 = \RMCF.HIGH }
+                        If (0 == Local2) // lowres
+                        {
+                            Local1 = LAPL
+                            Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                            if (Ones != Local0) { Break }
+                        }
+                        ElseIf (1 == Local2) // hires
+                        {
+                            Local1 = LAPH
+                            Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                            if (Ones != Local0) { Break }
+                        }
+                        // not found in LAPL or LAPH, use generic
+                        Local1 = LAPG
+                        Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                        if (Ones != Local0) { Break }
                     }
                 }
-            }
-            // desktop search always done even if no RMCF data
-            If (Ones == Local1)
-            {
                 // search desktop table
-                Local0 = DESK
-                Local1 = Match(Local0, MEQ, GDID, MTR, 0, 0)
-            }
-            If (Ones != Local1)
-            {
-                // start search for zero-terminator (prefix to injection package)
-                Local1 = Match(Local0, MEQ, 0, MTR, 0, Local1+1)
-                Local0 = DerefOf(Local0[Local1+1])
-                // the user can provide an override of ig-platform-id (or snb-platform-id) in RMCF.IGPI
-                If (CondRefOf(\RMCF.IGPI))
-                {
-                    if (0 != \RMCF.IGPI)
-                    {
-                        CreateDWordField(DerefOf(Local0[1]), 0, IGPI)
-                        IGPI = \RMCF.IGPI
-                    }
-                }
-                Return (Local0)
+                Local1 = DESK
+                Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                Break
             }
             // unrecognized device... inject nothing in this case
-            Return (Package() { })
+            If (Ones == Local0) { Return (Package() { }) }
+            // start search for zero-terminator (prefix to injection package)
+            Local0 = DerefOf(Local1[Match(Local1, MEQ, 0, MTR, 0, Local0+1)+1])
+            // the user can provide an override of ig-platform-id (or snb-platform-id) in RMCF.IGPI
+            If (CondRefOf(\RMCF.IGPI))
+            {
+                if (0 != \RMCF.IGPI)
+                {
+                    CreateDWordField(DerefOf(Local0[1]), 0, IGPI)
+                    IGPI = \RMCF.IGPI
+                }
+            }
+            Return (Local0)
         }
     }
 }
