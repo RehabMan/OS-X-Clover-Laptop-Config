@@ -359,6 +359,11 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>EDID</key>
+		<dict>
+			<key>Inject</key>
+			<false/>
+		</dict>
 		<key>ig-platform-id</key>
 		<string>0x191b0000</string>
 		<key>Inject</key>
@@ -370,8 +375,6 @@
 			<key>NVidia</key>
 			<true/>
 		</dict>
-		<key>InjectEDID</key>
-		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
