@@ -322,11 +322,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "model", Buffer() { "Intel HD Graphics 620" },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
-            // Kaby Lake-R/HD620
+            // Kaby Lake-R/UHD620
             0x5917, 0, Package()
             {
                 "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
-                "model", Buffer() { "Intel HD Graphics 620" },
+                "model", Buffer() { "Intel UHD Graphics 620" },
                 "hda-gfx", Buffer() { "onboard-1" },
                 "device-id", Buffer() { 0x16, 0x59, 0x00, 0x00 },
             },
@@ -358,6 +358,22 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 "model", Buffer() { "Intel Iris Plus Graphics 650" },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
+            // CoffeeLake/UHD620
+            0x3e91, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x59 },
+                "model", Buffer() { "Intel UHD Graphics 620" },
+                "hda-gfx", Buffer() { "onboard-1" },
+                "device-id", Buffer() { 0x12, 0x59, 0x00, 0x00 },
+            },
+            // CoffeeLake/UHD630
+            0x3e92, 0, Package()
+            {
+                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x59 },
+                "model", Buffer() { "Intel UHD Graphics 630" },
+                "hda-gfx", Buffer() { "onboard-1" },
+                "device-id", Buffer() { 0x12, 0x59, 0x00, 0x00 },
+            },
         })
 
         // inject properties for integrated graphics on IGPU
@@ -374,7 +390,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                 If (CondRefOf(\RMGO))
                 {
                     Local1 = RMGO
-                    Local0 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
+                    Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                     if (Ones != Local0) { Break }
                 }
                 If (CondRefOf(\RMCF.TYPE))
@@ -386,24 +402,24 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
                         If (0 == Local2) // lowres
                         {
                             Local1 = LAPL
-                            Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                            Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                             if (Ones != Local0) { Break }
                         }
                         ElseIf (1 == Local2) // hires
                         {
                             Local1 = LAPH
-                            Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                            Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                             if (Ones != Local0) { Break }
                         }
                         // not found in LAPL or LAPH, use generic
                         Local1 = LAPG
-                        Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                        Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                         if (Ones != Local0) { Break }
                     }
                 }
                 // search desktop table
                 Local1 = DESK
-                Local0 = Match(Local0, MEQ, GDID, MTR, 0, 0)
+                Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                 Break
             }
             // unrecognized device... inject nothing in this case
