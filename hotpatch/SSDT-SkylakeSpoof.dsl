@@ -78,6 +78,22 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-RMGO", 0)
             //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
             "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
         },
+        // CoffeeLake/UHD620
+        0x3e91, 0, Package()
+        {
+            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
+            "model", Buffer() { "Intel UHD Graphics 620" },
+            "hda-gfx", Buffer() { "onboard-1" },
+            "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+        },
+        // CoffeeLake/UHD630
+        0x3e92, 0, Package()
+        {
+            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
+            "model", Buffer() { "Intel UHD Graphics 630" },
+            "hda-gfx", Buffer() { "onboard-1" },
+            "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+        },
     })
 }
 //EOF
