@@ -117,7 +117,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "IGPU", 0)
             // Broadwell/HD5300
             0x161e, 0, Package()
             {
-                "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x16 },
+                "AAPL,ig-platform-id", Buffer() { 0x01, 0x00, 0x1e, 0x16 },
                 "model", Buffer() { "Intel HD Graphics 5300" },
                 "hda-gfx", Buffer() { "onboard-1" },
             },
