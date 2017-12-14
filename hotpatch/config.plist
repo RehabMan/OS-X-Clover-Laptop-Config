@@ -8,15 +8,17 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>NewWay_80000000</key>
+				<key>FixHeaders</key>
 				<true/>
-				<key>FIX_TMR_40000</key>
+				<key>#Comment-IRQ Fix</key>
+				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>FixTMR</key>
 				<true/>
-				<key>FIX_RTC_20000</key>
+				<key>FixRTC</key>
 				<true/>
-				<key>FixIPIC_0040</key>
+				<key>FixIPIC</key>
 				<true/>
-				<key>FixHPET_0010</key>
+				<key>FixHPET</key>
 				<true/>
 			</dict>
 			<key>Patches</key>
@@ -371,8 +373,6 @@
 		</array>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -386,13 +386,17 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>NoOemTableId</key>
+			<false/>
+			<key>NoDynamicExtract</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1</string>
-		<key>DefaultVolume</key>
+		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1 -disablegfxfirmware</string>
+		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
 		<true/>
@@ -401,11 +405,6 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>XMPDetection</key>
-		<false/>
-	</dict>
-	<key>CPU</key>
-	<dict>
-		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
 	<key>Devices</key>
@@ -712,7 +711,7 @@
 		<key>DellSMBIOSPatch</key>
 		<false/>
 		<key>#Kaby Lake-Comment</key>
-		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<string>Kaby Lake CPU supportable on 10.12.5 and prior by using CPUID from Skylake</string>
 		<key>#FakeCPUID</key>
 		<string>0x0506e3</string>
 		<key>KernelLapic</key>
