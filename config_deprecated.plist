@@ -94,6 +94,20 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2 (credit PMHeart, shdkpr2008)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>TIlduHZA</data>
+				<key>MatchOS</key>
+				<string>10.13.2</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>TIlduOtA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.6 ( (credit RehabMan)</string>
 				<key>MatchOS</key>
 				<string>10.12.6</string>
