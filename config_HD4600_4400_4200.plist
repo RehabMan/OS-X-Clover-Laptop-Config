@@ -101,14 +101,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
-					<key>Find</key>
-					<data>R0ZYMA==</data>
-					<key>Replace</key>
-					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change PCI0.VID to IGPU #1 (Thinkpad)</string>
 					<key>Find</key>
 					<data>UENJMFZJRF8=</data>
