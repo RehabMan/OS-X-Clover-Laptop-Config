@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>This file is for HD3000 1366x768 on 7-series chipset (atypical)</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -12,13 +14,13 @@
 			<dict>
 				<key>FixHeaders</key>
 				<true/>
-				<key>#Comment-Mixed IMEI/HD graphics</key>
-				<string></string>
+				<key>Comment-Mixed IMEI/HD graphics</key>
+				<string>Needed for FakeID/IMEI for 7-series IMEI with HD3000</string>
 				<key>AddDTGP</key>
 				<true/>
 				<key>AddIMEI</key>
 				<true/>
-				<key>#Comment-IRQ Fix</key>
+				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixTMR</key>
 				<false/>

@@ -1,6 +1,6 @@
 // Automatic injection of HDEF properties
 
-DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_HDEF", 0)
 {
     External(_SB.PCI0.HDEF, DeviceObj)
     External(RMCF.AUDL, IntObj)

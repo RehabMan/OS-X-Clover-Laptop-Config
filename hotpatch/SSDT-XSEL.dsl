@@ -1,6 +1,6 @@
 // Disabling XSEL
 
-DefinitionBlock("", "SSDT", 2, "hack", "XSEL", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_XSEL", 0)
 {
     External(_SB.PCI0.XHC, DeviceObj)
 

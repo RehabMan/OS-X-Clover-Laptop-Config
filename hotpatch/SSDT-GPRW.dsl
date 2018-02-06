@@ -1,6 +1,6 @@
 // For solving instant wake by hooking GPRW or UPRW
 
-DefinitionBlock("", "SSDT", 2, "hack", "GPRW", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_GPRW", 0)
 {
     External(XPRW, MethodObj)
 

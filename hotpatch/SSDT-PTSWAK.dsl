@@ -1,6 +1,6 @@
 // Overriding _PTS and _WAK
 
-DefinitionBlock("", "SSDT", 2, "hack", "PTSWAK", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 {
     External(ZPTS, MethodObj)
     External(ZWAK, MethodObj)

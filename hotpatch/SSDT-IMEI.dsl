@@ -1,7 +1,7 @@
 // Deals with mixed systems (HD4000 on 6-series, HD3000 on 7-series)
 // Will also add the missing IMEI device.
 
-DefinitionBlock("", "SSDT", 2, "hack", "IMEI", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_IMEI", 0)
 {
     // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI)
     // remove this Device definition

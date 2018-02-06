@@ -1,6 +1,6 @@
 // Automatic injection of EH02 properties
 
-DefinitionBlock("", "SSDT", 2, "hack", "EH02", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_EH02", 0)
 {
     External(_SB.PCI0.EH02, DeviceObj)
 

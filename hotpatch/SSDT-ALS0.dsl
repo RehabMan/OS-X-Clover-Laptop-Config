@@ -1,5 +1,5 @@
 // Fake ambient light sensor device
-DefinitionBlock("", "SSDT", 2, "hack", "ALS0", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_ALS0", 0)
 {
     Device(_SB.ALS0)
     {

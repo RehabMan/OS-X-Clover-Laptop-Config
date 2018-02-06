@@ -1,6 +1,6 @@
 // Disabling ESEL
 
-DefinitionBlock("", "SSDT", 2, "hack", "ESEL", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_ESEL", 0)
 {
     External(_SB.PCI0.XHC, DeviceObj)
 

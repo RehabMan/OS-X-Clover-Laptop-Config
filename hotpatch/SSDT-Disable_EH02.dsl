@@ -1,6 +1,6 @@
 // Disabling EHCI #1 (and EHCI #2)
 
-DefinitionBlock("", "SSDT", 2, "hack", "D-EH02", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_DEH02", 0)
 {
     External(_SB.PCI0, DeviceObj)
     External(_SB.PCI0.EH02, DeviceObj)

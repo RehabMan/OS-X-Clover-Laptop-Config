@@ -1,6 +1,6 @@
 // Disabling XWAK
 
-DefinitionBlock("", "SSDT", 2, "hack", "XWAK", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_XWAK", 0)
 {
     External(_SB.PCI0.XHC, DeviceObj)
 

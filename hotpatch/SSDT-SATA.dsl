@@ -1,6 +1,6 @@
 // Fix certain unsupported SATA devices
 
-DefinitionBlock("", "SSDT", 2, "hack", "SATA", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_SATA", 0)
 {
     External(_SB.PCI0.SATA, DeviceObj)
     

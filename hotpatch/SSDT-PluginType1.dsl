@@ -10,7 +10,7 @@
 //   likely any HWP enabled SMBIOS does not have APSS/ACST/APLF/etc and does not need it
 //   could be that any XCPM enabled SMBIOS needs only this plugin-type injection
 
-DefinitionBlock("", "SSDT", 2, "hack", "Plugin1", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_XCPM", 0)
 {
     External(_PR.CPU0, DeviceObj)
     Method(_PR.CPU0._DSM, 4)

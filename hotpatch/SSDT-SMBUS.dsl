@@ -1,6 +1,6 @@
 // Adding SMBUS device
 
-DefinitionBlock("", "SSDT", 2, "hack", "SMBUS", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_SMBUS", 0)
 {
     Device(_SB.PCI0.SBUS.BUS0)
     {

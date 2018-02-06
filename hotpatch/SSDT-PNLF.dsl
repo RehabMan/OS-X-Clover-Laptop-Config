@@ -6,10 +6,12 @@
 #define CUSTOM_PWMMAX_07a1 0x07a1
 #define CUSTOM_PWMMAX_1499 0x1499
 
-DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
 {
     External(RMCF.BKLT, IntObj)
     External(RMCF.LMAX, IntObj)
+    External(RMCF.LEVW, IntObj)
+    External(RMCF.GRAN, IntObj)
     External(RMCF.FBTP, IntObj)
 
     External(_SB.PCI0.IGPU, DeviceObj)
@@ -45,6 +47,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
             LEVL, 32,
             Offset(0x70040),
             P0BL, 32,
+            Offset(0xc2000),
+            GRAN, 32,
             Offset(0xc8250),
             LEVW, 32,
             LEVX, 32,
@@ -56,7 +60,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
         {
             // IntelBacklight.kext takes care of this at load time...
             // If RMCF.BKLT does not exist, it is assumed you want to use AppleBacklight.kext...
-            If (CondRefOf(\RMCF.BKLT)) { If (1 != \RMCF.BKLT) { Return } }
+            If (CondRefOf(\RMCF.BKLT)) { Local4 = \RMCF.BKLT }
+            If (0 == (1 & Local4)) { Return }
 
             // Adjustment required when using AppleBacklight.kext
             Local0 = ^GDID
@@ -143,10 +148,30 @@ DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
                         Local2 = SKYLAKE_PWMMAX
                     }
                 }
-
+                // INTEL® OPEN SOURCE HD GRAPHICS, INTEL IRIS™ GRAPHICS, AND INTEL IRIS™ PRO GRAPHICS PROGRAMMER'S REFERENCE MANUAL (PRM)
+                // FOR THE 2015-2016 INTEL CORE™ PROCESSORS, CELERON™ PROCESSORS AND PENTIUM™ PROCESSORS BASED ON THE "SKYLAKE" PLATFORM
+                // Volume 12: Display (https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-skl-vol12-display.pdf)
+                //   page 189
+                //   Backlight Enabling Sequence
+                //   Description
+                //   1. Set frequency and duty cycle in SBLC_PWM_CTL2 Backlight Modulation Frequency and Backlight Duty Cycle.
+                //   2. Set granularity in 0xC2000 bit 0 (0 = 16, 1 = 128).
+                //   3. Enable PWM output and set polarity in SBLC_PWM_CTL1 PWM PCH Enable and Backlight Polarity.
+                //   4. Change duty cycle as needed in SBLC_PWM_CTL2 Backlight Duty Cycle.
                 // This 0xC value comes from looking what OS X initializes this
                 // register to after display sleep (using ACPIDebug/ACPIPoller)
-                ^LEVW = 0xC0000000
+                If (0 == (2 & Local4))
+                {
+                    Local5 = 0xC0000000
+                    If (CondRefOf(\RMCF.LEVW)) { If (Ones != \RMCF.LEVW) { Local5 = \RMCF.LEVW } }
+                    ^LEVW = Local5
+                }
+                // from step 2 above (you may need 1 instead)
+                If (4 & Local4)
+                {
+                    If (CondRefOf(\RMCF.GRAN)) { ^GRAN = \RMCF.GRAN }
+                    Else { ^GRAN = 0 }
+                }
 
                 // change/scale only if different than current...
                 Local1 = ^LEVX >> 16
