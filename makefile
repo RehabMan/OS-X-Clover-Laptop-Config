@@ -18,7 +18,7 @@ all : $(ALL)
 
 .PHONY: clean
 clean:
-	rm -f $(ALL)
+	rm -f $(BUILDDIR)/*.aml
 
 IASLOPTS=-vw 2095 -vw 2008 -vw 4089 -vi -vs
 
