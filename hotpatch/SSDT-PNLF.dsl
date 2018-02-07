@@ -73,17 +73,17 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
             If (0 == Local3)
             {
                 If (Ones != Match(Package()
-                    {
-                        // Sandy HD3000
-                        0x010b, 0x0102,
-                        0x0106, 0x1106, 0x1601, 0x0116, 0x0126,
-                        0x0112, 0x0122,
-                        // Ivy
-                        0x0152, 0x0156, 0x0162, 0x0166,
-                        0x016a,
-                        // Arrandale
-                        0x0046, 0x0042,
-                    }, MEQ, Local0, MTR, 0, 0))
+                {
+                    // Sandy HD3000
+                    0x010b, 0x0102,
+                    0x0106, 0x1106, 0x1601, 0x0116, 0x0126,
+                    0x0112, 0x0122,
+                    // Ivy
+                    0x0152, 0x0156, 0x0162, 0x0166,
+                    0x016a,
+                    // Arrandale
+                    0x0046, 0x0042,
+                }, MEQ, Local0, MTR, 0, 0))
                 {
                     Local3 = 1
                 }
@@ -131,12 +131,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                 {
                     // check Haswell and Broadwell, as they are both 0xad9 (for most common ig-platform-id values)
                     If (Ones != Match(Package()
-                        {
-                            // Haswell
-                            0x0d26, 0x0a26, 0x0d22, 0x0412, 0x0416, 0x0a16, 0x0a1e, 0x0a1e, 0x0a2e, 0x041e, 0x041a,
-                            // Broadwell
-                            0x0bd1, 0x0bd2, 0x0BD3, 0x1606, 0x160e, 0x1616, 0x161e, 0x1626, 0x1622, 0x1612, 0x162b,
-                        }, MEQ, Local0, MTR, 0, 0))
+                    {
+                        // Haswell
+                        0x0d26, 0x0a26, 0x0d22, 0x0412, 0x0416, 0x0a16, 0x0a1e, 0x0a1e, 0x0a2e, 0x041e, 0x041a,
+                        // Broadwell
+                        0x0bd1, 0x0bd2, 0x0BD3, 0x1606, 0x160e, 0x1616, 0x161e, 0x1626, 0x1622, 0x1612, 0x162b,
+                    }, MEQ, Local0, MTR, 0, 0))
                     {
                         Local2 = HASWELL_PWMMAX
                     }
@@ -148,8 +148,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                         Local2 = SKYLAKE_PWMMAX
                     }
                 }
-                // INTEL® OPEN SOURCE HD GRAPHICS, INTEL IRIS™ GRAPHICS, AND INTEL IRIS™ PRO GRAPHICS PROGRAMMER'S REFERENCE MANUAL (PRM)
-                // FOR THE 2015-2016 INTEL CORE™ PROCESSORS, CELERON™ PROCESSORS AND PENTIUM™ PROCESSORS BASED ON THE "SKYLAKE" PLATFORM
+                // INTEL OPEN SOURCE HD GRAPHICS, INTEL IRIS GRAPHICS, AND INTEL IRIS PRO GRAPHICS PROGRAMMER'S REFERENCE MANUAL (PRM)
+                // FOR THE 2015-2016 INTEL CORE PROCESSORS, CELERON PROCESSORS AND PENTIUM PROCESSORS BASED ON THE "SKYLAKE" PLATFORM
                 // Volume 12: Display (https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-skl-vol12-display.pdf)
                 //   page 189
                 //   Backlight Enabling Sequence
@@ -198,3 +198,4 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
     }
 }
 //EOF
+
