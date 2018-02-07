@@ -6,8 +6,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "_LPC", 0)
 
     Scope(_SB.PCI0.LPCB)
     {
-        OperationRegion(RMP1, PCI_Config, 2, 2)
-        Field(RMP1, AnyAcc, NoLock, Preserve)
+        OperationRegion(RMP0, PCI_Config, 2, 2)
+        Field(RMP0, AnyAcc, NoLock, Preserve)
         {
             LDID,16
         }

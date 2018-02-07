@@ -17,14 +17,14 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEH02", 0)
     }
     Scope(_SB.PCI0.LPCB)
     {
-        OperationRegion(RMP4, PCI_Config, 0xF0, 4)
-        Field(RMP4, DWordAcc, NoLock, Preserve)
+        OperationRegion(RMP2, PCI_Config, 0xF0, 4)
+        Field(RMP2, DWordAcc, NoLock, Preserve)
         {
             RCB4, 32, // Root Complex Base Address
         }
         // address is in bits 31:14
-        OperationRegion(FDM4, SystemMemory, (RCB4 & Not((1<<14)-1)) + 0x3418, 4)
-        Field(FDM4, DWordAcc, NoLock, Preserve)
+        OperationRegion(FDM2, SystemMemory, (RCB4 & Not((1<<14)-1)) + 0x3418, 4)
+        Field(FDM2, DWordAcc, NoLock, Preserve)
         {
             ,13,    // skip first 13 bits
             FDE2,1, // should be bit 13 (0-based) (FD EHCI#2)
