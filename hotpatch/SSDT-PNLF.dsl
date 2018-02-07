@@ -60,6 +60,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
         {
             // IntelBacklight.kext takes care of this at load time...
             // If RMCF.BKLT does not exist, it is assumed you want to use AppleBacklight.kext...
+            Local4 = 1
             If (CondRefOf(\RMCF.BKLT)) { Local4 = \RMCF.BKLT }
             If (0 == (1 & Local4)) { Return }
 
