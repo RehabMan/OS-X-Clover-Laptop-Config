@@ -199,7 +199,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change LPC to LPCB, optionally pair with SSDT-EHCI_Disable.aml, SSDT-LPC.aml</string>
+					<string>change LPC to LPCB, optionally pair with SSDT-DEHCI.aml, SSDT-DEH01.aml, SSDT-DEH02.aml, SSDT-LPC.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -317,7 +317,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change LANC Method(_PRW,0,S) to Method(XPRW,0,..), pair with SSDT-LANC_PRW.aml</string>
+					<string>change LANC Method(_PRW,0,S) to Method(XPRW,0,..), pair with SSDT-LANCPRW.aml</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>

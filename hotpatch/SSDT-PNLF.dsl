@@ -27,10 +27,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
         Name(_HID, EisaId ("APP0002"))
         Name(_CID, "backlight")
         // _UID is set depending on PWMMax
-        // 10: Sandy/Ivy 0x710
-        // 11: Haswell/Broadwell 0xad9
-        // 12: Skylake/KabyLake 0x56c (and some Haswell, example 0xa2e0008)
-        // 99: Other
+        // 14: Sandy/Ivy 0x710
+        // 15: Haswell/Broadwell 0xad9
+        // 16: Skylake/KabyLake 0x56c (and some Haswell, example 0xa2e0008)
+        // 17: custom LMAX=0x7a1
+        // 18: custom LMAX=0x1499
+        // 99: Other (requires custom AppleBacklightInjector.kext)
         Name(_UID, 0)
         Name(_STA, 0x0B)
 
@@ -127,7 +129,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
             }
             ElseIf (2 == Local3) // No other values are valid for RMCF.FBTP
             {
-                // otherwise... Assume Haswell/Broadwell/Skylake
+                // otherwise... Assume Haswell/Broadwell/Skylake/KabyLake/KabyLake-R
                 if (Ones == Local2)
                 {
                     // check Haswell and Broadwell, as they are both 0xad9 (for most common ig-platform-id values)
@@ -143,7 +145,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                     }
                     Else
                     {
-                        // assume Skylake/KabyLake, both 0x56c
+                        // assume Skylake/KabyLake/KabyLake-R, both 0x56c
                         // 0x1916, 0x191E, 0x1926, 0x1927, 0x1912, 0x1932, 0x1902, 0x1917, 0x191b,
                         // 0x5916, 0x5912, 0x591b, others...
                         Local2 = SKYLAKE_PWMMAX
