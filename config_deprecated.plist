@@ -108,7 +108,7 @@
 				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2/3 (credit PMHeart, , shdkpr2008)</string>
 				<key>MatchOS</key>
-				<string>10.13.2,10.13.3</string>
+				<string>10.13.2,10.13.3,10.13.4</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
@@ -132,7 +132,7 @@
 				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2/3 (credit RehabMan)</string>
 				<key>MatchOS</key>
-				<string>10.13.2,10.13.3</string>
+				<string>10.13.2,10.13.3,10.13.4</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Find</key>
