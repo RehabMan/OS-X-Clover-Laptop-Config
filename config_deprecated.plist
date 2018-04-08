@@ -58,9 +58,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2/3 (credit RehabMan)</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2/3/4 (credit RehabMan)</string>
 				<key>MatchOS</key>
-				<string>10.13.2,10.13.3</string>
+				<string>10.13.2,10.13.3,10.13.4</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
