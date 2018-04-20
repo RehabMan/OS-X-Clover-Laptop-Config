@@ -8,12 +8,12 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
+		<key>FixHeaders</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FixHeaders</key>
-				<true/>
 				<key>Comment-Mixed IMEI/HD graphics</key>
 				<string>Needed for FakeID/IMEI for 6-series IMEI with HD4000</string>
 				<key>AddDTGP</key>

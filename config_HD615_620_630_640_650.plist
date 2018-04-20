@@ -8,6 +8,8 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
+		<key>FixHeaders</key>
+		<true/>
 		<key>Comment-DisabledAML</key>
 		<string>Disable other forms of CPU PM due to SSDT/Generate/PluginType=true</string>
 		<key>DisabledAML</key>
@@ -20,8 +22,6 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FixHeaders</key>
-				<true/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixTMR</key>
@@ -410,6 +410,18 @@
 				<key>Replace</key>
 				<data>AQUKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x591b0000, eliminate all external ports (0204 and 0306)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AgQKAAAIAACHAQAAAwYKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<key>Replace</key>
+				<data>/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
+			</dict>
 		</array>
 		<key>KernelToPatch</key>
 		<array>
@@ -434,10 +446,8 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>ProductName-Comment</key>
-		<string>Using Haswell MacBookAir6,2 until Clover has support for KabyLake identifiers</string>
 		<key>ProductName</key>
-		<string>MacBookAir6,2</string>
+		<string>MacBookPro14,1</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
