@@ -1,7 +1,9 @@
 // Disabling EHCI #1 (and EHCI #2)
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_DEHCI", 0)
 {
+#endif
     External(_SB.PCI0.EH01, DeviceObj)
     External(_SB.PCI0.EH02, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
@@ -59,5 +61,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEHCI", 0)
             ^^LPCB.FDE2 = 1
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

@@ -2,8 +2,10 @@
 
 // Note: Only for Haswell and Broadwell
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_HDAU", 0)
 {
+#endif
     External(RMCF.AUDL, IntObj)
 
     // inject properties for audio
@@ -23,5 +25,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_HDAU", 0)
         }
         Return(Local0)
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

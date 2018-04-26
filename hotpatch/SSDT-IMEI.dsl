@@ -1,8 +1,10 @@
 // Deals with mixed systems (HD4000 on 6-series, HD3000 on 7-series)
 // Will also add the missing IMEI device.
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_IMEI", 0)
 {
+#endif
     // setup PCI_Config for IGPU
     External(_SB.PCI0.IGPU, DeviceObj)
     Scope(_SB.PCI0.IGPU) { OperationRegion(RMP2, PCI_Config, 2, 2) }
@@ -42,5 +44,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IMEI", 0)
             Return (Package(){})
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

@@ -13,8 +13,10 @@
 // Newer KabyLake/KabyLake-R/CoffeeLake boards use _PR.PR00, or _PR.P000 as first CPU path.
 // Adjust this code according to what you find for Processor objects in your own DSDT.
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_XCPM", 0)
 {
+#endif
     Method(_PR.CPU0._DSM, 4)
     {
         If (!Arg2) { Return (Buffer() { 0x03 } ) }
@@ -23,5 +25,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_XCPM", 0)
             "plugin-type", 1
         })
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

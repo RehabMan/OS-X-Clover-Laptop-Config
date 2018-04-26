@@ -1,6 +1,9 @@
 // Fake ambient light sensor device
+
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_ALS0", 0)
 {
+#endif
     Device(_SB.ALS0)
     {
         Name(_HID, "ACPI0008")
@@ -15,5 +18,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_ALS0", 0)
             //Package() { 150, 1000 },
         })
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

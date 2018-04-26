@@ -4,9 +4,10 @@
 // Use "Add SSDT Debug Extern Declarations" to access these methods from other
 // hotpatch SSDTs or even patched OEM ACPI files.
 //
-
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_RMDT", 0)
 {
+#endif
     Device(RMDT)
     {
         Name(_HID, "RMD0000")
@@ -114,5 +115,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMDT", 0)
             PUSH(Local0)
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

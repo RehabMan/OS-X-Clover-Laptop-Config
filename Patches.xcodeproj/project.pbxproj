@@ -51,6 +51,7 @@
 		ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XOSI.dsl"; path = "hotpatch/SSDT-XOSI.dsl"; sourceTree = "<group>"; };
 		ED9956171C94BA0C00B3B13F /* SSDT-SMBUS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-SMBUS.dsl"; path = "hotpatch/SSDT-SMBUS.dsl"; sourceTree = "<group>"; };
 		ED9956181C94BA0C00B3B13F /* SSDT-PNLF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-PNLF.dsl"; path = "hotpatch/SSDT-PNLF.dsl"; sourceTree = "<group>"; };
+		ED9A0C9E20921FDF00F259F1 /* SSDT-IALL.dsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = "SSDT-IALL.dsl"; path = "hotpatch/SSDT-IALL.dsl"; sourceTree = "<group>"; };
 		EDAC054D1CA38DDB00109CA4 /* SSDT-XCPM.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XCPM.dsl"; path = "hotpatch/SSDT-XCPM.dsl"; sourceTree = "<group>"; };
 		EDB68B771C99B72500147700 /* SSDT-XSEL.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XSEL.dsl"; path = "hotpatch/SSDT-XSEL.dsl"; sourceTree = "<group>"; };
 		EDBE0CBD1CC2CA920008EF8F /* SSDT-RMDT.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-RMDT.dsl"; path = "hotpatch/SSDT-RMDT.dsl"; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				ED9956111C94BA0C00B3B13F /* config.plist */,
+				ED9A0C9E20921FDF00F259F1 /* SSDT-IALL.dsl */,
 				ED9956101C94BA0C00B3B13F /* SSDT-RMCF.dsl */,
 				EDBE0CBD1CC2CA920008EF8F /* SSDT-RMDT.dsl */,
 				ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */,

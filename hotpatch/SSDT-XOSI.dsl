@@ -1,6 +1,9 @@
 // Override for host defined _OSI to handle "Darwin"...
+
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_XOSI", 0)
 {
+#endif
     // All _OSI calls in DSDT are routed to XOSI...
     // As written, this XOSI simulates "Windows 2012" (which is Windows 8)
     // Note: According to ACPI spec, _OSI("Windows") must also return true
@@ -27,5 +30,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_XOSI", 0)
         }
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

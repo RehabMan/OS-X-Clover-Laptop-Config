@@ -1,7 +1,9 @@
 // For disabling the discrete GPU
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_DDGPU", 0)
 {
+#endif
     // Note: The _OFF path should be customized to correspond to your native ACPI
     // the two paths provided here should be considered examples only
     // it is best to edit the code such that only the single _OFF path that your ACPI
@@ -19,5 +21,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DDGPU", 0)
             If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

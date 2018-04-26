@@ -1,7 +1,9 @@
 // For solving instant wake by hooking GPRW or UPRW
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_UPRW", 0)
 {
+#endif
     External(XPRW, MethodObj)
 
     // In DSDT, native UPRW is renamed to XPRW with Clover binpatch.
@@ -15,5 +17,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_UPRW", 0)
         If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
         Return (XPRW(Arg0, Arg1))
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF
