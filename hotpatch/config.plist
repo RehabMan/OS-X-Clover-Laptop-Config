@@ -398,8 +398,6 @@
 			</dict>
 			<key>NoOemTableId</key>
 			<false/>
-			<key>NoDynamicExtract</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
