@@ -2,8 +2,6 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "_EH02", 0)
 {
-    External(_SB.PCI0.EH02, DeviceObj)
-
     // inject properties for EHCI#2
     Method(_SB.PCI0.EH02._DSM, 4)
     {

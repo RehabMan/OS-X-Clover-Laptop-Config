@@ -2,13 +2,12 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
 {
-    External(_SB.PCI0.IGPU, DeviceObj)
-
     External(RMCF.TYPE, IntObj)
     External(RMCF.HIGH, IntObj)
     External(RMCF.IGPI, IntObj)
     External(RMGO, PkgObj)
 
+    External(_SB.PCI0.IGPU, DeviceObj)
     Scope(_SB.PCI0.IGPU)
     {
         // need the device-id from PCI_config to inject correct properties

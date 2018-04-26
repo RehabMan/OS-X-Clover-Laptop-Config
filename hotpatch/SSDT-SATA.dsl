@@ -3,7 +3,6 @@
 DefinitionBlock("", "SSDT", 2, "hack", "_SATA", 0)
 {
     External(_SB.PCI0.SATA, DeviceObj)
-    
     Scope(_SB.PCI0.SATA)
     {
         OperationRegion(RMP1, PCI_Config, 2, 2)

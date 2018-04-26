@@ -4,7 +4,6 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "_HDAU", 0)
 {
-    External(_SB.PCI0.HDAU, DeviceObj)
     External(RMCF.AUDL, IntObj)
 
     // inject properties for audio

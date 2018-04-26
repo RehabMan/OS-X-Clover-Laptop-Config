@@ -10,7 +10,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_LANCPRW", 0)
     // by returning 0 in the second position (sleep state supported)
     // of the return package.
     // LANC._PRW is renamed to XPRW so we can replace it here
-    External(_SB.PCI0.LANC, DeviceObj)
     External(_SB.PCI0.LANC.XPRW, MethodObj)
     Method(_SB.PCI0.LANC._PRW)
     {

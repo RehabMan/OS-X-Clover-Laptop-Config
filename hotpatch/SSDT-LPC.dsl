@@ -3,7 +3,6 @@
 DefinitionBlock("", "SSDT", 2, "hack", "_LPC", 0)
 {
     External(_SB.PCI0.LPCB, DeviceObj)
-
     Scope(_SB.PCI0.LPCB)
     {
         OperationRegion(RMP0, PCI_Config, 2, 2)

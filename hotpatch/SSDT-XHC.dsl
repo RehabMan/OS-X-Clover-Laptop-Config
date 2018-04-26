@@ -2,8 +2,6 @@
 
 DefinitionBlock("", "SSDT", 2, "hack", "_XHC", 0)
 {
-    External(_SB.PCI0.XHC, DeviceObj)
-
     // inject properties for XHCI
     Method(_SB.PCI0.XHC._DSM, 4)
     {
