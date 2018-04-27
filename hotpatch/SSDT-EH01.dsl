@@ -1,9 +1,9 @@
 // Automatic injection of EH01 properties
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_EH01", 0)
 {
-    External(_SB.PCI0.EH01, DeviceObj)
-
+#endif
     // inject properties for ECHI#1
     Method(_SB.PCI0.EH01._DSM, 4)
     {
@@ -18,5 +18,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_EH01", 0)
             "AAPL,max-port-current-in-sleep", Buffer() { 0x34, 0x08, 0, 0 },
         })
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

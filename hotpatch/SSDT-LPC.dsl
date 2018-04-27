@@ -1,9 +1,10 @@
 // To fix unsupported 8-series LPC devices
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_LPC", 0)
 {
+#endif
     External(_SB.PCI0.LPCB, DeviceObj)
-
     Scope(_SB.PCI0.LPCB)
     {
         OperationRegion(RMP0, PCI_Config, 2, 2)
@@ -56,5 +57,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_LPC", 0)
             Return (Package() { })
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

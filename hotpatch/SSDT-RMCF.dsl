@@ -1,7 +1,9 @@
 // configuration data for other SSDTs in this pack
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
 {
+#endif
     Device(RMCF)
     {
         Name(_ADR, 0)   // do not remove
@@ -111,5 +113,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         // 2: Haswell/Broadwell/Skylake/KabyLake
         Name(FBTP, 0)
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

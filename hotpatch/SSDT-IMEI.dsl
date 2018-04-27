@@ -1,16 +1,17 @@
 // Deals with mixed systems (HD4000 on 6-series, HD3000 on 7-series)
 // Will also add the missing IMEI device.
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_IMEI", 0)
 {
-    // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI)
-    // remove this Device definition
-    Device(_SB.PCI0.IMEI) { Name(_ADR, 0x00160000) }
-
+#endif
     // setup PCI_Config for IGPU
     External(_SB.PCI0.IGPU, DeviceObj)
     Scope(_SB.PCI0.IGPU) { OperationRegion(RMP2, PCI_Config, 2, 2) }
 
+    // Note: If your ACPI set (DSDT+SSDTs) already defines IMEI (or HECI),
+    // remove this Device definition, swap for External below
+    Device(_SB.PCI0.IMEI) { Name(_ADR, 0x00160000) }
     //External(_SB.PCI0.IMEI, DeviceObj)
     Scope(_SB.PCI0.IMEI)
     {
@@ -43,5 +44,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IMEI", 0)
             Return (Package(){})
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

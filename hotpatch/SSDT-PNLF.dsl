@@ -6,8 +6,10 @@
 #define CUSTOM_PWMMAX_07a1 0x07a1
 #define CUSTOM_PWMMAX_1499 0x1499
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
 {
+#endif
     External(RMCF.BKLT, IntObj)
     External(RMCF.LMAX, IntObj)
     External(RMCF.LEVW, IntObj)
@@ -199,6 +201,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
             Else { _UID = 99 }
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF
 

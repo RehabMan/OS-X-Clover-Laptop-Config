@@ -1,8 +1,9 @@
 // Automatic injection of HDEF properties
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_HDEF", 0)
 {
-    External(_SB.PCI0.HDEF, DeviceObj)
+#endif
     External(RMCF.AUDL, IntObj)
 
     // Note: If your ACPI set (DSDT+SSDTs) does not define HDEF (or AZAL or HDAS)
@@ -32,5 +33,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_HDEF", 0)
         }
         Return(Local0)
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

@@ -1,9 +1,10 @@
 // Fix certain unsupported SATA devices
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_SATA", 0)
 {
+#endif
     External(_SB.PCI0.SATA, DeviceObj)
-    
     Scope(_SB.PCI0.SATA)
     {
         OperationRegion(RMP1, PCI_Config, 2, 2)
@@ -47,5 +48,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SATA", 0)
             Return (Package() { })
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

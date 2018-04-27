@@ -3,8 +3,10 @@
 // The purpose of this file is to allow KabyLake or KabyLake-R systems to spoof Skylake graphics.
 // Just include the built version of this file in ACPI/patched.
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
 {
+#endif
     Name(RMGO, Package()
     {
         // Kaby Lake/HD615
@@ -95,5 +97,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
         },
     })
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

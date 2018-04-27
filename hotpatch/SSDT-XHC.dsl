@@ -1,9 +1,9 @@
 // Automatic injection of XHC properties
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_XHC", 0)
 {
-    External(_SB.PCI0.XHC, DeviceObj)
-
+#endif
     // inject properties for XHCI
     Method(_SB.PCI0.XHC._DSM, 4)
     {
@@ -26,5 +26,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_XHC", 0)
         }
         Return(Local0)
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

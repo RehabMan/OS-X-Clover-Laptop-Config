@@ -1,8 +1,9 @@
 // Disabling EHCI #1 (and EHCI #2)
 
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_DEHCI", 0)
 {
-    External(_SB.PCI0, DeviceObj)
+#endif
     External(_SB.PCI0.EH01, DeviceObj)
     External(_SB.PCI0.EH02, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
@@ -42,26 +43,25 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEHCI", 0)
             FDE1,1, // should be bit 15 (0-based) (FD EHCI#1)
         }
     }
-    Scope(_SB.PCI0)
+    Device(_SB.PCI0.RMD2)
     {
-        Device(RMD2)
+        Name(_HID, "RMD20000")
+        Method(_INI)
         {
-            Name(_HID, "RMD20000")
-            Method(_INI)
-            {
-                // disable EHCI#1
-                // put EHCI#1 in D3hot (sleep mode)
-                ^^EH01.PSTE = 3
-                // disable EHCI#1 PCI space
-                ^^LPCB.FDE1 = 1
+            // disable EHCI#1
+            // put EHCI#1 in D3hot (sleep mode)
+            ^^EH01.PSTE = 3
+            // disable EHCI#1 PCI space
+            ^^LPCB.FDE1 = 1
 
-                // disable EHCI#2
-                // put EHCI#2 in D3hot (sleep mode)
-                ^^EH02.PSTE = 3
-                // disable EHCI#2 PCI space
-                ^^LPCB.FDE2 = 1
-            }
+            // disable EHCI#2
+            // put EHCI#2 in D3hot (sleep mode)
+            ^^EH02.PSTE = 3
+            // disable EHCI#2 PCI space
+            ^^LPCB.FDE2 = 1
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF
