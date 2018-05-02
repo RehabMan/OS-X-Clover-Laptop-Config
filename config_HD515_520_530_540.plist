@@ -362,6 +362,7 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+			<string>\System\Library\Extensions\AppleIntelSKLGraphicsFramebuffer.kext</string>
 		</array>
 		<key>KextsToPatch</key>
 		<array>
