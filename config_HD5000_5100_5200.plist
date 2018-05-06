@@ -206,6 +206,56 @@
 				<key>Comment</key>
 				<string>Inject bogus class-code to prevent graphics drivers loading for NVidia</string>
 			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>name</string>
+				<key>Value</key>
+				<data>I2Rpc3BsYXkA</data>
+				<key>Comment</key>
+				<string>Inject &quot;name&quot; as (data)&quot;#display&quot; to disable graphics drivers on AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>IOName</string>
+				<key>Value</key>
+				<string>#display</string>
+				<key>Comment</key>
+				<string>Inject &quot;IOName&quot; as &quot;#display&quot; to disable graphics drivers on AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>class-code</string>
+				<key>Value</key>
+				<data>/////w==</data>
+				<key>Comment</key>
+				<string>Inject bogus class-code to prevent graphics drivers loading for AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>vendor-id</string>
+				<key>Value</key>
+				<data>//8AAA==</data>
+				<key>Comment</key>
+				<string>Inject bogus vendor-id to prevent graphics drivers loading for AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>device-id</string>
+				<key>Value</key>
+				<data>//8AAA==</data>
+				<key>Comment</key>
+				<string>Inject bogus device-id to prevent graphics drivers loading for AMD</string>
+			</dict>
 		</array>
 		<key>#AddProperties</key>
 		<array>
@@ -326,7 +376,7 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<false/>
+			<true/>
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>

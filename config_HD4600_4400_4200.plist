@@ -206,6 +206,56 @@
 				<key>Comment</key>
 				<string>Inject bogus class-code to prevent graphics drivers loading for NVidia</string>
 			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>name</string>
+				<key>Value</key>
+				<data>I2Rpc3BsYXkA</data>
+				<key>Comment</key>
+				<string>Inject &quot;name&quot; as (data)&quot;#display&quot; to disable graphics drivers on AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>IOName</string>
+				<key>Value</key>
+				<string>#display</string>
+				<key>Comment</key>
+				<string>Inject &quot;IOName&quot; as &quot;#display&quot; to disable graphics drivers on AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>class-code</string>
+				<key>Value</key>
+				<data>/////w==</data>
+				<key>Comment</key>
+				<string>Inject bogus class-code to prevent graphics drivers loading for AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>vendor-id</string>
+				<key>Value</key>
+				<data>//8AAA==</data>
+				<key>Comment</key>
+				<string>Inject bogus vendor-id to prevent graphics drivers loading for AMD</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>ATI</string>
+				<key>Key</key>
+				<string>device-id</string>
+				<key>Value</key>
+				<data>//8AAA==</data>
+				<key>Comment</key>
+				<string>Inject bogus device-id to prevent graphics drivers loading for AMD</string>
+			</dict>
 		</array>
 		<key>#AddProperties</key>
 		<array>
@@ -331,7 +381,7 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<false/>
+			<true/>
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
@@ -461,6 +511,18 @@
 				<data>AgQJAAAEAAAHAQAA</data>
 				<key>Replace</key>
 				<data>AgQJAAAIAAAHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0204, alternate/later versions macOS, 0x0a2e0008, 0x0a16000c, 0x0a2e000d, 0x0a26000d</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Find</key>
+				<data>AgQKAAAEAAAHAQAA</data>
+				<key>Replace</key>
+				<data>AgQKAAAIAAAHAQAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
