@@ -172,7 +172,7 @@
 				<true/>
 			</dict>
 			<key>NoOemTableId</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
