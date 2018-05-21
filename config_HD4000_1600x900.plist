@@ -12,6 +12,8 @@
 		<true/>
 		<key>DSDT</key>
 		<dict>
+			<key>DropOEM_DSM</key>
+			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>Comment-IRQ Fix</key>
@@ -189,7 +191,7 @@
 				<false/>
 			</dict>
 			<key>NoOemTableId</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>Boot</key>
