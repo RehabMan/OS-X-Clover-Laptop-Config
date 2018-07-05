@@ -70,6 +70,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>dkBI/wUSKwY=</data>
+				<key>Replace</key>
+				<data>60BI/wUSKwY=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 (based on Austere.J patch)</string>
 				<key>MatchOS</key>
 				<string>10.11.x</string>
@@ -118,6 +130,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>dkBI/wVh6Qc=</data>
+				<key>Replace</key>
+				<data>60BI/wVh6Qc=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.0/1 (credit PMHeart)</string>
 				<key>MatchOS</key>
 				<string>10.13.0,10.13.1</string>
@@ -130,15 +154,27 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2/3 (credit RehabMan)</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.13.2-5 (credit RehabMan)</string>
 				<key>MatchOS</key>
-				<string>10.13.2,10.13.3,10.13.4</string>
+				<string>10.13.2,10.13.3,10.13.4,10.13.5</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>TIltuHZG</data>
 				<key>Replace</key>
 				<data>TIltuOtG</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>dkZI/wUCUgg=</data>
+				<key>Replace</key>
+				<data>60ZI/wUCUgg=</data>
 			</dict>
 		</array>
 	</dict>
