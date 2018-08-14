@@ -112,6 +112,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         // 1: Ivy/Sandy
         // 2: Haswell/Broadwell/Skylake/KabyLake
         Name(FBTP, 0)
+        
+        // DWOU: Disable wake on USB
+        // 1: Disable wake on USB
+        // 0: Do not disable wake on USB
+        Name(DWOU, 0)
     }
 #ifndef NO_DEFINITIONBLOCK
 }
