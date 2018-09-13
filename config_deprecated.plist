@@ -70,15 +70,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J/Sniki)</string>
 				<key>MatchOS</key>
 				<string>10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>dkBI/wUSKwY=</data>
+				<data>dkBI/wU=</data>
 				<key>Replace</key>
-				<data>60BI/wUSKwY=</data>
+				<data>60BI/wU=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -130,15 +130,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J/Sniki)</string>
 				<key>MatchOS</key>
 				<string>10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>dkBI/wVh6Qc=</data>
+				<data>dkBI/wU=</data>
 				<key>Replace</key>
-				<data>60BI/wVh6Qc=</data>
+				<data>60BI/wU=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -166,15 +166,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J)</string>
+				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.14 (credit Austere.J/Sniki)</string>
 				<key>MatchOS</key>
 				<string>10.14.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>dkZI/wUCUgg=</data>
+				<data>dkZI/wU=</data>
 				<key>Replace</key>
-				<data>60ZI/wUCUgg=</data>
+				<data>60ZI/wU=</data>
 			</dict>
 		</array>
 	</dict>

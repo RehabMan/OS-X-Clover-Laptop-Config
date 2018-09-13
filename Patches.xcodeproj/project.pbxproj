@@ -18,6 +18,7 @@
 		ED08499A1F05AA5100B0828D /* SSDT-UPRW.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-UPRW.dsl"; path = "hotpatch/SSDT-UPRW.dsl"; sourceTree = "<group>"; };
 		ED08499B1F05AA5100B0828D /* SSDT-GPRW.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-GPRW.dsl"; path = "hotpatch/SSDT-GPRW.dsl"; sourceTree = "<group>"; };
 		ED0A92CD1DFEE98E002D3AC9 /* config_patches.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_patches.plist; sourceTree = "<group>"; };
+		ED135F0E214AF41200A5D897 /* SSDT-DDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-DDA.dsl"; path = "hotpatch/SSDT-DDA.dsl"; sourceTree = "<group>"; };
 		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
 		ED1D74A61F61C25900BE4F5C /* config_HD510.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD510.plist; sourceTree = "<group>"; };
 		ED2500581CF681E2006A5FB7 /* config_HD5600.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5600.plist; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				ED9956111C94BA0C00B3B13F /* config.plist */,
 				ED9A0C9E20921FDF00F259F1 /* SSDT-IALL.dsl */,
 				ED9956101C94BA0C00B3B13F /* SSDT-RMCF.dsl */,
+				ED135F0E214AF41200A5D897 /* SSDT-DDA.dsl */,
 				EDBE0CBD1CC2CA920008EF8F /* SSDT-RMDT.dsl */,
 				ED9956161C94BA0C00B3B13F /* SSDT-XOSI.dsl */,
 				ED99560D1C94BA0C00B3B13F /* SSDT-IGPU.dsl */,

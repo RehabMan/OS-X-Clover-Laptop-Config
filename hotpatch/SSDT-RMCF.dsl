@@ -80,6 +80,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         // If set to Ones, no audio injection will be done.
         Name(AUDL, Ones)
 
+        // DAUD: Digital audio
+        //
+        // 0: "hda-gfx" is disabled, injected as "#hda-gfx" instead
+        // 1: (default when not specified) "hda-gfx" is injected
+        Name(DAUD, 1)
+
         // BKLT: Backlight control type
         //
         // bit0=0: Using IntelBacklight.kext
@@ -112,6 +118,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         // 1: Ivy/Sandy
         // 2: Haswell/Broadwell/Skylake/KabyLake
         Name(FBTP, 0)
+
+        // DWOU: Disable wake on USB
+        // 1: Disable wake on USB
+        // 0: Do not disable wake on USB
+        Name(DWOU, 1)
     }
 #ifndef NO_DEFINITIONBLOCK
 }
