@@ -26,14 +26,18 @@
 			<dict>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>AddMCHC</key>
+                                <true/>
 				<key>FixTMR</key>
-				<false/>
+				<true/>
 				<key>FixRTC</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
+				<key>FixShutdown</key>
+                                <true/>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -394,11 +398,11 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<true/>
+			<false/>
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
