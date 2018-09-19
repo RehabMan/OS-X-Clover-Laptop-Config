@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>This file is for Skylake graphics that require FakeID=0x19268086</string>
+	<string>This file is for 10.12.6+ with native KabyLake support</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
@@ -180,7 +180,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1 -igfxnohdmi -cdfon</string>
+		<string>kext-dev-mode=1 dart=0 nv_disable=1 -disablegfxfirmware -igfxnohdmi -cdfon</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -282,17 +282,17 @@
 		</dict>
 		<key>FakeID</key>
 		<dict>
+			<key>#Kaby Lake-Comment</key>
+			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
 			<key>#IntelGFX</key>
-			<string>0x19268086</string>
+			<string>0x59168086</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AAAmGQ==</data>
-				<key>device-id</key>
-				<data>hoAmGQ==</data>
+				<data>AACbPg==</data>
 				<key>#hda-gfx</key>
 				<data>b25ib2FyZC0xAA==</data>
 				<key>#AAPL00,override-no-connect</key>
@@ -317,6 +317,8 @@
 				<integer>1</integer>
 				<key>#framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
+				<key># Note1</key>
+				<string> no HDMI example in CoffeeLake, flags 86090000 seen in CannonLake?</string>
 				<key>#framebuffer-con1-flags</key>
 				<data>hwEAAA==</data>
 				<key>#framebuffer-con1-pipe</key>
@@ -341,22 +343,18 @@
 				<data>hwEAAA==</data>
 				<key>#framebuffer-con3-pipe</key>
 				<data>EgAAAA==</data>
-				<key>## patch0</key>
-				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
-				<key>#framebuffer-patch0-enable</key>
+				<key>#2 0204-&gt;0306</key>
+				<string>0x3e9b0000, 0306 instead of 0204, HDMI</string>
+				<key>#2 framebuffer-con2-enable</key>
 				<integer>1</integer>
-				<key>#framebuffer-patch0-find</key>
-				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
-				<key>#framebuffer-patch0-replace</key>
-				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
-				<key>## patch1</key>
-				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
-				<key>#framebuffer-patch1-enable</key>
+				<key>#2 framebuffer-con2-alldata</key>
+				<data>AwYIAAAEAADHAwAA</data>
+				<key>#3 no external</key>
+				<string>0x3e9b0000, eliminate all external ports (0105 and 0204)</string>
+				<key>#3 framebuffer-con1-enable</key>
 				<integer>1</integer>
-				<key>#framebuffer-patch1-find</key>
-				<data>CgsDAAAHBgADAAAABAAAAA==</data>
-				<key>#framebuffer-patch1-replace</key>
-				<data>DwsDAAAHBgADAAAABAAAAA==</data>
+				<key>#3 framebuffer-con1-alldata</key>
+				<data>/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
@@ -435,7 +433,7 @@
 			<false/>
 		</dict>
 		<key>#ig-platform-id</key>
-		<string>0x19260000</string>
+		<string>0x3e9b0000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -506,7 +504,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>MacBookPro13,1</string>
+		<string>MacBookPro15,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>

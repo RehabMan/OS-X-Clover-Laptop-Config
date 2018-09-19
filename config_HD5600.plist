@@ -164,7 +164,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1</string>
+		<string>kext-dev-mode=1 dart=0 nv_disable=1 -igfxnohdmi -cdfon</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -259,56 +259,83 @@
 				<string>Inject bogus device-id to prevent graphics drivers loading for AMD</string>
 			</dict>
 		</array>
-		<key>#AddProperties</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>IntelGFX</string>
-				<key>Key</key>
-				<string>hda-gfx</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>hda-gfx</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>layout-id</string>
-				<key>Value</key>
-				<data>AgAAAA==</data>
-				<key>Comment</key>
-				<string>layout-id=2</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>PinConfigurations</string>
-				<key>Value</key>
-				<data></data>
-			</dict>
-		</array>
-		<key>FakeID</key>
-		<dict>
-			<key>IntelGFX</key>
-			<string>0x16268086</string>
-		</dict>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
 			<integer>0</integer>
+		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>#IntelGFX</key>
+			<string>0x16268086</string>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>BgAmFg==</data>
+				<key>device-id</key>
+				<data>hoAmFg==</data>
+				<key>#hda-gfx</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>#AAPL00,override-no-connect</key>
+				<data></data>
+				<key># DVMT-prealloc</key>
+				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
+				<key>framebuffer-patch-enable</key>
+				<integer>1</integer>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-cursormem</key>
+				<data>AACQAA==</data>
+				<key>## @1 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con1-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key># note1</key>
+				<string>flags 06000000 also used for HDMI</string>
+				<key>#framebuffer-con1-flags</key>
+				<data>ggAAAA==</data>
+				<key>#framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
+				<key>## @2 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con2-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>#framebuffer-con2-flags</key>
+				<data>ggAAAA==</data>
+				<key>#framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>## @3 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con3-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con3-type</key>
+				<data>AAgAAA==</data>
+				<key>#framebuffer-con3-flags</key>
+				<data>ggAAAA==</data>
+				<key>#framebuffer-con3-pipe</key>
+				<data>EgAAAA==</data>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1b,0)</key>
+			<dict>
+				<key>#layout-id</key>
+				<integer>2</integer>
+				<key>#PinConfigurations</key>
+				<data></data>
+			</dict>
+			<key>PciRoot(0)/Pci(0x03,0)</key>
+			<dict>
+				<key>#layout-id</key>
+				<integer>2</integer>
+				<key>#hda-gfx</key>
+				<data>b25ib2FyZC0x</data>
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -373,19 +400,19 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>EDID</key>
+		<key>#EDID</key>
 		<dict>
 			<key>Inject</key>
 			<false/>
 		</dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x16260006</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
 			<true/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<true/>
 		</dict>
@@ -403,157 +430,9 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
-			<string>\System\Library\Extensions\AppleIntelBDWGraphicsFramebuffer.kext</string>
 		</array>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>0x16260006,0x16260004/etc, 32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AAAgAgAAUAE=</data>
-				<key>Replace</key>
-				<data>AAAwAQAAkAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x16060000 0x160e0000 0x16160000 0x161e0000 0x16260000 0x162b0000 0x16220000</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAQAAAAEAAAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x16060000 0x160e0000 0x16160000 0x161e0000 0x16260000 0x162b0000 0x16220000</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AgQJAAAIAACCAAAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x160e0001 0x161e0001</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAABEAAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x16060002 0x16060002 0x16160002 0x16260002 0x16220002 0x162b0002 0x162b0004 0x16260004 0x16220007 0x162b0008 0x16260008</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x16060002 0x16060002 0x16160002 0x16260002 0x16220002 0x162b0002 0x162b0004 0x16260004 0x16220007 0x162b0008 0x16260008</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x16160002 (may be 10.11.6 only)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>MatchOS</key>
-				<string>10.11.6</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AgQKAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AgQKAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x16120003 0x16120005 0x16120006 0x16260006</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQULAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AQULAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x16120003 0x16120005 0x16120006 0x16260006</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AgQLAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AgQLAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0306, 0x16220007</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AwYIAAAEAAARAAAA</data>
-				<key>Replace</key>
-				<data>AwYIAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x160e0001 0x161e0001 (1 of 2)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQAeFgECAgIAACACAABQAQ==</data>
-				<key>Replace</key>
-				<data>AQAeFgEDAwMAACACAABQAQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x160e0001 0x161e0001 (2 of 2)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>/wAAAAEAAABAAAAAAAA=</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACCAAAA/wA=</data>
-			</dict>
-		</array>
+		<array/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -565,6 +444,26 @@
 				<data>ILniAAAADzA=</data>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.13 release kernel (credit Vandroiy)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Find</key>
+				<data>igKEwHRE</data>
+				<key>Replace</key>
+				<data>igKEwOtE</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14 release kernel (credit Vandroiy)</string>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Find</key>
+				<data>igKEwHRC</data>
+				<key>Replace</key>
+				<data>igKEwOtC</data>
 			</dict>
 		</array>
 	</dict>

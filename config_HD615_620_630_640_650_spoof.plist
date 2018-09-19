@@ -180,7 +180,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1</string>
+		<string>kext-dev-mode=1 dart=0 nv_disable=1 -igfxnohdmi -cdfon</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -275,47 +275,6 @@
 				<string>Inject bogus device-id to prevent graphics drivers loading for AMD</string>
 			</dict>
 		</array>
-		<key>#AddProperties</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>IntelGFX</string>
-				<key>Key</key>
-				<string>hda-gfx</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>hda-gfx</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>layout-id</string>
-				<key>Value</key>
-				<data>AgAAAA==</data>
-				<key>Comment</key>
-				<string>layout-id=2</string>
-			</dict>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Key</key>
-				<string>PinConfigurations</string>
-				<key>Value</key>
-				<data></data>
-			</dict>
-		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -325,8 +284,89 @@
 		<dict>
 			<key>#Kaby Lake-Comment</key>
 			<string>Kaby Lake HD620 graphics supportable by using Skylake device-id</string>
-			<key>IntelGFX</key>
+			<key>#IntelGFX</key>
 			<string>0x19168086</string>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAbGQ==</data>
+				<key>device-id</key>
+				<data>hoAWGQ==</data>
+				<key>#hda-gfx</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>#AAPL00,override-no-connect</key>
+				<data></data>
+				<key># DVMT-prealloc</key>
+				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
+				<key>framebuffer-patch-enable</key>
+				<integer>1</integer>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>framebuffer-cursormem</key>
+				<data>AACQAA==</data>
+				<key>## @0 LVDS-&gt;DP</key>
+				<string></string>
+				<key>#framebuffer-con0-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con0-type</key>
+				<data>AAQAAA==</data>
+				<key>## @1 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con1-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>#framebuffer-con1-flags</key>
+				<data>hwEAAA==</data>
+				<key>#framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
+				<key>## @2 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con2-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>#framebuffer-con2-flags</key>
+				<data>hwEAAA==</data>
+				<key>#framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>## @3 HDMI</key>
+				<string></string>
+				<key>#framebuffer-con3-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con3-type</key>
+				<data>AAgAAA==</data>
+				<key>#framebuffer-con3-flags</key>
+				<data>hwEAAA==</data>
+				<key>#framebuffer-con3-pipe</key>
+				<data>EgAAAA==</data>
+				<key>## patch0</key>
+				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
+				<key>#framebuffer-patch0-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-patch0-find</key>
+				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
+				<key>#framebuffer-patch0-replace</key>
+				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
+				<key>## patch1</key>
+				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
+				<key>#framebuffer-patch1-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-patch1-find</key>
+				<data>CgsDAAAHBgADAAAABAAAAA==</data>
+				<key>#framebuffer-patch1-replace</key>
+				<data>DwsDAAAHBgADAAAABAAAAA==</data>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1f,3)</key>
+			<dict>
+				<key>#layout-id</key>
+				<integer>2</integer>
+				<key>#PinConfigurations</key>
+				<data></data>
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -391,19 +431,19 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>EDID</key>
+		<key>#EDID</key>
 		<dict>
 			<key>Inject</key>
 			<false/>
 		</dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x191b0000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
 			<true/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<true/>
 		</dict>
@@ -425,59 +465,9 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
-			<string>\System\Library\Extensions\AppleIntelSKLGraphicsFramebuffer.kext</string>
 		</array>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>0x19160000/etc, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AAAgAgAAUAE=</data>
-				<key>Replace</key>
-				<data>AAAwAQAAkAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AAAIAAIAAACYAAAAAQUJAAAEAAA=</data>
-				<key>Replace</key>
-				<data>AAAIAAAEAACYAAAAAQUJAAAEAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable lid wake for 0x19260002 credit syscl/lighting/Yating Zhou</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
-				<key>Replace</key>
-				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable lid wake for 0x19260004 credit syscl/lighting/Yating Zhou</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>CgsDAAAHBgADAAAABAAAAA==</data>
-				<key>Replace</key>
-				<data>DwsDAAAHBgADAAAABAAAAA==</data>
-			</dict>
-		</array>
+		<array/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -489,6 +479,26 @@
 				<data>ILniAAAADzA=</data>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.13 release kernel (credit Vandroiy)</string>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Find</key>
+				<data>igKEwHRE</data>
+				<key>Replace</key>
+				<data>igKEwOtE</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14 release kernel (credit Vandroiy)</string>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Find</key>
+				<data>igKEwHRC</data>
+				<key>Replace</key>
+				<data>igKEwOtC</data>
 			</dict>
 		</array>
 	</dict>

@@ -21,6 +21,7 @@
 		ED135F0E214AF41200A5D897 /* SSDT-DDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-DDA.dsl"; path = "hotpatch/SSDT-DDA.dsl"; sourceTree = "<group>"; };
 		ED16FCE51C98D3F6002B97A6 /* SSDT-XWAK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-XWAK.dsl"; path = "hotpatch/SSDT-XWAK.dsl"; sourceTree = "<group>"; };
 		ED1D74A61F61C25900BE4F5C /* config_HD510.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD510.plist; sourceTree = "<group>"; };
+		ED202A332152A12D000DD37C /* config_UHD630.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_UHD630.plist; sourceTree = "<group>"; };
 		ED2500581CF681E2006A5FB7 /* config_HD5600.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD5600.plist; sourceTree = "<group>"; };
 		ED3636B91CA426EF004CE8B4 /* config_HD515_520_530_540.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_HD515_520_530_540.plist; sourceTree = "<group>"; };
 		ED415C871DDE28C900AC633E /* SSDT-DEH01.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SSDT-DEH01.dsl"; path = "hotpatch/SSDT-DEH01.dsl"; sourceTree = "<group>"; };
@@ -83,14 +84,14 @@
 			children = (
 				ED0A92CD1DFEE98E002D3AC9 /* config_patches.plist */,
 				EDD734E11F60491E009645F6 /* config_deprecated.plist */,
-				ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */,
 				ED6DB3B51C873F5C00DB1B7A /* config_HD3000_1366x768.plist */,
-				ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */,
 				ED6DB3B71C873F5C00DB1B7A /* config_HD3000_1600x900.plist */,
-				ED6DB3B81C873F5C00DB1B7A /* config_HD4000_1366x768_6series.plist */,
+				ED6DB3B41C873F5C00DB1B7A /* config_HD3000_1366x768_7series.plist */,
+				ED6DB3B61C873F5C00DB1B7A /* config_HD3000_1600x900_7series.plist */,
 				ED6DB3B91C873F5C00DB1B7A /* config_HD4000_1366x768.plist */,
-				ED6DB3BA1C873F5C00DB1B7A /* config_HD4000_1600x900_6series.plist */,
 				ED6DB3BB1C873F5C00DB1B7A /* config_HD4000_1600x900.plist */,
+				ED6DB3B81C873F5C00DB1B7A /* config_HD4000_1366x768_6series.plist */,
+				ED6DB3BA1C873F5C00DB1B7A /* config_HD4000_1600x900_6series.plist */,
 				ED6DB3BC1C873F5C00DB1B7A /* config_HD4600_4400_4200.plist */,
 				ED6DB3BD1C873F5C00DB1B7A /* config_HD5000_5100_5200.plist */,
 				ED6DB3BE1C873F5C00DB1B7A /* config_HD5300_5500_6000.plist */,
@@ -100,6 +101,7 @@
 				ED1D74A61F61C25900BE4F5C /* config_HD510.plist */,
 				EDDD257B1DFE3C4A00092E18 /* config_HD615_620_630_640_650_spoof.plist */,
 				EDF4A6891F364130000B04AB /* config_HD615_620_630_640_650.plist */,
+				ED202A332152A12D000DD37C /* config_UHD630.plist */,
 			);
 			name = config;
 			sourceTree = "<group>";

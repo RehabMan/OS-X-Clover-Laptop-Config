@@ -45,7 +45,7 @@ download os-x-voodoo-ps2-controller RehabMan-Voodoo
 download os-x-realtek-network RehabMan-Realtek-Network
 download os-x-intel-network RehabMan-IntelMausiEthernet
 #download os-x-acpi-backlight RehabMan-Backlight
-download os-x-intel-backlight RehabMan-IntelBacklight
+#download os-x-intel-backlight RehabMan-IntelBacklight
 download os-x-acpi-battery-driver RehabMan-Battery
 download os-x-eapd-codec-commander RehabMan-CodecCommander
 download os-x-fake-pci-id RehabMan-FakePCIID
@@ -55,9 +55,13 @@ download os-x-atheros-3k-firmware RehabMan-Atheros
 download os-x-usb-inject-all RehabMan-USBInjectAll
 #download os-x-acpi-debug RehabMan-Debug
 download_latest_notbitbucket "https://github.com" "https://github.com/vit9696/Lilu/releases" "RELEASE" "nbb_vit9696-Lilu.zip"
-download_latest_notbitbucket "https://github.com" "https://github.com/lvs1974/IntelGraphicsFixup/releases" "RELEASE" "nbb_lvs1974-IntelGraphicsFixup.zip"
-download_latest_notbitbucket "https://github.com" "https://github.com/PMHeart/CoreDisplayFixup/releases" "RELEASE" "nbb_PMHeart-CoreDisplayFixup.zip"
-download_latest_notbitbucket "https://github.com" "https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup/releases" "IntelGraphicsDVMTFixup" "nbb_BarbaraPalvin-IntelGraphicsDVMTFixup.zip"
+#download_latest_notbitbucket "https://github.com" "https://github.com/lvs1974/IntelGraphicsFixup/releases" "RELEASE" "nbb_lvs1974-IntelGraphicsFixup.zip"
+#download_latest_notbitbucket "https://github.com" "https://github.com/PMHeart/CoreDisplayFixup/releases" "RELEASE" "nbb_PMHeart-CoreDisplayFixup.zip"
+#download_latest_notbitbucket "https://github.com" "https://github.com/BarbaraPalvin/IntelGraphicsDVMTFixup/releases" "IntelGraphicsDVMTFixup" "nbb_BarbaraPalvin-IntelGraphicsDVMTFixup.zip"
+# WhateverGreen.kext replaces most of the Lilu graphics plugins
+download_latest_notbitbucket "https://github.com" "https://github.com/acidanthera/WhateverGreen/releases" "RELEASE" "nbb_acidanthera-WhateverGreen.zip"
+download_latest_notbitbucket "https://github.com" "https://github.com/acidanthera/AirportBrcmFixup/releases" "RELEASE" nbb_acidanthera-AirportBrcmFixup.zip
+download_latest_notbitbucket "https://github.com" "https://github.com/acidanthera/BT4LEContiunityFixup/releases" "RELEASE" nbb_acidanthera-BT4LEContiunityFixup.zip
 cd ..
 
 # download tools
