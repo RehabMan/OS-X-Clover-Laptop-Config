@@ -253,7 +253,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "model", Buffer() { "Intel HD Graphics 510" },
                 "device-id", Buffer() { 0x02, 0x19, 0x00, 0x00 },
                 "RM,device-id", Buffer() { 0x02, 0x19, 0x00, 0x00 },
-                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD515
             0x191e, 0, Package()
@@ -262,7 +262,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "hda-gfx", Buffer() { "onboard-1" },
                 "model", Buffer() { "Intel HD Graphics 515" },
                 "RM,device-id", Buffer() { 0x1e, 0x19, 0x00, 0x00 },
-                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD520
             0x1916, 0, Package()
@@ -271,7 +271,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "hda-gfx", Buffer() { "onboard-1" },
                 "model", Buffer() { "Intel HD Graphics 520" },
                 "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
-                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD530
             0x1912, 0, Package()
@@ -280,7 +280,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "hda-gfx", Buffer() { "onboard-1" },
                 "model", Buffer() { "Intel HD Graphics 530" },
                 "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
-                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD530 mobile?
             0x191b, 0, Package()
@@ -290,7 +290,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "model", Buffer() { "Intel HD Graphics 530" },
                 "device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
                 "RM,device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
-                "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
             },
             // Skylake/HD540
             0x1926, 0, Package()
@@ -298,7 +298,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                 "hda-gfx", Buffer() { "onboard-1" },
                 "model", Buffer() { "Intel Iris Graphics 540" },
-                "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                //"RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
             },
             // Skylake/HD550
             0x1927, 0, Package()
@@ -308,7 +308,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IGPU", 0)
                 "model", Buffer() { "Intel Iris Graphics 550" },
                 //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
                 "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
-                "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                //"RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
             },
             // Skylake/Iris Pro HD580
             0x193b, 0, Package()

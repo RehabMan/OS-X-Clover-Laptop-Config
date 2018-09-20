@@ -17,7 +17,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "model", Buffer() { "Intel HD Graphics 515" },
             "device-id", Buffer() { 0x1e, 0x19, 0x00, 0x00 },
             "RM,device-id", Buffer() { 0x1e, 0x19, 0x00, 0x00 },
-            "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
         },
         // Kaby Lake/HD620
         0x5916, 0, Package()
@@ -27,7 +27,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "model", Buffer() { "Intel HD Graphics 620" },
             "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
             "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
-            "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
         },
         // Kaby Lake/HD620
         0x5917, 0, Package()
@@ -37,7 +37,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "model", Buffer() { "Intel HD Graphics 620" },
             "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
             "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
-            "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
         },
         // Kaby Lake/HD630
         0x5912, 0, Package()
@@ -47,7 +47,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "model", Buffer() { "Intel HD Graphics 630" },
             "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
             "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
-            "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
         },
         // KabyLake/HD630 mobile?
         0x591b, 0, Package()
@@ -57,7 +57,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "model", Buffer() { "Intel HD Graphics 630" },
             "device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
             "RM,device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
-            "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+            //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
         },
         // Kaby Lake/HD640
         0x5926, 0, Package()
@@ -66,7 +66,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             "hda-gfx", Buffer() { "onboard-1" },
             "model", Buffer() { "Intel Iris Plus Graphics 640" },
             "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
-            "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+            //"RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
         },
         // Kaby Lake/HD650
         0x5927, 0, Package()
@@ -78,7 +78,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
             //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
             "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
             //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
-            "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+            //"RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
         },
         // CoffeeLake/UHD620
         0x3e91, 0, Package()
