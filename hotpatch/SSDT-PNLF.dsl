@@ -5,6 +5,8 @@
 #define SKYLAKE_PWMMAX 0x56c
 #define CUSTOM_PWMMAX_07a1 0x07a1
 #define CUSTOM_PWMMAX_1499 0x1499
+//REVIEW: (guessing) could be 0xffff or even 0xfffe
+#define COFFEELAKE_PWMMAX 0xff7b
 
 #ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
@@ -34,6 +36,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
         // 16: Skylake/KabyLake 0x56c (and some Haswell, example 0xa2e0008)
         // 17: custom LMAX=0x7a1
         // 18: custom LMAX=0x1499
+        // 19: CoffeeLake 0xff7b
         // 99: Other (requires custom AppleBacklightInjector.kext)
         Name(_UID, 0)
         Name(_STA, 0x0B)
@@ -145,6 +148,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                     {
                         Local2 = HASWELL_PWMMAX
                     }
+                    // check CoffeeLake
+                    ElseIf (Ones != Match(Package()
+                    {
+                        // CoffeeLake identifiers from AppleIntelCFLGraphicsFramebuffer.kext
+                        0x3e9b, 0x3ea5, 0x3e92, 0x3e91,
+                    }, MEQ, Local0, MTR, 0, 0))
+                    {
+                        Local2 = COFFEELAKE_PWMMAX
+                    }
                     Else
                     {
                         // assume Skylake/KabyLake/KabyLake-R, both 0x56c
@@ -198,6 +210,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
             ElseIf (Local2 == SKYLAKE_PWMMAX) { _UID = 16 }
             ElseIf (Local2 == CUSTOM_PWMMAX_07a1) { _UID = 17 }
             ElseIf (Local2 == CUSTOM_PWMMAX_1499) { _UID = 18 }
+            ElseIf (Local2 == COFFEELAKE_PWMMAX) { _UID = 19 }
             Else { _UID = 99 }
         }
     }
