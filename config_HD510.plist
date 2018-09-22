@@ -292,7 +292,7 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAbGQ==</data>
 				<key>device-id</key>
-				<data>hoACGQ==</data>
+				<data>Ahk=</data>
 				<key># RM,device-id</key>
 				<string>spoof 0x1902 just in case FakePCIID_Intel_HD_Graphics installed</string>
 				<key>RM,device-id</key>
