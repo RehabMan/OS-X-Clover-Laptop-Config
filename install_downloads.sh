@@ -16,24 +16,26 @@ warn_about_superuser
 # install tools
 install_tools
 
+# remove old kexts
+# EHCI is disabled, so no need for FakePCIID_XHCIMux.kext
+remove_deprecated_kexts
+#remove_kext FakePCIID_XHCIMux.kext
+# remove other kexts not used anymore...
+#remove_kext Example.kext
+
 # install required kexts
 install_download_kexts
 install_brcmpatchram_kexts
-remove_deprecated_kexts
 install_backlight_kexts
 
 # install special download kexts
-install_kext _downloads/kexts/RehabMan-FakePCIID*/Release/FakePCIID_AR9280_as_AR946x.kext
-install_kext _downloads/kexts/RehabMan-FakePCIID*/Release/FakePCIID_XHCIMux.kext
-
-# EHCI is disabled, so no need for FakePCIID_XHCIMux.kext
-#remove_kext FakePCIID_XHCIMux.kext
+# for example, if you need FakePCIID_XHCIMux.kext
+#install_fakepciid_xhcimux
+# or other special FakePCIID injectors
+#install_kext _downloads/kexts/RehabMan-FakePCIID*/Release/FakePCIID_AR9280_as_AR946x.kext
 
 # create/install patched AppleHDA files
 install_hda
-
-# remove other kexts not used anymore...
-#remove_kext Example.kext
 
 # all kexts are now installed, so rebuild cache
 rebuild_kernel_cache
