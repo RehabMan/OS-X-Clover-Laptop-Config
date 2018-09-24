@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>This file is for 10.12.6+ with native KabyLake support</string>
+	<string>This file is for 10.14.x with native CoffeeLake support</string>
 	<key>ACPI</key>
 	<dict>
 		<key>AutoMerge</key>
