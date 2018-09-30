@@ -287,7 +287,7 @@
 				<integer>1</integer>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>framebuffer-cursormem</key>
+				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>## @1 HDMI</key>
 				<string></string>

@@ -296,7 +296,7 @@
 				<integer>1</integer>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>framebuffer-cursormem</key>
+				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>## @0 LVDS-&gt;DP</key>
 				<string></string>
