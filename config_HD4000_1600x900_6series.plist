@@ -203,7 +203,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1 -igfxnohdmi -cdfon</string>
+		<string>kext-dev-mode=1 dart=0 slide=0 nv_disable=1 -cdfon</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -317,6 +317,8 @@
 				<key>#hda-gfx</key>
 				<data>b25ib2FyZC0xAA==</data>
 				<key>#AAPL00,override-no-connect</key>
+				<data></data>
+				<key>#AAPL00,override-no-edid</key>
 				<data></data>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
