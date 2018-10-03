@@ -8,8 +8,7 @@ ESSENTIAL=
 #HDA=ALC283
 
 # include subroutines
-DIR=$(dirname ${BASH_SOURCE[0]})
-source "$DIR/tools/_install_subs.sh"
+source "$(dirname ${BASH_SOURCE[0]})"/_tools/_install_subs.sh
 
 warn_about_superuser
 
