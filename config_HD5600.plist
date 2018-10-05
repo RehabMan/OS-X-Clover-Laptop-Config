@@ -278,7 +278,7 @@
 				<key>device-id</key>
 				<data>JhYAAA==</data>
 				<key>#hda-gfx</key>
-				<data>b25ib2FyZC0xAA==</data>
+				<string>onboard-1</string>
 				<key>#AAPL00,override-no-connect</key>
 				<data></data>
 				<key># DVMT-prealloc</key>
@@ -336,7 +336,7 @@
 				<key>#layout-id</key>
 				<integer>2</integer>
 				<key>#hda-gfx</key>
-				<data>b25ib2FyZC0xAA==</data>
+				<string>onboard-1</string>
 			</dict>
 		</dict>
 		<key>USB</key>

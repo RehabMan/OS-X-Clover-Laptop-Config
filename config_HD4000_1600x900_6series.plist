@@ -315,7 +315,7 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>BABmAQ==</data>
 				<key>#hda-gfx</key>
-				<data>b25ib2FyZC0xAA==</data>
+				<string>onboard-1</string>
 				<key>#AAPL00,override-no-connect</key>
 				<data></data>
 				<key>#AAPL00,override-no-edid</key>
@@ -366,7 +366,7 @@
 				<key>#PinConfigurations</key>
 				<data></data>
 				<key>#hda-gfx</key>
-				<data>b25ib2FyZC0xAA==</data>
+				<string>onboard-1</string>
 			</dict>
 		</dict>
 		<key>USB</key>
