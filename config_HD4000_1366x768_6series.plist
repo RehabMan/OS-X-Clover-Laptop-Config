@@ -352,7 +352,7 @@
 				<key>#Comment</key>
 				<string>Intel HDA</string>
 				<key>#layout-id</key>
-				<data>AgAAAA==</data>
+				<integer>3</integer>
 				<key>#PinConfigurations</key>
 				<data></data>
 				<key>#hda-gfx</key>
@@ -463,7 +463,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.13 release kernel (credit Vandroiy)</string>
+				<string>Disable panic kext logging on 10.13 release kernel (credit vit9696)</string>
 				<key>MatchOS</key>
 				<string>10.13.x</string>
 				<key>Find</key>
@@ -473,7 +473,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14 release kernel (credit Vandroiy)</string>
+				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
 				<key>MatchOS</key>
 				<string>10.14.x</string>
 				<key>Find</key>
