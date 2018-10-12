@@ -5,8 +5,7 @@
 #define SKYLAKE_PWMMAX 0x56c
 #define CUSTOM_PWMMAX_07a1 0x07a1
 #define CUSTOM_PWMMAX_1499 0x1499
-//REVIEW: (guessing) could be 0xffff or even 0xfffe
-#define COFFEELAKE_PWMMAX 0xff7b
+#define COFFEELAKE_PWMMAX 0xffff
 
 #ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
