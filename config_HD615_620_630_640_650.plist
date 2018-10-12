@@ -323,7 +323,7 @@
 				<data>AAgAAA==</data>
 				<key>#framebuffer-con1-flags</key>
 				<data>hwEAAA==</data>
-				<key>framebuffer-con1-pipe</key>
+				<key>#framebuffer-con1-pipe</key>
 				<data>EgAAAA==</data>
 				<key>## @2 HDMI</key>
 				<string></string>
