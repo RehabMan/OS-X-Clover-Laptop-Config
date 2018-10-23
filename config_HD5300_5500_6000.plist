@@ -270,6 +270,10 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BgAmFg==</data>
+				<key># fake device-id</key>
+				<string>some HD5500 need this, such as i3-5005U; enable as required</string>
+				<key>#device-id</key>
+				<data>JhYAAA==</data>
 				<key>#hda-gfx</key>
 				<string>onboard-1</string>
 				<key>#AAPL00,override-no-connect</key>
