@@ -312,7 +312,7 @@
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-pipecount</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>framebuffer-portcount</key>
 				<integer>4</integer>
 				<key>framebuffer-memorycount</key>
