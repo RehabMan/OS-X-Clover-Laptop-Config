@@ -334,6 +334,8 @@
 				<integer>3</integer>
 				<key>#hda-gfx</key>
 				<string>onboard-1</string>
+				<key>#no-controller-patch</key>
+				<integer>1</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
