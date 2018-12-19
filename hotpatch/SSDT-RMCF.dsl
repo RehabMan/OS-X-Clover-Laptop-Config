@@ -92,6 +92,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         // bit0=1: Using AppleBacklight.kext + AppleBacklightInjector.kext or AppleBacklightFixup.kext
         // bit1=1: do not set LEVW
         // bit2=1: set GRAN
+        // bit3=1: prevent PWM initialization (eg. don't set PWMMax/PWMDuty)
         Name(BKLT, 1)
 
         // LMAX: Backlight PWM MAX.  Must match framebuffer in use.

@@ -31,7 +31,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
     Device(_SB.PCI0.IGPU.PNLF)
     {
         Name(_ADR, Zero)
-        Name(_HID, EisaId ("APP0002"))
+        Name(_HID, EisaId("APP0002"))
         Name(_CID, "backlight")
         // _UID is set depending on PWMMax to match profiles in AppleBacklightFixup.kext Info.plist
         // 14: Sandy/Ivy 0x710
@@ -147,7 +147,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                 // change/scale only if different than current...
                 Local1 = ^LEVX >> 16
                 If (!Local1) { Local1 = Local2 }
-                If (Local2 != Local1)
+                If (!(8 & Local4) && Local2 != Local1)
                 {
                     // set new backlight PWMMax but retain current backlight level by scaling
                     Local0 = (^LEVL * Local2) / Local1
@@ -180,7 +180,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                 // change/scale only if different than current...
                 Local1 = ^LEVX
                 If (!Local1) { Local1 = Local2 }
-                If (Local2 != Local1)
+                If (!(8 & Local4) && Local2 != Local1)
                 {
                     // set new backlight PWMMax but retain current backlight level by scaling
                     Local0 = (^LEVD * Local2) / Local1
@@ -228,7 +228,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PNLF", 0)
                 // change/scale only if different than current...
                 Local1 = ^LEVX >> 16
                 If (!Local1) { Local1 = Local2 }
-                If (Local2 != Local1)
+                If (!(8 & Local4) && Local2 != Local1)
                 {
                     // set new backlight PWMAX but retain current backlight level by scaling
                     Local0 = (((^LEVX & 0xFFFF) * Local2) / Local1) | (Local2 << 16)
