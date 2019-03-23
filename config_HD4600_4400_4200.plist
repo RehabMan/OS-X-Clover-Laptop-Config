@@ -307,6 +307,10 @@
 				<data>BgAAAA==</data>
 				<key>#framebuffer-con2-pipe</key>
 				<data>EgAAAA==</data>
+				<key>#HDMI Port</key>
+				<string>0x3e9b0000, 0306 port</string>
+				<key>#framebuffer-con2-alldata</key>
+				<data>AwYIAAAEAADHAwAA</data>
 				<key>## @3 HDMI</key>
 				<string></string>
 				<key>#framebuffer-con3-enable</key>
