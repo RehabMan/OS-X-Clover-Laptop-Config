@@ -31,6 +31,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_XOSI", 0)
             //"Windows 2017",       // Windows 10, version 1703
             //"Windows 2017.2",     // Windows 10, version 1709
             //"Windows 2018",       // Windows 10, version 1803
+            //"Windows 2018.2",     // Windows 10, version 1809
         }
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
