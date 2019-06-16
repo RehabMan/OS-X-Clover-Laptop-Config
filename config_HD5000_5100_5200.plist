@@ -464,13 +464,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14 release kernel (credit vit9696)</string>
+				<string>Disable panic kext logging on 10.14.0-10.14.3 release kernel (credit vit9696)</string>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.14.0,10.14.1,10.14.2,10.14.3</string>
 				<key>Find</key>
 				<data>igKEwHRC</data>
 				<key>Replace</key>
 				<data>igKEwOtC</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14.4-10.14.5 release kernel</string>
+				<key>MatchOS</key>
+				<string>10.14.4,10.14.5</string>
+				<key>Find</key>
+				<data>AIoChMB0</data>
+				<key>Replace</key>
+				<data>AIoChMDr</data>
 			</dict>
 		</array>
 	</dict>
